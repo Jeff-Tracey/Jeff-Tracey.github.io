@@ -18,7 +18,7 @@
     "href": "mission/mission.html#what-this-looks-like-in-practice",
     "title": "Mission",
     "section": "What This Looks Like in Practice",
-    "text": "What This Looks Like in Practice\nThree sensor modalities — acoustic recorders, camera traps, and UAV imagery — form the observational foundation. Under the hood, all three produce images: spectrograms, trap photos, orthomosaics. The same AI infrastructure handles all of them.\n\n\n\n\n\n\n\nPillar\nWhat It Does\n\n\n\n\nBioacoustics AI\nPassive acoustic monitoring; species detection from audio\n\n\nWildlife cameras + AI\nCamera trap images and video; occupancy and behavior\n\n\nGeospatial AI + sUAVs\nNadir imagery, orthomosaics, habitat mapping and change detection\n\n\n\nThese aren’t independent tools — they form a sequence:\n\nMap — UAV baseline survey: orthomosaic, surface model, habitat classification\nDeploy — sensors placed strategically based on landscape structure\nMonitor — bioacoustics, camera traps, and repeat imagery over time\nInterpret — AI inference returning species trends, anomaly alerts, and actionable information for conservation decisions\nRepeat — regular resurveys to track change and update the spatial foundation\n\nA detection in a riparian edge patch means something different than the same detection in interior chaparral. A change in vegetation structure shows up in the orthomosaic before it shows up in a site visit. The AI work — classifiers, augmentation methods, detection pipelines — is infrastructure for step 4. Very few people can execute this stack end to end."
+    "text": "What This Looks Like in Practice\nTo Be Completed."
   },
   {
     "objectID": "mission/mission.html#training-as-mission-infrastructure",
