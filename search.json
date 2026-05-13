@@ -1,0 +1,541 @@
+[
+  {
+    "objectID": "mission/mission.html",
+    "href": "mission/mission.html",
+    "title": "Mission",
+    "section": "",
+    "text": "The Cognavitron — hover for details · click to navigate"
+  },
+  {
+    "objectID": "mission/mission.html#the-vision",
+    "href": "mission/mission.html#the-vision",
+    "title": "Mission",
+    "section": "The Vision",
+    "text": "The Vision\nA world where local communities have access to the tools, data, and scientific support to understand and protect the ecosystems they live in — and where that understanding flows both ways.\nNetworks of community-based ecological monitoring systems where citizen scientists aren’t just data suppliers — they get something back. You deploy a sensor, go out on a survey, contribute a recording — and what comes back is analysis in context. A picture of your local ecosystem, situated within the broader one. Local communities bring what no remote sensor captures: lived knowledge of the place, generational observation, the kind of noticing that comes from being there. The science provides the analytical infrastructure and the broader context. Each informs the other.\nThe people doing this work live there. They notice when the sea lions don’t come back, when the fish thin out, when the soundscape goes quiet in a way it didn’t used to. The tools give them a way to document it, understand it, and make the case for protecting it — with their own data, in language that connects to their own experience of the place."
+  },
+  {
+    "objectID": "mission/mission.html#what-this-looks-like-in-practice",
+    "href": "mission/mission.html#what-this-looks-like-in-practice",
+    "title": "Mission",
+    "section": "What This Looks Like in Practice",
+    "text": "What This Looks Like in Practice\nThree sensor modalities — acoustic recorders, camera traps, and UAV imagery — form the observational foundation. Under the hood, all three produce images: spectrograms, trap photos, orthomosaics. The same AI infrastructure handles all of them.\n\n\n\n\n\n\n\nPillar\nWhat It Does\n\n\n\n\nBioacoustics AI\nPassive acoustic monitoring; species detection from audio\n\n\nWildlife cameras + AI\nCamera trap images and video; occupancy and behavior\n\n\nGeospatial AI + sUAVs\nNadir imagery, orthomosaics, habitat mapping and change detection\n\n\n\nThese aren’t independent tools — they form a sequence:\n\nMap — UAV baseline survey: orthomosaic, surface model, habitat classification\nDeploy — sensors placed strategically based on landscape structure\nMonitor — bioacoustics, camera traps, and repeat imagery over time\nInterpret — AI inference returning species trends, anomaly alerts, and actionable information for conservation decisions\nRepeat — regular resurveys to track change and update the spatial foundation\n\nA detection in a riparian edge patch means something different than the same detection in interior chaparral. A change in vegetation structure shows up in the orthomosaic before it shows up in a site visit. The AI work — classifiers, augmentation methods, detection pipelines — is infrastructure for step 4. Very few people can execute this stack end to end."
+  },
+  {
+    "objectID": "mission/mission.html#training-as-mission-infrastructure",
+    "href": "mission/mission.html#training-as-mission-infrastructure",
+    "title": "Mission",
+    "section": "Training as Mission Infrastructure",
+    "text": "Training as Mission Infrastructure\nThe challenge before us cannot be met by a handful of people who know these tools. We need ecologists, conservation scientists, tribal environmental staff, and STEM students who understand not just AI, but the ecology- and conservation-specific aspects of applying it.\nTeaching is how that happens. Training isn’t a side project — it’s infrastructure for the larger vision. Every workshop taught is a multiplier: one person learns, and the work they go on to do carries that knowledge forward. The goal is to make these tools accessible to people who have the ecological knowledge but not the machine learning background. Free when possible. Fundable as capacity building through foundations and NSF workforce development programs."
+  },
+  {
+    "objectID": "mission/mission.html#listening-to-the-earth",
+    "href": "mission/mission.html#listening-to-the-earth",
+    "title": "Mission",
+    "section": "Listening to the Earth",
+    "text": "Listening to the Earth\nThe deeper aspiration underneath all of it: not just measuring the Earth, but listening to it.\nThe landscape and the soundscape are both expressions of the same underlying ecological state — projected through different sensors, captured at different scales, but encoding the same living system. A drone orthophoto and a dawn chorus recording from the same site on the same morning are two voices of one place.\nThe conservation use is real: phenology tracking, disturbance detection, recovery monitoring. But the motivation underneath is older and simpler. We want to know if the place is okay. We want to hear it tell us."
+  },
+  {
+    "objectID": "mission/mission.html#the-honest-version",
+    "href": "mission/mission.html#the-honest-version",
+    "title": "Mission",
+    "section": "The Honest Version",
+    "text": "The Honest Version\nI could make a better living elsewhere. I’m here because I care about wildlife and wild places — that’s been true since I caught my first rattlesnake as an undergraduate, and it hasn’t changed. The science and the tools are how I contribute something real and justify the work economically. But they’re in service of something bigger: a genuine relationship between people and the living systems they depend on.\nThe sensors and the models are expressions of care, not replacements for it. We can be technically sophisticated and still be creatures of this planet — embedded in it, accountable to it.\nIf any of this resonates with you — as a researcher, funder, student, collaborator, or someone who simply cares about wild places — get in touch."
+  },
+  {
+    "objectID": "about/about.html",
+    "href": "about/about.html",
+    "title": "About",
+    "section": "",
+    "text": "The Cognavitron — hover for details · click to navigate"
+  },
+  {
+    "objectID": "about/about.html#my-story",
+    "href": "about/about.html#my-story",
+    "title": "About",
+    "section": "My Story",
+    "text": "My Story\nI got into this because I care about wildlife and wild places.\nThat’s not a polished origin story — it’s just true. I caught my first rattlesnake during an undergraduate field internship, radio-tracked them for my M.S. thesis, then spent the next two decades building computational tools for the kinds of ecological problems I’d been doing fieldwork on. The arc from herpetofaunal surveys to deep generative models is less of a career pivot than it looks. The questions are the same. The tools have changed.\nThe “field + algorithm” combination matters in ways that are easy to understate. Lots of people work with ecological data. But understanding the data — where it comes from, what it misses, where the annotation is ambiguous, why the class imbalance looks the way it does — requires having been in the field. I’ve radio-tracked rattlesnakes, captured and handled golden eagles, spent hours in a highway underpass mounting wildlife cameras with a hammer drill. That background shapes how I think about every model I build.\nI’ve also always been at the front edge of methods — neural networks before they were cool, Bayesian modeling, agent-based models, evolutionary computing, and now deep learning. Not because new methods are inherently better, but because the hard ecological problems tend to be exactly where the standard toolkit runs out.\nOutside the work: I freedive. It’s how I actually experience the ocean ecosystems that motivate a lot of this research — coral reefs, kelp forests, open water. There’s something clarifying about being in the water with the animals you’re trying to protect. It’s a different kind of knowing than a spectrogram gives you, and both matter.\n\n\n\nHorn shark (Heterodontus francisci), San Diego kelp forest. (Photo: Jeff A. Tracey)"
+  },
+  {
+    "objectID": "projects/current_projects.html",
+    "href": "projects/current_projects.html",
+    "title": "Current Work",
+    "section": "",
+    "text": "The Cognavitron — hover for details · click to navigate\n\n\n\n\n\n\n\n\n\n\nWalrus Bioacoustics — Passive Acoustic Monitoring\n\n\n\nbioacoustics\n\npassive-acoustic-monitoring\n\nmarine-mammals\n\ndeep-learning\n\n\n\nPassive acoustic monitoring of Pacific walrus (Odobenus rosmarus divergens) in Alaska. Automated call detection, classification, and abundance estimation from long-term…\n\n\n\n\n\n\n\n\n\nsUAV 3D Structure and AI Classification\n\n\n\nsuav\n\nphotogrammetry\n\ndeep-learning\n\nremote-sensing\n\nhabitat\n\nvisualization\n\n\n\nCapture → reconstruct → classify → visualize: UAV imagery to 3D photogrammetric model, AI pixel classification of the orthoimage, results draped back onto the 3D mesh.…\n\n\n\n\n\n\n\n\n\nVAE-GAN for Bioacoustic Data Augmentation\n\n\n\nbioacoustics\n\ndeep-learning\n\ngenerative-models\n\ndata-augmentation\n\n\n\nDeep generative models for acoustic data augmentation. VAE-GAN architecture for generating synthetic spectrogram patches; addressing class imbalance in bioacoustic species…\n\n\n\n\n\n\n\n\n\nsUAV Vegetation Mapping\n\n\n\nsuav\n\nremote-sensing\n\nvegetation\n\nhabitat\n\n\n\nUAV-based vegetation mapping and classification using multispectral and RGB imagery. Land cover classification, change detection, and habitat mapping at ecologically…\n\n\n\n\n\n\n\n\n\nBirdNET Wrapper — Bioacoustic Inference Pipeline\n\n\n\nbioacoustics\n\ndeep-learning\n\ntools\n\nopen-source\n\n\n\nA convenience wrapper for BirdNET inference on ecological audio datasets. Batch processing, output formatting, and integration with passive acoustic monitoring workflows.…\n\n\n\n\n\n\n\n\n\nsUAV + Mask R-CNN — Aerial Wildlife Detection\n\n\n\nsuav\n\ndeep-learning\n\ncomputer-vision\n\nwildlife-monitoring\n\n\n\nDeep learning for automated wildlife detection and counting in small UAV aerial imagery. Mask R-CNN instance segmentation applied to high-resolution nadir survey data;…\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/current/birdnet.html",
+    "href": "projects/current/birdnet.html",
+    "title": "BirdNET Wrapper — Bioacoustic Inference Pipeline",
+    "section": "",
+    "text": "The Cognavitron — hover for details · click to navigate\n\n\n\nBirdNET is a deep learning model for bird call detection and species identification in passive acoustic recordings, developed by the Cornell Lab of Ornithology and Chemnitz University of Technology. It’s excellent — but running it on a directory full of AudioMoth or Song Meter files, and getting the results into a usable table, takes a bit of scaffolding.\nI built easy_birdnet for my own PAM workflows and decided to share it. It wraps the BirdNET Python package to handle batch processing, output formatting, and per-file detection plots with minimal setup. Give it a folder of audio files; get back a CSV and a plot for each one.\n\nGitHub: https://github.com/Jeff-Tracey/easy_birdnet\nLicense: RAIL Non-Commercial"
+  },
+  {
+    "objectID": "projects/current/vae-gan.html",
+    "href": "projects/current/vae-gan.html",
+    "title": "VAE-GAN for Bioacoustic Data Augmentation",
+    "section": "",
+    "text": "The Cognavitron — hover for details · click to navigate\n\n\n\nComing soon."
+  },
+  {
+    "objectID": "projects/current/walrus-pam.html",
+    "href": "projects/current/walrus-pam.html",
+    "title": "Walrus Bioacoustics — Passive Acoustic Monitoring",
+    "section": "",
+    "text": "The Cognavitron — hover for details · click to navigate\n\n\n\nComing soon."
+  },
+  {
+    "objectID": "projects/projects.html",
+    "href": "projects/projects.html",
+    "title": "Past Projects",
+    "section": "",
+    "text": "The Cognavitron — hover for details · click to navigate\n\n\n\n\n\n\n\n\n\n\nHigh-Performance Computing for Ecology\n\n\n\nhpc\n\ncomputational-ecology\n\ndeep-learning\n\ninfrastructure\n\nteaching\n\n\n\nA decade supporting and developing HPC workflows for ecological research at USGS Advanced Research Computing — large-scale simulation, AI/ML infrastructure, and teaching…\n\n\n\n\n\n\n\n\n\nGolden Eagles — Telemetry and Occupancy\n\n\n\nfield-ecology\n\nmovement\n\nbirds\n\nbayesian\n\nspatial-analysis\n\n\n\nLong-term telemetry and occupancy modeling for golden eagles (Aquila chrysaetos) in the western US. GPS tracking, habitat modeling, and Bayesian occupancy analysis across…\n\n\n\n\n\n\n\n\n\nCalifornia Condors — 3D Space Use\n\n\n\nfield-ecology\n\nmovement\n\nbirds\n\nspatial-analysis\n\ncomputational-ecology\n\nhpc\n\n\n\nThree-dimensional movement kernel density estimation for GPS-tracked California condors (Gymnogyps californianus). Extended MKDE methods to full 3D space to capture…\n\n\n\n\n\n\n\n\n\nFire, Fragmentation, and Conservation Prioritization\n\n\n\nconservation-planning\n\nfire-ecology\n\nspatial-analysis\n\nlandscape-ecology\n\n\n\nSpatial prioritization of conserved areas threatened by wildfire and urban fragmentation in coastal southern California. Integrating fire risk, biodiversity, and landscape…\n\n\n\n\n\n\n\n\n\nWildlife Camera Surveys\n\n\n\nfield-ecology\n\ncamera-traps\n\nmammals\n\nconnectivity\n\n\n\nCamera trap and sensor monitoring of wildlife use of highway underpasses in southern California. Species detection, passage rate estimation, and infrastructure effectiveness…\n\n\n\n\n\n\n\n\n\nEcology of Infectious Disease — Agent-Based Models\n\n\n\nagent-based-models\n\nepidemiology\n\ncomputational-ecology\n\nspatial-analysis\n\n\n\nAgent-based simulation models for the ecology of infectious disease. Spatial epidemiological dynamics, host movement and contact networks, and disease spread in…\n\n\n\n\n\n\n\n\n\nBobcat Movement — Finite Mixture Models\n\n\n\nfield-ecology\n\nmovement\n\nmammals\n\nstatistical-modeling\n\n\n\nFinite mixture models for GPS-tracked bobcat (Lynx rufus) movement in coastal southern California. Identified behavioral modes (foraging, resting, commuting) from step…\n\n\n\n\n\n\n\n\n\nMonitoring Design and Statistical Power\n\n\n\nstatistical-modeling\n\nconservation-planning\n\ncomputational-ecology\n\nfield-ecology\n\n\n\nStudy design, power analysis, and detection probability for wildlife monitoring programs. Simulation-based approaches to determining how long it takes to detect population…\n\n\n\n\n\n\n\n\n\nIvory-billed Woodpecker Habitat Network Modeling\n\n\n\ncomputational-ecology\n\nnetwork-analysis\n\nspatial-analysis\n\nbirds\n\noccupancy\n\n\n\nHabitat suitability and landscape connectivity modeling for the ivory-billed woodpecker (Campephilus principalis) in collaboration with Barry Noon and Curt Flather.…\n\n\n\n\n\n\n\n\n\nNeural Network Movement Models\n\n\n\nmovement\n\nneural-networks\n\nstatistical-modeling\n\ncomputational-ecology\n\n\n\nPhD dissertation work: neural network models for predicting animal movement steps. Used von Mises and gamma output distributions to model turning angle and step length.…\n\n\n\n\n\n\n\n\n\nRed Diamond Rattlesnakes\n\n\n\nfield-ecology\n\nmovement\n\nherpetology\n\nagent-based-models\n\n\n\nM.S. thesis research: radio-tracking and movement ecology of Crotalus ruber in coastal southern California. Home range estimation, habitat selection, and early application…\n\n\n\n\n\n\n\n\n\nHerpetofauna Surveys\n\n\n\nfield-ecology\n\nherpetology\n\noccupancy\n\nsurvey-design\n\n\n\nUndergraduate field internship: reptile and amphibian surveys in coastal southern California. First field experience — and the encounter with a juvenile red diamond…\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/past/hpc.html",
+    "href": "projects/past/hpc.html",
+    "title": "High-Performance Computing for Ecology",
+    "section": "",
+    "text": "The Cognavitron — hover for details · click to navigate\nMore content coming soon."
+  },
+  {
+    "objectID": "projects/past/hpc.html#papers",
+    "href": "projects/past/hpc.html#papers",
+    "title": "High-Performance Computing for Ecology",
+    "section": "Papers",
+    "text": "Papers\nTracey JA, Sheppard JK, Lockwood GK, Chourasia A, Tatineni M, Fisher RN, Sinkovits RS (2014). Efficient 3D movement-based kernel density estimator and application to wildlife ecology. Proceedings of the 2014 Annual Conference on Extreme Science and Engineering Discovery Environment, pp. 1–8. https://doi.org/10.1145/2616498.2616522\nRapstine NI, Tracey JA, Gordon JM, Fisher RN (2019). Unsupervised Clustering of Telemetry Data. Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis. IEEE Press. https://sc19.supercomputing.org/proceedings/tech_poster/tech_poster_pages/rpost221.html"
+  },
+  {
+    "objectID": "projects/past/monitoring-design.html",
+    "href": "projects/past/monitoring-design.html",
+    "title": "Monitoring Design and Statistical Power",
+    "section": "",
+    "text": "The Cognavitron — hover for details · click to navigate\nA recurring thread across projects: how do you design a monitoring program that can actually detect what you need to detect, in time to act on it? Power analysis and study design show up across species and contexts — wood frogs in Colorado, reptiles and amphibians in San Diego, long-term USGS monitoring programs. The answer is usually the same: it takes longer than you think, costs more than you planned, and the statistical design matters as much as the field effort.\nMore content coming soon."
+  },
+  {
+    "objectID": "projects/past/monitoring-design.html#projects",
+    "href": "projects/past/monitoring-design.html#projects",
+    "title": "Monitoring Design and Statistical Power",
+    "section": "Projects",
+    "text": "Projects\nWood frog egg mass surveys — Simulation study to determine how many years of monitoring are required to detect a specified decline in wood frog (Lithobates sylvaticus) populations using counts of egg masses. Stochastic population model combined with a survey simulation framework. With Rick Scherer (Colorado State University).\nSANDAG monitoring design — (details to add)\nUSGS monitoring programs — (details to add)"
+  },
+  {
+    "objectID": "projects/past/monitoring-design.html#papers",
+    "href": "projects/past/monitoring-design.html#papers",
+    "title": "Monitoring Design and Statistical Power",
+    "section": "Papers",
+    "text": "Papers\nScherer RD, Tracey JA (2011). A power analysis for the use of counts of egg masses to monitor wood frog (Lithobates sylvaticus) populations. Herpetological Conservation and Biology 6(1): 81–90. https://www.herpconbio.org/Volume_6/Issue_1/Scherer_Tracey_2011.pdf"
+  },
+  {
+    "objectID": "projects/past/wildlife-underpasses.html",
+    "href": "projects/past/wildlife-underpasses.html",
+    "title": "Wildlife Camera Surveys",
+    "section": "",
+    "text": "The Cognavitron — hover for details · click to navigate\nMore content coming soon."
+  },
+  {
+    "objectID": "projects/past/wildlife-underpasses.html#papers",
+    "href": "projects/past/wildlife-underpasses.html#papers",
+    "title": "Wildlife Camera Surveys",
+    "section": "Papers",
+    "text": "Papers\nBrehme CS, Tracey JA, Ewing BAI, Hobbs MT, Launer AE, Matsuda T, Adelsheim EMC, Fisher RN (2021). Responses of migratory amphibians to barrier fencing inform the spacing of road underpasses: a case study with California tiger salamanders (Ambystoma californiense) in Stanford, CA, USA. Global Ecology and Conservation 31: e01857.\nBrehme CS, Tracey JA, McClenaghan LR, Fisher RN (2013). Permeability of roads to movement of scrubland lizards and small mammals. Conservation Biology 27(4): 710–720. https://doi.org/10.1111/cobi.12081\nAscensão F, Grilo C, LaPoint S, Tracey J, Clevenger AP, Santos-Reis M (2014). Inter-individual variability of stone marten behavioral responses to a highway. PLoS ONE 9(7): e103544. https://doi.org/10.1371/journal.pone.0103544\nTracey JA, Brehme CS, Rochester C, Clark D, Fisher RN (2014). A Field Study of Small Vertebrate Use of Wildlife Underpasses in San Diego County, 2014. USGS Data Summary.\nTracey JA (2006). Individual-based modeling as a tool for conserving connectivity. In Crooks KR, Sanjayan M (eds.), Connectivity Conservation: Maintaining Connections for Nature. Conservation Biology Series, vol. 14. Cambridge University Press. https://doi.org/10.1017/CBO9780511754821.001"
+  },
+  {
+    "objectID": "projects/past/ivory-billed.html",
+    "href": "projects/past/ivory-billed.html",
+    "title": "Ivory-billed Woodpecker Habitat Network Modeling",
+    "section": "",
+    "text": "The Cognavitron — hover for details · click to navigate\n\n\n\nComing soon.\nReport: Tracey, J.A., C.H. Flather, and B.R. Noon. 2010. Network Analysis of Potential Ivory-billed Woodpecker Habitat. Prepared for US Fish and Wildlife Service, Lower Mississippi Valley Joint Venture Office. 30 December 2010."
+  },
+  {
+    "objectID": "projects/past/golden-eagles.html",
+    "href": "projects/past/golden-eagles.html",
+    "title": "Golden Eagles — Telemetry and Occupancy",
+    "section": "",
+    "text": "The Cognavitron — hover for details · click to navigate\nGPS telemetry data for golden eagles (Aquila chrysaetos) in southern California, visualized in three dimensions using ParaView. The study area spans the urban-wildland interface east of San Diego — chaparral, oak woodland, and grassland habitat embedded in a matrix of urban and agricultural land use.\nThe video below shows the release of eagle M001 on Otay Mountain after fitting with a GPS telemetry unit. With Pete Bloom. (Video: Jeff A. Tracey)\nReleasing eagle M001 on Otay Mountain, San Diego County. 5 December 2014."
+  },
+  {
+    "objectID": "projects/past/golden-eagles.html#study-area",
+    "href": "projects/past/golden-eagles.html#study-area",
+    "title": "Golden Eagles — Telemetry and Occupancy",
+    "section": "Study Area",
+    "text": "Study Area\nThe terrain and land cover context for the eagle telemetry study, visualized in ParaView from a digital elevation model with land use/land cover overlay. Urban areas in gray; natural vegetation in green; developed/disturbed areas in orange.\n\n\n\nTop-down view of the study area terrain and land use/land cover. Urban San Diego is visible at left; wildland habitat extends to the east.\n\n\n\n\n\nOblique view of the same landscape, showing terrain relief. The urban-wildland interface is clearly visible — eagles move between natural and human-modified habitats across this gradient."
+  },
+  {
+    "objectID": "projects/past/golden-eagles.html#d-telemetry-visualization",
+    "href": "projects/past/golden-eagles.html#d-telemetry-visualization",
+    "title": "Golden Eagles — Telemetry and Occupancy",
+    "section": "3D Telemetry Visualization",
+    "text": "3D Telemetry Visualization\nGPS location data for eagle M001, visualized in three spatial dimensions over the study area terrain. These visualizations were produced using ParaView with custom R code to export GPS data and MKDE outputs in VTK format.\n\n\n\nAll GPS locations for eagle M001, rendered as points over the 3D terrain surface. The dense cluster of locations reflects core use areas within the home range.\n\n\n\n\n\nAll movement steps for eagle M001 rendered as white tubes in 3D space over the terrain. The vertical extent of the tubes captures the eagle’s use of altitude.\n\n\n\n\n\nGPS locations where eagle M001 was on or near the ground, represented as spheres scaled by and colored by first-passage time. Larger, warmer-colored spheres indicate locations where the eagle spent more time in area-restricted search — likely foraging patches.\n\n\n\n\n\nTop-down view of low ground-speed GPS locations for eagle M001. Low ground speed indicates perching or foraging behavior; the spatial clustering of these locations reveals habitat features associated with resting and foraging activity.\n\n\n\n\n\nGPS tracks for eagle M001 colored by ground speed (m/s). Faster movements in warmer colors; slower, area-restricted movements in cooler colors. The pattern reveals distinct commuting corridors and foraging areas."
+  },
+  {
+    "objectID": "projects/past/golden-eagles.html#animation",
+    "href": "projects/past/golden-eagles.html#animation",
+    "title": "Golden Eagles — Telemetry and Occupancy",
+    "section": "Animation",
+    "text": "Animation\nMovement of eagle M001 animated over time, rendered in 3D over the study area terrain.\n\n\nYour browser does not support the video tag."
+  },
+  {
+    "objectID": "projects/past/golden-eagles.html#papers",
+    "href": "projects/past/golden-eagles.html#papers",
+    "title": "Golden Eagles — Telemetry and Occupancy",
+    "section": "Papers",
+    "text": "Papers\nWiens JD, Bloom PH, Madden MC, Kolar PS, Tracey JA, Fisher RN (2022). Golden eagle occupancy surveys and monitoring strategy in coastal southern California, United States. Frontiers in Ecology and Evolution 9: 665792.\nPoessel SA, Woodbridge B, Smith BW, Murphy RK, Bedrosian BE, Bell DA, Bittner D, Bloom PH, Crandall RH, Domenech R, Fisher RN, Haggerty PK, Slater S, Tracey JA, Watson JW, Katzner TE (2022). Interpreting long-distance movements of non-migratory golden eagles: Prospecting and nomadism? Ecosphere 13(6): e4072.\nSur M, Woodbridge B, Esque TC, Belthoff JR, Bloom PH, Fisher RN, Longshore K, Nussear KE, Tracey JA, Braham MA, Katzner TE (2021). Linking behavioral states to landscape features for improved conservation management. Ecology and Evolution 11(12): 7905–7916.\nSur M, Duerr AE, Bell DA, Fisher RN, Tracey JA, Bloom PH, Miller TA, Katzner TE (2020). Relevance of individual and environmental drivers of movement of Golden Eagles. Ibis 162(2): 381–399.\nTracey JA, Madden MC, Bloom PH, Fisher RN (2020). A clarification on the effects of urbanization on Golden Eagle (Aquila chrysaetos) habitat selection. USGS Data Series 1128. https://doi.org/10.3133/ds1128\nTracey JA, Madden MC, Bloom PH, Katzner TE, Fisher RN (2018). Golden eagle (Aquila chrysaetos) habitat selection as a function of land use and terrain, San Diego County, California. USGS Open-File Report 2018-1067. https://doi.org/10.3133/ofr20181067\nTracey JA, Madden MC, Molden JC, Sebes JB, Bloom PH, Fisher RN (2020). Biotelemetry data for Golden Eagles (Aquila chrysaetos) captured in coastal southern California, February 2017–December 2019. USGS Data Series 1128. https://doi.org/10.3133/ds1128\nTracey JA, Madden MC, Sebes JB, Bloom PH, Katzner TE, Fisher RN (2017). Biotelemetry data for golden eagles (Aquila chrysaetos) captured in coastal southern California, February 2016–February 2017. USGS Data Series 1051. https://doi.org/10.3133/ds1051\nRapstine NI, Tracey JA, Gordon JM, Fisher RN (2019). Unsupervised Clustering of Telemetry Data. Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis. IEEE Press. https://sc19.supercomputing.org/proceedings/tech_poster/tech_poster_pages/rpost221.html\nTracey JA, Madden MC, Sebes JB, Bloom PH, Katzner TE, Fisher RN (2016). Biotelemetry data for golden eagles (Aquila chrysaetos) captured in coastal southern California, November 2014–February 2016. USGS Data Series 994. https://doi.org/10.3133/ds994"
+  },
+  {
+    "objectID": "projects/past/golden-eagles.html#collaborators",
+    "href": "projects/past/golden-eagles.html#collaborators",
+    "title": "Golden Eagles — Telemetry and Occupancy",
+    "section": "Collaborators",
+    "text": "Collaborators\n\nPete Bloom — raptor biologist; eagle trapping and field work\nTodd Katzner — USGS Forest and Rangeland Ecosystem Science Center; eagle ecology and movement\nRobert N. Fisher — USGS Western Ecological Research Center; project PI"
+  },
+  {
+    "objectID": "projects/past/herp-surveys.html",
+    "href": "projects/past/herp-surveys.html",
+    "title": "Herpetofauna Surveys",
+    "section": "",
+    "text": "The Cognavitron — hover for details · click to navigate\n\n\n\nComing soon."
+  },
+  {
+    "objectID": "training/training.html",
+    "href": "training/training.html",
+    "title": "Training",
+    "section": "",
+    "text": "The Cognavitron — hover for details · click to navigate\nTeaching is part of the mission. The tools and methods I use for ecological research are not yet accessible to most of the people who need them — field ecologists, conservation practitioners, tribal environmental staff, agency scientists. Closing that gap is not a side project. It’s infrastructure for the larger vision.\nEvery course here was designed for people with ecological knowledge but not a machine learning background. The goal is to produce practitioners who can apply these tools to real problems — not just run scripts they don’t understand.\nTo request a workshop or talk for your organization, get in touch."
+  },
+  {
+    "objectID": "training/training.html#talks",
+    "href": "training/training.html#talks",
+    "title": "Training",
+    "section": "Talks",
+    "text": "Talks\n\nAI 101: What Ecologists Need to Know About Artificial Intelligence\nA non-technical introduction to AI for ecologists, conservation scientists, and the people who fund and manage their work. No equations, no code — just a clear-eyed look at what these tools actually do, where they genuinely help, and where they fail. Originally developed for senior leadership audiences; now offered freely to ecology and conservation organizations.\nAudience: Managers, program officers, funders, field scientists curious about AI Format: 60–90 minute talk + Q&A Prerequisites: None\nIn development (converting from PowerPoint) — available on request for non-profit, conservation, and academic audiences."
+  },
+  {
+    "objectID": "training/training.html#workshops",
+    "href": "training/training.html#workshops",
+    "title": "Training",
+    "section": "Workshops",
+    "text": "Workshops\n\nThe Honest Ecological ML Workflow\nA full-pipeline workshop covering everything most ML courses skip: study design, field data collection, annotation, dataset construction, modeling, evaluation, deployment, and communication. Designed for wildlife practitioners who have ecological data and want to use AI effectively — not just run someone else’s model.\nAudience: Wildlife biologists, conservation practitioners, agency staff, NGO researchers Format: 2–3 day intensive (in-person) or split across multiple half-days (remote) Prerequisites: Basic Python familiarity helpful but not required\nIn development — available for institutional booking.\n\n\n\nScientific Python for Ecologists\nPython for field scientists: environment setup, data wrangling with pandas, visualization, and batch processing of ecological data files. Every example uses real ecological data — no generic datasets. A prerequisite companion for the deep learning workshops.\nAudience: Field biologists and ecologists new to Python Format: Half-day or full-day workshop Prerequisites: None\nAvailable on request.\n\n\n\nScientific R for Ecologists\nR for ecological data analysis: data wrangling, visualization, and statistical modeling with ecologically relevant examples. Developed and workshop-tested at USGS.\nAudience: Field biologists and ecologists new to R, or R users wanting to modernize their workflow Format: Half-day or full-day workshop Prerequisites: None\nAvailable on request.\n\n\n\nIntroduction to Deep Learning with PyTorch\nHands-on introduction to deep learning using PyTorch, taught entirely with ecological examples. Neural network fundamentals, training loops, transfer learning, and evaluation — from first principles to a working classifier on your own data.\nAudience: Ecologists and conservation scientists with basic Python skills Format: 1–2 day workshop Prerequisites: Basic Python (Scientific Python workshop or equivalent)\nIn development.\n\n\n\nIntroduction to Image Classification with PyTorch\nCNNs and transfer learning applied to ecological image data — camera trap images, drone imagery, and spectrograms. Fine-tuning pretrained models, handling class imbalance, and evaluating classifiers on held-out field data.\nAudience: Ecologists working with camera traps, drones, or acoustic monitoring Format: 1–2 day workshop Prerequisites: Introduction to Deep Learning, or equivalent\nIn development.\n\n\n\nDeep Learning for Bioacoustics\nEnd-to-end acoustic monitoring pipeline: PAM data collection, spectrogram generation, BirdNET and custom classifier workflows, evaluation, and deployment. Built around real passive acoustic monitoring datasets.\nAudience: Ecologists and conservation scientists working with acoustic data Format: 1–2 day workshop Prerequisites: Introduction to Deep Learning, or equivalent\nIn development.\n\nTo discuss bringing a workshop or talk to your organization, contact me."
+  },
+  {
+    "objectID": "projects/repos.html",
+    "href": "projects/repos.html",
+    "title": "Repos",
+    "section": "",
+    "text": "The Cognavitron — hover for details · click to navigate"
+  },
+  {
+    "objectID": "projects/repos.html#r-packages",
+    "href": "projects/repos.html#r-packages",
+    "title": "Repos",
+    "section": "R Packages",
+    "text": "R Packages\n\nmkde — Movement Kernel Density Estimation\nR package for 2D and 3D movement-based kernel density estimation (MKDE) for animal home range and space use analysis. Developed in conjunction with the California condor 3D MKDE project; now maintained by the San Diego Supercomputer Center (SDSC).\n\nCRAN: https://cran.r-project.org/package=mkde\nPaper: Tracey JA, Sheppard J, Zhu J, Wei F, Swaisgood RR, Fisher RN (2014). Movement-Based Estimation and Visualization of Space Use in 3D for Wildlife Ecology and Conservation. PLOS ONE 9(7): e101205. https://doi.org/10.1371/journal.pone.0101205\nProject: California Condor Space Use\nTutorial: Animal Space Use in 2D and 3D (coming soon)"
+  },
+  {
+    "objectID": "projects/repos.html#python-tools",
+    "href": "projects/repos.html#python-tools",
+    "title": "Repos",
+    "section": "Python Tools",
+    "text": "Python Tools\n\neasy_birdnet\nConvenience wrapper for BirdNET bird call detection. Runs BirdNET on one or more audio files from AudioMoth or Song Meter recorders and produces a CSV table and detection plot per file. Supports batch and recursive directory modes.\n\nGitHub: https://github.com/Jeff-Tracey/easy_birdnet\nLicense: RAIL Non-Commercial\n\n\n\nuav_pytools\nPython utilities for DJI UAV mission planning, data management, and project setup. Developed for ecological field work with the DJI Mavic 3M (multispectral) and DJI Air 3S. Includes tools for GSD calculation, flight path export, image QC, RGB/multispectral splitting for WebODM, SRT telemetry parsing, and project directory management.\n\nGitHub: https://github.com/Jeff-Tracey/uav_pytools\nLicense: RAIL Non-Commercial\n\n\n\nMegaDetector Pipeline\nComing soon."
+  },
+  {
+    "objectID": "projects/repos.html#r-examples",
+    "href": "projects/repos.html#r-examples",
+    "title": "Repos",
+    "section": "R Examples",
+    "text": "R Examples\n\nr_large_raster\nR examples for working with large raster datasets that don’t fit in memory — tiling, Virtual Raster Datasets (VRTs), and parallel processing. Developed for NAIP multispectral imagery using terra and stars. Includes two parallel implementations (base parallel and future/future.apply) and HPC examples using MPI.\n\nGitHub: https://github.com/Jeff-Tracey/r_large_raster\nLicense: RAIL Non-Commercial"
+  },
+  {
+    "objectID": "projects/past/condors.html",
+    "href": "projects/past/condors.html",
+    "title": "California Condors — 3D Space Use",
+    "section": "",
+    "text": "2018-01-01\nThe Cognavitron — hover for details · click to navigate"
+  },
+  {
+    "objectID": "projects/past/condors.html#background",
+    "href": "projects/past/condors.html#background",
+    "title": "California Condors — 3D Space Use",
+    "section": "Background",
+    "text": "Background\nBiotelemetry — placing tracking devices on animals to collect location data — lets ecologists understand which areas individual animals use. GPS tracking devices can collect hundreds or thousands of locations on a schedule chosen by researchers. But even with dense GPS data, we don’t know where an animal was between observations. This uncertainty matters: an animal may have used an area we never observed it in simply because we weren’t sampling at that moment.\nEcologists have developed progressively better methods for estimating animal space use from location data. An early approach, still used today, is the minimum convex polygon (MCP) — equivalent to stretching a rubber band around all observed locations. The MCP is simple but includes many areas the animal never used. For nearly two decades after Worton (1989), kernel density estimation (KDE) based on observed locations was the standard approach. In 2007, two important advances followed: the LoCoH (local convex hull) method (Getz et al. 2007) greatly improved home range delineation over the MCP, and Horne et al. (2007) introduced a paradigm shift — estimating space use from an interpolated movement path between observed locations using a Brownian bridge, rather than from the locations themselves. This approach is called a movement-based kernel density estimate (MKDE), and it better captures areas an animal likely used during unobserved intervals.\n\n\n\nFigure 1: Four common methods for describing animal space use. Red points are observed locations. Nonparametric methods (top row): minimum convex polygon and LoCoH, with different convex hulls in shades of gray. Kernel-based methods (bottom row): higher density regions in darker gray.\n\n\nAll of these methods share a common limitation: they operate in two spatial dimensions. Some species, however, have an important vertical component to their space use. Until this project, very little work had extended 2D methods to handle full 3D location data."
+  },
+  {
+    "objectID": "projects/past/condors.html#estimating-animal-space-use-in-3d",
+    "href": "projects/past/condors.html#estimating-animal-space-use-in-3d",
+    "title": "California Condors — 3D Space Use",
+    "section": "Estimating Animal Space Use in 3D",
+    "text": "Estimating Animal Space Use in 3D\nThis work began as a collaboration between Jeff A. Tracey and Dr. James K. Sheppard of the San Diego Zoo’s Institute for Conservation Research (now San Diego Zoo Wildlife Alliance) to extend the MKDE approach to three spatial dimensions. The motivation was the spatial ecology of reintroduced California condors (Gymnogyps californianus) and risks they face from wind energy development along the US-Mexico border. The methods, however, apply to any species that can be tracked with biotelemetry and has significant vertical movement — birds, marine mammals, sea turtles, arboreal species.\n\n\n\nFigure 2: A California condor in flight. (photo Don Graham, CC BY-SA 2.0)\n\n\nThe proposed Sempra wind farm in Baja, Mexico, sits in a corridor used by condors reintroduced by the San Diego Zoo. One bird released in Baja flew through the proposed installation area in 2007.\n\n\n\nFigure 3: 3D model of a proposed wind farm along the US-Mexico border in Baja, Mexico. Turbine locations, tower heights, and rotor radii are consistent with the proposed installation."
+  },
+  {
+    "objectID": "projects/past/condors.html#methodology",
+    "href": "projects/past/condors.html#methodology",
+    "title": "California Condors — 3D Space Use",
+    "section": "Methodology",
+    "text": "Methodology\nWe extend the Brownian bridge MKDE of Horne et al. (2007) to three spatial dimensions. The animal’s movement path is approximated by linear interpolation between observed locations. A trivariate kernel is integrated over time for each move step between consecutive locations. As time since the nearest observation increases — reaching its maximum at the midpoint between consecutive locations — the variance of the kernel increases, reflecting greater positional uncertainty. The model assumes equal variance in the x- and y-dimensions and a separate variance in the z-dimension, with additional parameters for observation error. Lower and upper barriers to movement in z can also be specified — for condors, the lower barrier is the earth’s surface.\n\n\n\nFigure 4: Steps involved in building and visualizing a 3D MKDE.\n\n\nOnce the 3D MKDE is calculated, contour surfaces at specified probability levels (e.g., 50%, 75%, 95%, 99%) describe the volume of space used with corresponding probability. These can be visualized in 3D using tools such as ParaView, VisIt, or Mayavi.\n\n\n\nFigure 5: Condor movement data (red spheres = observed locations, red lines = interpolated path) with 99%, 95%, 75%, and 50% contours of a 3D MKDE.\n\n\n\n\n\nFigure 6: Side view of condor movement data and 3D MKDE contours."
+  },
+  {
+    "objectID": "projects/past/condors.html#high-performance-computing",
+    "href": "projects/past/condors.html#high-performance-computing",
+    "title": "California Condors — 3D Space Use",
+    "section": "High-Performance Computing",
+    "text": "High-Performance Computing\nThe computations involved in 3D MKDE are demanding. In 2013, this collaboration expanded to include Robert Sinkovits, Amit Chourasia, and Glenn Lockwood at the San Diego Supercomputer Center (SDSC). SDSC provided technical expertise including optimization of the core C++ code, parallelization of the algorithms, access to HPC resources, and scientific visualization support.\n\n\n\nGordon supercomputer at SDSC. (Photo: Alan Decker / SDSC)\n\n\nA paper describing the computational aspects of the methodology was presented at the XSEDE14 conference, along with an animation for the conference’s Visualization Showcase. In this visualization, 3D MKDEs for a breeding pair of California condors were calculated within a two-day moving window over several years on SDSC’s Gordon supercomputer and animated using VisIt software."
+  },
+  {
+    "objectID": "projects/past/condors.html#software",
+    "href": "projects/past/condors.html#software",
+    "title": "California Condors — 3D Space Use",
+    "section": "Software",
+    "text": "Software\nThis work produced the mkde R package, developed in collaboration with SDZG and SDSC. The package provides functions for setting up animal location data, estimating MKDE variance parameters, creating MKDE objects, computing the MKDE, and exporting output files. Joint space-use between two animals based on spatiotemporal overlap of their MKDEs is also implemented. Output can be exported in VTK and XDMF formats for 3D visualization in ParaView, VisIt, and Mayavi. The package supports both 2D and 3D MKDE calculation and is now maintained by SDSC."
+  },
+  {
+    "objectID": "projects/past/condors.html#products",
+    "href": "projects/past/condors.html#products",
+    "title": "California Condors — 3D Space Use",
+    "section": "Products",
+    "text": "Products\n\nR Package: mkde on CRAN\nPaper: Tracey JA, Sheppard J, Zhu J, Wei F, Swaisgood RR, Fisher RN (2014). Movement-Based Estimation and Visualization of Space Use in 3D for Wildlife Ecology and Conservation. PLOS ONE 9(7): e101205. https://doi.org/10.1371/journal.pone.0101205\nXSEDE14 Proceedings Paper: Tracey JA, Sheppard JK, Lockwood GK, Chourasia A, Tatineni M, Fisher RN, Sinkovits RS (2014). Efficient 3D movement-based kernel density estimator and application to wildlife ecology. Proceedings of the 2014 Annual Conference on Extreme Science and Engineering Discovery Environment, pp. 1–8. https://doi.org/10.1145/2616498.2616522\nXSEDE14 Visualization Showcase: Animated 3D MKDEs for a breeding condor pair"
+  },
+  {
+    "objectID": "projects/past/condors.html#references",
+    "href": "projects/past/condors.html#references",
+    "title": "California Condors — 3D Space Use",
+    "section": "References",
+    "text": "References\nGetz WM, Fortmann-Roe S, Cross PC, Lyons AJ, Ryan SJ, et al. (2007) LoCoH: Nonparametric Kernel Methods for Constructing Home Ranges and Utilization Distributions. PLoS ONE 2(2): e207. https://doi.org/10.1371/journal.pone.0000207\nHorne JS, Garton EO, Krone SM, Lewis JS (2007) Analyzing animal movements using Brownian bridges. Ecology 88(9): 2354–2363.\nWorton BJ (1989) Kernel methods for estimating the utilization distribution in home-range studies. Ecology 70(1): 164–168."
+  },
+  {
+    "objectID": "projects/past/condors.html#collaborators",
+    "href": "projects/past/condors.html#collaborators",
+    "title": "California Condors — 3D Space Use",
+    "section": "Collaborators",
+    "text": "Collaborators\n\nJames K. Sheppard, Ph.D. — San Diego Zoo Wildlife Alliance, Institute for Conservation Research\n\nSan Diego Zoo Wildlife Alliance — California Condor Program\n\nRobert Sinkovits and the San Diego Supercomputer Center"
+  },
+  {
+    "objectID": "projects/past/neural-net-movement.html",
+    "href": "projects/past/neural-net-movement.html",
+    "title": "Neural Network Movement Models",
+    "section": "",
+    "text": "The Cognavitron — hover for details · click to navigate\nThis work dates to my PhD dissertation at Colorado State University, completed in 2006. I mention that not as a historical footnote but because it matters: I have been thinking about neural networks, animal behavior, and landscape ecology for twenty years. The tools have changed beyond recognition — from hand-coded networks fit on desktop workstations to transformer architectures trained on GPU clusters — but the questions I was asking then are the same questions driving my current work. Connectivity. Movement. How animals respond to the landscape they live in. How we build models that are honest about that complexity.\nI came to deep learning not through a crash course but through a long arc that started here. That context shapes how I build models, what I think they can and can’t do, and what questions I think are worth asking.\nThe core idea: use a neural network to model how an animal’s next movement step depends on the surrounding landscape. Step length and turning angle are modeled jointly — step length with a gamma distribution, turning angle with a von Mises distribution. When multiple landscape features compete for influence, a finite mixture structure assigns a mixing weight to each, letting the model capture multi-modal movement decisions."
+  },
+  {
+    "objectID": "projects/past/neural-net-movement.html#network-architecture",
+    "href": "projects/past/neural-net-movement.html#network-architecture",
+    "title": "Neural Network Movement Models",
+    "section": "Network Architecture",
+    "text": "Network Architecture\nThe network takes landscape inputs and outputs the parameters of probability distributions for turning angle and step length. Turning angle is modeled with a von Mises distribution — the circular analogue of the Gaussian, appropriate for angles. When an animal responds to multiple landscape features, a finite mixture assigns a weight to each component, capturing the multi-modal structure of real movement decisions.\n\n\n\nSimple mixture network for a single landscape feature. Scalar inputs (distances to the feature) drive the mixing proportion node u₁; vector inputs (directional components s and d) feed the hidden layer outputting von Mises parameters.\n\n\n\n\n\nFull two-feature mixture network. Two hidden layers; two bias nodes; inputs for two landscape features (s and d components for each). The output layer produces one mixing proportion u₁ and four von Mises parameters w₁–w₄. Each row of weights encodes how a specific feature influences turning direction at a given moment.\n\n\n\n\n\nExample von Mises mixture output — the predicted turning angle distribution for one animal at one step. The bimodal shape reflects a real behavioral decision: the animal is balancing attraction toward one feature against another. A unimodal distribution would miss this entirely."
+  },
+  {
+    "objectID": "projects/past/neural-net-movement.html#training-with-a-genetic-algorithm",
+    "href": "projects/past/neural-net-movement.html#training-with-a-genetic-algorithm",
+    "title": "Neural Network Movement Models",
+    "section": "Training with a Genetic Algorithm",
+    "text": "Training with a Genetic Algorithm\nBy 2004–2006, gradient-based optimization of neural networks was well-known but practically difficult — vanishing gradients, sensitivity to initialization, and local minima were real problems, especially with small ecological datasets and non-standard output distributions. I trained the networks using a genetic algorithm (GA): a population of candidate weight vectors evolves over generations through selection, crossover, and mutation, with fitness measured by negative log-likelihood on the training data.\n\n\n\nGA operations: elitism preserves the best chromosomes across generations; selection chooses parents by fitness; crossover recombines weight vectors; mutation introduces variation. Each chromosome is a full set of network weights.\n\n\n\n\n\nGA training history over 50,000 generations. Negative log-likelihood (y-axis) for the minimum (black), mean (gray), and maximum (light gray) chromosomes in the population. The sharp initial drop reflects rapid early improvement; the long tail reflects the difficulty of the optimization landscape. Population diversity (spread between min and max) is maintained throughout."
+  },
+  {
+    "objectID": "projects/past/neural-net-movement.html#agent-based-simulation-framework",
+    "href": "projects/past/neural-net-movement.html#agent-based-simulation-framework",
+    "title": "Neural Network Movement Models",
+    "section": "Agent-Based Simulation Framework",
+    "text": "Agent-Based Simulation Framework\nThe fitted network was embedded in an agent-based model (ABM) to simulate animal movement through heterogeneous landscapes. The GA is not just a training tool — it is part of the model architecture, iterating within the ABM to fit parameters to observed movement data for each individual animal.\n\n\n\nFull model architecture. The Spatial Component supplies continuous and categorical landscape rasters. The Move Agent Component contains the neural network, the GA optimizer, and the effector that generates movement steps. The Interaction Component mediates between landscape and agent. Solid arrows: always active; dashed: fitting; double-dashed: simulation."
+  },
+  {
+    "objectID": "projects/past/neural-net-movement.html#simulations-puma-movement-in-southern-california",
+    "href": "projects/past/neural-net-movement.html#simulations-puma-movement-in-southern-california",
+    "title": "Neural Network Movement Models",
+    "section": "Simulations — Puma Movement in Southern California",
+    "text": "Simulations — Puma Movement in Southern California\nThe fitted model was validated by simulation: run the trained agent forward through the landscape and compare the simulated paths to observed movement data. The puma data used here were generously shared by Paul Beier (Northern Arizona University), whose long-term field work on mountain lion (Puma concolor) movement and landscape connectivity in southern California provided an ideal test case — a large-bodied carnivore navigating a highly fragmented urban-wildland matrix.\n\n\n\nIndividual simulated paths for puma M8 — five trials, each shown as points and lines over 1993 land cover. The model was fit to M8’s observed GPS locations; these are forward simulations using the fitted parameters. The paths follow habitat structure, avoiding urban core and tracking open space and habitat/vacant land cover.\n\n\n\n\n\nSame simulations at a broader spatial extent, showing the full southern California urban matrix. The simulated paths stay coherent with the observed movement corridor — navigating through habitat patches in a landscape dominated by urban and agricultural land use.\n\n\n\n\n\nAll simulated paths combined — points and lines for all trials overlaid. The density of simulated locations reveals the movement corridors the model learned from the observed data: concentrated in open space and habitat patches, thinning across agricultural land, absent from urban core.\n\n\nMore content coming soon."
+  },
+  {
+    "objectID": "projects/past/neural-net-movement.html#papers",
+    "href": "projects/past/neural-net-movement.html#papers",
+    "title": "Neural Network Movement Models",
+    "section": "Papers",
+    "text": "Papers\nTracey JA, Zhu J, Crooks KR (2011). Modeling and inference of animal movement using artificial neural networks. Environmental and Ecological Statistics 18(3): 393–410. https://doi.org/10.1007/s10651-010-0138-8\nTracey JA, Zhu J, Crooks KR (2005). A set of nonlinear regression models for animal movement in response to a single landscape feature. Journal of Agricultural, Biological, and Environmental Statistics 10(1): 1–18. https://doi.org/10.1198/108571105X29056\nTracey JA (2006). Agent-based movement models and landscape connectivity. Ph.D. Dissertation, Colorado State University.\nTracey JA (2004). Models for Animal Movement in Response to Landscape Features. M.S. Thesis in Biometry, University of Wisconsin – Madison."
+  },
+  {
+    "objectID": "projects/past/fire-fragmentation.html",
+    "href": "projects/past/fire-fragmentation.html",
+    "title": "Fire, Fragmentation, and Conservation Prioritization",
+    "section": "",
+    "text": "The Cognavitron — hover for details · click to navigate\nMore content coming soon."
+  },
+  {
+    "objectID": "projects/past/fire-fragmentation.html#papers",
+    "href": "projects/past/fire-fragmentation.html#papers",
+    "title": "Fire, Fragmentation, and Conservation Prioritization",
+    "section": "Papers",
+    "text": "Papers\nTracey JA, Rochester CJ, Hathaway SA, Preston KL, Syphard AD, Vandergast AG, Diffendorfer JE, Franklin J, MacKenzie JB, Oberbauer TA, et al. (2018). Prioritizing conserved areas threatened by wildfire and fragmentation for monitoring and management. PLoS ONE 13(9): e0200203. https://doi.org/10.1371/journal.pone.0200203\nSyphard AD, Butsic V, Bar-Massada A, Keeley JE, Tracey JA, Fisher RN (2016). Setting priorities for private land conservation in fire-prone landscapes: Are fire risk reduction and biodiversity conservation competing or compatible objectives? Ecology and Society 21(3): 302. https://doi.org/10.5751/ES-08410-210302"
+  },
+  {
+    "objectID": "projects/past/rattlesnakes.html",
+    "href": "projects/past/rattlesnakes.html",
+    "title": "Red Diamond Rattlesnakes",
+    "section": "",
+    "text": "The Cognavitron — hover for details · click to navigate\nMy M.S. research at UC San Diego tracked red diamond rattlesnakes (Crotalus ruber) in the coastal chaparral of San Diego County — radio-telemetry, home range estimation, and an early attempt to model their movement statistically. It was also where I learned that fieldwork has a way of creating situations no one planned for."
+  },
+  {
+    "objectID": "projects/past/rattlesnakes.html#study-area",
+    "href": "projects/past/rattlesnakes.html#study-area",
+    "title": "Red Diamond Rattlesnakes",
+    "section": "Study Area",
+    "text": "Study Area\nThe study sites were fragments of coastal sage scrub and chaparral embedded in the urban matrix of northern San Diego — canyon reserves surrounded on all sides by residential development. The urban-wildland interface was not a backdrop; it was the research question. Were snakes in fragmented patches behaving differently from those in larger core areas? Were their home ranges smaller, their movements more constrained?\n\n\n\nCoastal chaparral in northern San Diego County — the dominant vegetation type in the study area. Native shrub cover over rocky terrain; dense, difficult to move through, and home to a surprising diversity of wildlife.\n\n\n\n\n\nThe urban-wildland interface at one of the study sites. Native chaparral in the foreground; residential development immediately behind the ridge. Several of the study animals ranged up to — and occasionally beyond — this boundary."
+  },
+  {
+    "objectID": "projects/past/rattlesnakes.html#field-methods",
+    "href": "projects/past/rattlesnakes.html#field-methods",
+    "title": "Red Diamond Rattlesnakes",
+    "section": "Field Methods",
+    "text": "Field Methods\nSnakes were located by radio-telemetry and GPS, typically multiple times per week. Each animal carried a small implanted transmitter — surgically placed under the skin along the body wall — that broadcast a unique radio frequency. I’d hike the canyons with a receiver and directional antenna, triangulating on the signal, and close in on foot until I found the snake under a rock, in a crevice, or coiled in the shade of a shrub.\n\n\n\nRadio-tracking in the field. The handheld directional antenna picks up the transmitter signal; the receiver gives signal strength. You follow the beeps uphill through the chaparral until you find the snake.\n\n\n\n\n\nA red diamond rattlesnake (Crotalus ruber) close-up. The heat-sensing pit organs between eye and nostril are clearly visible — the defining feature of pit vipers, used to detect warm-bodied prey in complete darkness."
+  },
+  {
+    "objectID": "projects/past/rattlesnakes.html#teddy",
+    "href": "projects/past/rattlesnakes.html#teddy",
+    "title": "Red Diamond Rattlesnakes",
+    "section": "Teddy",
+    "text": "Teddy\nBefore I could track snakes in the field, I needed to learn to implant transmitters surgically. The first one I did was under the supervision of a veterinarian from UCSD. The snake was a southern Pacific rattlesnake (Crotalus oreganus helleri) — a different species from my study animals, but the procedure is the same. I named him Teddy, after my advisor Ted Case. It seemed appropriate.\n\n\n\nThe radio transmitter used in the implant surgeries. Quarter shown for scale — small enough to fit inside a snake, expensive enough that losing one was a real problem.\n\n\n\n\n\nTeddy in the lab prior to surgery. Southern Pacific rattlesnakes (Crotalus oreganus helleri) are a robust, heavy-bodied species — a good candidate for a first implant.\n\n\nThe procedure: anesthetize the snake, make a small incision along the lower body wall, place the transmitter, suture closed. Under a vet’s guidance the first time, then on my own after that. The antenna exits through the skin and trails behind the snake — the signal is what you follow through the chaparral.\n\n\n\nTransmitter implantation surgery. The snake is anesthetized on a sterile drape; the incision is open and the transmitter is being seated. Done under veterinary supervision for the first procedure, then independently thereafter.\n\n\nTeddy recovered well, carried his transmitter, and eventually went back to his home range. My kids got to meet him before he did. I missed him when the study was over."
+  },
+  {
+    "objectID": "projects/past/rattlesnakes.html#the-coachwhip",
+    "href": "projects/past/rattlesnakes.html#the-coachwhip",
+    "title": "Red Diamond Rattlesnakes",
+    "section": "The Coachwhip",
+    "text": "The Coachwhip\nOne day my labmate John came back from tracking horned lizards with an unusual problem. The lizard he’d been tracking had gone silent — and when he finally found the signal, it wasn’t moving. He dug around and found a coachwhip (Masticophis flagellum) that had swallowed the lizard, transmitter and all. We brought the snake to the lab and took an X-ray. There it was: the outline of the horned lizard, and the transmitter clearly visible inside.\nRadio transmitters are not cheap, and they can be refurbished. My advisor, Ted Case — a serious herpetologist and ecologist — looked at the situation practically: “Kill the snake, get the transmitter.”\nI hated that idea. Coachwhips are beautiful snakes, and this one had already demonstrated her personality — she’d bitten me three times in the nose when we caught her. I asked Ted if I could try to remove the transmitter surgically instead. He thought about it and said okay.\nBy this point I had implanted transmitters in rattlesnakes on my own. But removing a foreign object — with a horned lizard still partly around it — was different. I anesthetized the snake, made the incision, and worked the transmitter free. I sutured her back up and thought: I must have killed her.\nShe came around slowly. We kept her in the lab to recover — coachwhips are ectotherms; they don’t need to eat much, and healing moves at the pace of their metabolism. After about two weeks, I caught a fence lizard and offered it to her. She struck, turned it in her coils, and swallowed it cleanly. No hesitation. We gave her a few more weeks, then released her exactly where John had found her.\nAbout nine months later, John was out tracking horned lizards in the same area. He spotted a coachwhip moving through the scrub. Scar on her side. Looked gravid. Moving like she owned the place."
+  },
+  {
+    "objectID": "projects/past/rattlesnakes.html#movement-and-home-range",
+    "href": "projects/past/rattlesnakes.html#movement-and-home-range",
+    "title": "Red Diamond Rattlesnakes",
+    "section": "Movement and Home Range",
+    "text": "Movement and Home Range\nThe main thesis work asked whether rattlesnake movement patterns differed between fragmented and core habitat patches. Males and females also differed substantially — males move more and farther, particularly during the breeding season.\n\n\n\nDistributions of turning angles (a) and move lengths (b) for female and male Crotalus ruber. Males show much larger maximum move lengths and a broader distribution — consistent with active mate-searching during the breeding season.\n\n\n\n\n\nHome range (Terra Nova study site) for one individual, estimated by minimum convex polygon (MCP) and kernel density estimation. The land cover map shows the fragmented nature of the habitat — natural vegetation (green) surrounded by urban development."
+  },
+  {
+    "objectID": "projects/past/rattlesnakes.html#papers",
+    "href": "projects/past/rattlesnakes.html#papers",
+    "title": "Red Diamond Rattlesnakes",
+    "section": "Papers",
+    "text": "Papers\nBrown TK, Lemm JM, Montagne J-P, Tracey JA, Alberts AC (2008). Spatial ecology, habitat use, and survivorship of resident and translocated red diamond rattlesnakes (Crotalus ruber). In The Biology of Rattlesnakes. Loma Linda University Press, California.\nTracey JA (2000). Movement of Red Diamond Rattlesnakes (Crotalus ruber ruber) in Heterogeneous Landscapes in Coastal Southern California. M.S. Thesis in Biology, University of California, San Diego."
+  },
+  {
+    "objectID": "projects/past/bobcats.html",
+    "href": "projects/past/bobcats.html",
+    "title": "Bobcat Movement — Finite Mixture Models",
+    "section": "",
+    "text": "The Cognavitron — hover for details · click to navigate\nMore content coming soon."
+  },
+  {
+    "objectID": "projects/past/bobcats.html#papers",
+    "href": "projects/past/bobcats.html#papers",
+    "title": "Bobcat Movement — Finite Mixture Models",
+    "section": "Papers",
+    "text": "Papers\nTracey JA, Zhu J, Boydston E, Lyren L, Fisher RN, Crooks KR (2013). Mapping behavioral landscapes: a finite mixture modeling approach. Ecological Applications 23(3): 654–669. https://doi.org/10.1890/12-0687.1\nRuell EW, Riley SPD, Douglas MR, Antolin MF, Pollinger JR, Tracey JA, Lyren LM, Boydston EE, Fisher RN, Crooks KR (2012). Urban habitat fragmentation and genetic population structure of bobcats in coastal southern California. The American Midland Naturalist 168(2): 265–280. https://doi.org/10.1674/0003-0031-168.2.265\nBoydston EE, Tracey JA, Preston KL, Rochester CJ, Fisher RN (2018). Modeling resource selection of bobcats (Lynx rufus) and vertebrate species distributions in Orange County, southern California. USGS Open-File Report 2018-1095. https://doi.org/10.3133/ofr20181095"
+  },
+  {
+    "objectID": "projects/past/eeid.html",
+    "href": "projects/past/eeid.html",
+    "title": "Ecology of Infectious Disease — Agent-Based Models",
+    "section": "",
+    "text": "The Cognavitron — hover for details · click to navigate\nMore content coming soon."
+  },
+  {
+    "objectID": "projects/past/eeid.html#papers",
+    "href": "projects/past/eeid.html#papers",
+    "title": "Ecology of Infectious Disease — Agent-Based Models",
+    "section": "Papers",
+    "text": "Papers\nTracey JA, Bevins SN, VandeWoude S, Crooks KR (2014). An agent-based movement model to assess the impact of landscape fragmentation on disease transmission. Ecosphere 5(9): 1–24. https://doi.org/10.1890/ES13-00376.1\nBevins SN, Tracey JA, Franklin SP, Schmit VL, MacMillan ML, Gage KL, Schriefer ME, Logan KA, Sweanor LL, Alldredge MW, Krumm C, Boyce WM, Vickers W, Riley SPD, Lyren LM, Boydston EE, Fisher RN, Roelke ME, Salman M, Crooks KR, VandeWoude S (2009). Wild Felids as Hosts for Human Plague, Western United States. Emerging Infectious Diseases 15(12): 2021–2024. https://doi.org/10.3201/eid1512.090526"
+  },
+  {
+    "objectID": "projects/publications.html",
+    "href": "projects/publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "The Cognavitron — hover for details · click to navigate"
+  },
+  {
+    "objectID": "projects/publications.html#journal-articles",
+    "href": "projects/publications.html#journal-articles",
+    "title": "Publications",
+    "section": "Journal Articles",
+    "text": "Journal Articles\n\n\n\nWiens J.D., Bloom P.H., Madden M.C., Kolar P.S., Tracey J.A., Fisher R.N. (2022). Golden eagle occupancy surveys and monitoring strategy in coastal southern California, United States. Frontiers in Ecology and Evolution, 9:665792.\nPoessel S.A., Woodbridge B., Smith B.W., Murphy R.K., Bedrosian B.E., Bell D.A., et al. (2022). Interpreting long-distance movements of non-migratory golden eagles: Prospecting and nomadism?. Ecosphere, 13(6):e4072.\nSur M., Woodbridge B., Esque T.C., Belthoff J.R., Bloom P.H., Fisher R.N., et al. (2021). Linking behavioral states to landscape features for improved conservation management. Ecology and Evolution, 11(12):7905–7916.\nBrehme C.S., Tracey J.A., Ewing B.A., Hobbs M.T., Launer A.E., Matsuda T.A., et al. (2021). Responses of migratory amphibians to barrier fencing inform the spacing of road underpasses: a case study with California tiger salamanders (Ambystoma californiense) in Stanford, CA, USA. Global Ecology and Conservation, 31:e01857.\nSur M., Duerr A.E., Bell D.A., Fisher R.N., Tracey J.A., Bloom P.H., et al. (2020). Relevance of individual and environmental drivers of movement of Golden Eagles. Ibis, 162(2):381–399.\nRapstine N.I., Tracey J.A., Gordon J.M., Fisher R.N. (2019). Unsupervised Clustering of Telemetry Data. Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis. link\nTracey J.A., Rochester C.J., Hathaway S.A., Preston K.L., Syphard A.D., Vandergast A.G., et al. (2018). Prioritizing conserved areas threatened by wildfire and fragmentation for monitoring and management. PLoS One, 13(9):e0200203. doi:10.1371/journal.pone.0200203\nSyphard A.D., Butsic V., Bar-Massada A., Keeley J.E., Tracey J.A., Fisher R.N. (2016). Setting priorities for private land conservation in fire-prone landscapes: Are fire risk reduction and biodiversity conservation competing or compatible objectives?. Ecology and Society, 21(3). doi:10.5751/ES-08410-210302\nRisley J.C., Tracey J.A., Markstrom S.L., Hay L. (2014). Using Gridded Snow Covered Area and Snow-Water Equivalence Spatial Data Sets to Improve Snow-Pack Depletion Simulation in a Continental Scale Hydrologic Model. AGU Fall Meeting Abstracts.\nTracey J.A., Sheppard J., Zhu J., Wei F., Swaisgood R.R., Fisher R.N. (2014). Movement-Based Estimation and Visualization of Space Use in 3D for Wildlife Ecology and Conservation. PLoS One, 9(7):e101205. doi:10.1371/journal.pone.0101205\nTracey J.A., Bevins S.N., VandeWoude S., Crooks K.R. (2014). An agent-based movement model to assess the impact of landscape fragmentation on disease transmission. Ecosphere, 5(9). doi:10.1890/ES13-00376.1\nAscens{~a}o F., Grilo C., LaPoint S., Tracey J., Clevenger A.P., Santos-Reis M. (2014). Inter-Individual Variability of Stone Marten Behavioral Responses to a Highway. PLoS One, 9(7):e103544. doi:10.1371/journal.pone.0103544\nTracey J.A., Zhu J., Boydston E., Lyren L., Fisher R.N., Crooks K.R. (2013). Mapping behavioral landscapes: a finite mixture modeling approach. Ecological Applications, 23(3):654–669. doi:10.1890/12-0687.1\nBrehme C.S., Tracey J.A., McClenaghan L.R., Fisher R.N. (2013). Permeability of roads to movement of scrubland lizards and small mammals. Conservation Biology, 27(4):710-720. doi:10.1111/cobi.12081\nRuell E., Riley S., Douglas M., Antolin M., Pollinger J., Tracey J., et al. (2012). Urban habitat fragmentation and genetic population structure of bobcats in coastal southern California. The American Midland Naturalist, 168(2):265–280. doi:10.1674/0003-0031-168.2.265\nTracey J.A., Zhu J., Crooks K.R. (2011). Modeling and inference of animal movement using artificial neural networks. Environmental and Ecological Statistics, 18(3):393–410. doi:10.1007/s10651-010-0138-8\nScherer R.D., Tracey J.A. (2011). A power analysis for the use of counts of egg masses to monitor wood frog (Lithobates sylvaticus) populations. Herpetological Conservation and Biology, 6(1):81–90.\nBevins S.N., Tracey J.A., Franklin S.P., Schmit V.L., MacMillan M.L., Gage K.L., et al. (2009). Wild Felids as Hosts for Human Plague, Western United States. Emerging Infectious Diseases, 15(12):2021–2024. doi:10.3201/eid1512.090526\nLyren L.M., Turschak G.M., Ambat E.S., Haas C.D., Tracey J.A., Boydston E.E., et al. (2006). Carnivore activity and movement in a southern California protected area, the North/Central Irvine Ranch. US Geological Survey Technical Report, :1–115.\nTracey J.A., Zhu J., Crooks K.R. (2005). A set of nonlinear regression models for animal movement in response to a single landscape feature. Journal of Agricultural, Biological, and Environmental Statistics, 10(1):1–18. doi:10.1198/108571105X29056"
+  },
+  {
+    "objectID": "projects/publications.html#book-chapters",
+    "href": "projects/publications.html#book-chapters",
+    "title": "Publications",
+    "section": "Book Chapters",
+    "text": "Book Chapters\n\n\n\nBrown T.K., Lemm J.M., Montagne J., Tracey J.A., Alberts A.C. (2008). Spatial ecology, habitat use, and survivorship of resident and translocated red diamond rattlesnakes (Crotalus ruber). In The Biology of Rattlesnakes. Loma Linda University Press, California, USA.\nTracey J.A. (2006). Individual-based modeling as a tool for conserving connectivity. In Connectivity Conservation: Maintaining Connections for Nature, pp. 343. Cambridge University Press. doi:10.1017/CBO9780511754821.001"
+  },
+  {
+    "objectID": "projects/publications.html#conference-proceedings",
+    "href": "projects/publications.html#conference-proceedings",
+    "title": "Publications",
+    "section": "Conference Proceedings",
+    "text": "Conference Proceedings\n\n\n\nRapstine N.I., Tracey J.A., Gordon J.M., Fisher R.N. (2019). Unsupervised Clustering of Telemetry Data. Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis. link\nRisley J.C., Tracey J.A., Markstrom S.L., Hay L. (2014). Using Gridded Snow Covered Area and Snow-Water Equivalence Spatial Data Sets to Improve Snow-Pack Depletion Simulation in a Continental Scale Hydrologic Model. AGU Fall Meeting Abstracts.\nTracey J.A., Sheppard J.K., Lockwood G.K., Chourasia A., Tatineni M., Fisher R.N., et al. (2014). Efficient 3D movement-based kernel density estimator and application to wildlife ecology. Proceedings of the 2014 Annual Conference on Extreme Science and Engineering Discovery Environment. doi:10.1145/2616498.2616522"
+  },
+  {
+    "objectID": "projects/publications.html#reports",
+    "href": "projects/publications.html#reports",
+    "title": "Publications",
+    "section": "Reports",
+    "text": "Reports\n\n\n\nTracey J.A., Madden M.C., Bloom P.H., Fisher R.N. (2020). A clarification on the effects of urbanization on Golden Eagle (Aquila chrysaetos) habitat selection. U.S. Geological Survey, USGS Data Series 1128. doi:10.3133/ds1128\nTracey J.A., Madden M.C., Molden J.C., Sebes J.B., Bloom P.H., Fisher R.N. (2020). Biotelemetry data for Golden Eagles (Aquila chrysaetos) captured in coastal southern California, February 2017–December 2019. U.S. Geological Survey, 1128. doi:10.3133/ds1128\nTracey J.A., Madden M.C., Bloom P.H., Katzner T.E., Fisher R.N. (2018). Golden eagle (Aquila chrysaetos) habitat selection as a function of land use and terrain, San Diego County, California. U.S. Geological Survey, 2018-1067. doi:10.3133/ofr20181067\nBoydston E.E., Tracey J.A., Preston K.L., Rochester C.J., Fisher R.N. (2018). Modeling resource selection of bobcats (Lynx rufus) and vertebrate species distributions in Orange County, southern California, with a section on modeling for reptile, amphibian, and bird distributions. US Geological Survey, 2018-1095. doi:10.3133/ofr20181095\nTracey J.A., Madden M.C., Sebes J.B., Bloom P.H., Katzner T.E., Fisher R.N. (2017). Biotelemetry data for golden eagles (Aquila chrysaetos) captured in coastal southern California, February 2016–February 2017. U.S. Geological Survey, 1051. doi:10.3133/ds1051\nTracey J.A., Madden M.C., Sebes J.B., Bloom P.H., Katzner T.E., Fisher R.N. (2016). Biotelemetry data for golden eagles (Aquila chrysaetos) captured in coastal southern California, November 2014–February 2016. U.S. Geological Survey, 994. doi:10.3133/ds994\nTracey J.A., Brehme C.S., Rochester C., Clark D., Fisher R.N. (2014). A Field Study of Small Vertebrate Use of Wildlife Underpasses in San Diego County, 2014. U.S. Geological Survey."
+  },
+  {
+    "objectID": "projects/publications.html#theses",
+    "href": "projects/publications.html#theses",
+    "title": "Publications",
+    "section": "Theses",
+    "text": "Theses\n\n\n\nTracey J.A. (2006). Agent-based movement models and landscape connectivity. Ph.D. Dissertation, Colorado State University.\nTracey J.A. (2004). Models for Animal Movement in Response to Landscape Features. Thesis for M.S. in Biometry, University of Wisconsin – Madison.\nTracey J.A. (2000). Movement of Red Diamond Rattlesnakes ({}) in Heterogeneous Landscapes in Coastal Southern California. Thesis for M.S. in Biology, University of California, San Diego."
+  },
+  {
+    "objectID": "projects/current/suav-3d.html",
+    "href": "projects/current/suav-3d.html",
+    "title": "sUAV 3D Structure and AI Classification",
+    "section": "",
+    "text": "The Cognavitron — hover for details · click to navigate\n\n\n\nComing soon."
+  },
+  {
+    "objectID": "projects/current/suav-veg.html",
+    "href": "projects/current/suav-veg.html",
+    "title": "sUAV Vegetation Mapping",
+    "section": "",
+    "text": "The Cognavitron — hover for details · click to navigate\n\n\n\nMultispectral and RGB orthophotos and 3D surface models acquired with a DJI Mavic 3M over southern California chaparral. The goal is to map and monitor vegetation cover, detect invasive species, and characterize habitat structure at ecologically relevant scales — work that is difficult or impossible with satellite imagery alone.\nThe images below are from a mission flown at Rancho Mission Canyon, San Diego County, California on May 6, 2026.\n\n\n\nRGB orthophoto of Rancho Mission Canyon chaparral. Trail system visible; dominant shrub cover includes lemonade berry (Rhus integrifolia) and other native chaparral species. Acquired with DJI Mavic 3M, processed with WebODM.\n\n\n\n\n\nFalse-color multispectral orthophoto (R-G-NIR) of the same area. Blue tones indicate healthy vegetation with high NIR reflectance; yellow-green and darker tones indicate stressed or senesced tissue. The spectral contrast reveals fine-scale variation in vegetation condition not visible in the RGB image.\n\n\n\n\n\n3D surface model of Rancho Mission Canyon generated by structure-from-motion photogrammetry (WebODM). Canopy height and terrain structure are clearly resolved across the slope. The trail system and individual shrub crowns are visible."
+  },
+  {
+    "objectID": "projects/current/suav-maskcnn.html",
+    "href": "projects/current/suav-maskcnn.html",
+    "title": "sUAV + Mask R-CNN — Aerial Wildlife Detection",
+    "section": "",
+    "text": "The Cognavitron — hover for details · click to navigate\n\n\n\nMask R-CNN instance segmentation applied to nadir UAV imagery for detection and classification of marine wildlife from aerial surveys. The model detects and delineates individual animals in high-resolution ocean imagery — leopard sharks, bat rays, sea lions, seabirds — at confidence levels suitable for automated survey pipelines.\n\n\n\nLeopard shark (Triakis semifasciata) detection. Confidence: 1.00. The instance segmentation mask captures the full body outline against the ocean surface.\n\n\n\n\n\nBat ray (Myliobatis californica) detection. Confidence: 0.99. Partial view — the ray is at the edge of the frame — and the model still segments it correctly.\n\n\n\n\n\nCalifornia sea lion (Zalophus californianus) detection. Confidence: 0.98. Swimming at the surface; the segmentation mask distinguishes the animal from sun glint and surface texture.\n\n\n\n\n\nSeabird in flight detection. Confidence: 0.96. The model handles a flying animal against open water — a harder case than a stationary surface animal. Note the large aggregation of animals visible in the upper portion of the frame that were not detected — training data limitations on dense aggregations.\n\n\nMore content coming soon."
+  },
+  {
+    "objectID": "about/contact.html",
+    "href": "about/contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "The Cognavitron — hover for details · click to navigate\n\n\n\nEmail: jeff.a.tracey@proton.me\n\n\n\nScripps Pier (photo: Jeff A. Tracey 2006)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Jeff A. Tracey, PhD",
+    "section": "",
+    "text": "Research Associate at Conservation Biology Institute"
+  },
+  {
+    "objectID": "index.html#the-mission",
+    "href": "index.html#the-mission",
+    "title": "Jeff A. Tracey, PhD",
+    "section": "The Mission",
+    "text": "The Mission\nWe are at an unprecedented time. Never in human history has biodiversity — life on planet Earth — been under greater threat.\nAt the same time, never before have we had more powerful tools for gathering data from the wild and processing it to yield more useful insights and guide our decisions.\nWe simultaneously face a threat and have an opportunity.\nMy mission is to bring AI and other computational tools to bear on ecological research and conservation science so that we may effectively meet the challenge of protecting our home and the life we share it with.\nRead more about the mission →\n\n\n\n\nCalifornia sea lions at a southern California haulout (Photo: Jeff A. Tracey 2026)"
+  },
+  {
+    "objectID": "index.html#what-i-bring",
+    "href": "index.html#what-i-bring",
+    "title": "Jeff A. Tracey, PhD",
+    "section": "What I Bring",
+    "text": "What I Bring\nWhat I Do: I build machine learning tools for wildlife monitoring — working across acoustic recordings, camera trap imagery, and UAV-based remote sensing, often under the messy, class-imbalanced conditions that real-world ecological datasets produce.\nBackground: My background spans over 20 years, with 15 years at USGS — a decade as an ecologist and biostatistician at the Western Ecological Research Center, then as a computational scientist with Advanced Research Computing — which means I’ve worked on both sides of the field-to-algorithm pipeline. I’m currently affiliated with the Conservation Biology Institute.\nCurrent focus: deep generative models for acoustic data augmentation, geospatial AI for sUAV (drone) survey data, and multi-modal approaches to species detection and behavioral analysis.\nMy full story →\n\n\n\nMask R-CNN detections of marine animals on aerial ocean imagery that I captured with a DJI Air 3S. (Imagery and models by Jeff A. Tracey)\n\n\n\n\n\n                            \n                                            \nThe Cognavitron — hover for details · click to navigate"
+  },
+  {
+    "objectID": "index.html#get-in-touch",
+    "href": "index.html#get-in-touch",
+    "title": "Jeff A. Tracey, PhD",
+    "section": "Get in Touch",
+    "text": "Get in Touch\nIf the mission resonates — as a researcher, funder, student, collaborator, or someone who simply cares about wild places — I’d love to hear from you.\nContact →"
+  }
+]
