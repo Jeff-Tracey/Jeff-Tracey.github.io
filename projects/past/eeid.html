@@ -169,7 +169,8 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#papers" id="toc-papers" class="nav-link active" data-scroll-target="#papers">Papers</a></li>
+  <li><a href="#simulation-sequence" id="toc-simulation-sequence" class="nav-link active" data-scroll-target="#simulation-sequence">Simulation Sequence</a></li>
+  <li><a href="#papers" id="toc-papers" class="nav-link" data-scroll-target="#papers">Papers</a></li>
   </ul>
 </nav>
     </div>
@@ -264,7 +265,77 @@ if (outputEl) {{
 })();
 </script>
 <hr>
-<p><em>More content coming soon.</em></p>
+<p>How does habitat fragmentation affect the spread of infectious disease through a wildlife population? To study this, I built an agent-based model (ABM) in which simulated bobcats move through a spatially explicit landscape, form contact networks based on proximity, and transmit infection to neighbors. The landscape is derived from actual land cover data — green pixels are habitat, white is the non-habitat matrix. Runs are replicated across many stochastic realizations to characterize the distribution of outcomes.</p>
+<p>At each time step: agents move, the contact network updates, and the disease network updates. The figure below shows the overall simulation structure.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/eeid/flowchart.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Simulation process overview. Each realization advances through time steps in which agents move, contact networks update, and disease transmission is resolved. Statistics are computed at the end of each time step, each realization, and across all realizations.</figcaption>
+</figure>
+</div>
+<hr>
+<section id="simulation-sequence" class="level2">
+<h2 class="anchored" data-anchor-id="simulation-sequence">Simulation Sequence</h2>
+<p>The table below shows six time steps from a single simulation realization, with time increasing from top to bottom. Each column shows a different representation of the same simulation state.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 32%">
+<col style="width: 19%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Time step</th>
+<th style="text-align: center;">Location and Disease State</th>
+<th style="text-align: center;">Contact Network</th>
+<th style="text-align: center;">Disease Transmission Network</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><img src="../../img/eeid/loc-fig01-sm.png" class="img-fluid"></td>
+<td style="text-align: center;"><img src="../../img/eeid/contact-fig01-sm.png" class="img-fluid"></td>
+<td style="text-align: center;"><img src="../../img/eeid/disease-fig01-sm.png" class="img-fluid"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"><img src="../../img/eeid/loc-fig02-sm.png" class="img-fluid"></td>
+<td style="text-align: center;"><img src="../../img/eeid/contact-fig02-sm.png" class="img-fluid"></td>
+<td style="text-align: center;"><img src="../../img/eeid/disease-fig02-sm.png" class="img-fluid"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"><img src="../../img/eeid/loc-fig03-sm.png" class="img-fluid"></td>
+<td style="text-align: center;"><img src="../../img/eeid/contact-fig03-sm.png" class="img-fluid"></td>
+<td style="text-align: center;"><img src="../../img/eeid/disease-fig03-sm.png" class="img-fluid"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><img src="../../img/eeid/loc-fig04-sm.png" class="img-fluid"></td>
+<td style="text-align: center;"><img src="../../img/eeid/contact-fig04-sm.png" class="img-fluid"></td>
+<td style="text-align: center;"><img src="../../img/eeid/disease-fig04-sm.png" class="img-fluid"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><img src="../../img/eeid/loc-fig05-sm.png" class="img-fluid"></td>
+<td style="text-align: center;"><img src="../../img/eeid/contact-fig05-sm.png" class="img-fluid"></td>
+<td style="text-align: center;"><img src="../../img/eeid/disease-fig05-sm.png" class="img-fluid"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;"><img src="../../img/eeid/loc-fig06-sm.png" class="img-fluid"></td>
+<td style="text-align: center;"><img src="../../img/eeid/contact-fig06-sm.png" class="img-fluid"></td>
+<td style="text-align: center;"><img src="../../img/eeid/disease-fig06-sm.png" class="img-fluid"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Location and Disease State</strong>: blue = susceptible, red = infected. Infection spreads from a small number of initial seed individuals; the large connected habitat block in the upper left becomes saturated while more isolated patches resist longer.</p>
+<p><strong>Contact Network</strong>: agents connected by proximity; edge and node color indicate the number of neighbors (node degree), from isolated individuals (dark blue) through increasingly connected individuals (orange/red). Dense clusters form in habitat patches where animals aggregate.</p>
+<p><strong>Disease Transmission Network</strong>: each color represents a distinct transmission chain, traceable to a different founding infection. Dense within-patch clusters are connected by occasional long-distance transmissions across the matrix.</p>
+<hr>
+</section>
 <section id="papers" class="level2">
 <h2 class="anchored" data-anchor-id="papers">Papers</h2>
 <p>Tracey JA, Bevins SN, VandeWoude S, Crooks KR (2014). An agent-based movement model to assess the impact of landscape fragmentation on disease transmission. <em>Ecosphere</em> 5(9): 1–24. <a href="https://doi.org/10.1890/ES13-00376.1">https://doi.org/10.1890/ES13-00376.1</a></p>
