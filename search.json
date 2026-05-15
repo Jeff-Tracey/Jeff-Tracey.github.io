@@ -476,11 +476,18 @@
     "text": "The Cognavitron — hover for details · click to navigate\nHow does habitat fragmentation affect the spread of infectious disease through a wildlife population? To study this, I built an agent-based model (ABM) in which simulated bobcats move through a spatially explicit landscape, form contact networks based on proximity, and transmit infection to neighbors. The landscape is derived from actual land cover data — green pixels are habitat, white is the non-habitat matrix. Runs are replicated across many stochastic realizations to characterize the distribution of outcomes.\nAt each time step: agents move, the contact network updates, and the disease network updates. The figure below shows the overall simulation structure."
   },
   {
-    "objectID": "projects/past/eeid.html#simulation-sequence",
-    "href": "projects/past/eeid.html#simulation-sequence",
+    "objectID": "projects/past/eeid.html#simulation-sequences",
+    "href": "projects/past/eeid.html#simulation-sequences",
     "title": "Ecology of Infectious Disease — Agent-Based Models",
-    "section": "Simulation Sequence",
-    "text": "Simulation Sequence\nThe table below shows six time steps from a single simulation realization, with time increasing from top to bottom. Each column shows a different representation of the same simulation state.\n\n\n\n\n\n\n\n\n\nTime step\nLocation and Disease State\nContact Network\nDisease Transmission Network\n\n\n\n\n1\n\n\n\n\n\n2\n\n\n\n\n\n3\n\n\n\n\n\n4\n\n\n\n\n\n5\n\n\n\n\n\n6\n\n\n\n\n\n\nLocation and Disease State: blue = susceptible, red = infected. Infection spreads from a small number of initial seed individuals; the large connected habitat block in the upper left becomes saturated while more isolated patches resist longer.\nContact Network: agents connected by proximity; edge and node color indicate the number of neighbors (node degree), from isolated individuals (dark blue) through increasingly connected individuals (orange/red). Dense clusters form in habitat patches where animals aggregate.\nDisease Transmission Network: each color represents a distinct transmission chain, traceable to a different founding infection. Dense within-patch clusters are connected by occasional long-distance transmissions across the matrix."
+    "section": "Simulation Sequences",
+    "text": "Simulation Sequences\nEach sequence below shows six time steps from a single simulation realization, with time increasing left to right then top to bottom. The three sequences are from independent simulation runs, each illustrating a different representation of the model state.\n\nLocation and Disease State\nBlue = susceptible; red = infected. Infection spreads from a small number of seed individuals; the large connected habitat block saturates quickly while more isolated patches resist longer.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nContact Network\nAgents are connected when within proximity of one another — potential transmission links. Node and edge color indicate degree (number of neighbors): dark blue = isolated; orange/red = highly connected. Dense clusters form in habitat patches where animals aggregate.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDisease Transmission Network\nEach color represents a distinct transmission chain, traceable to a different founding infection. Dense within-patch clusters are connected by occasional long-distance transmissions across the matrix."
+  },
+  {
+    "objectID": "projects/past/eeid.html#software",
+    "href": "projects/past/eeid.html#software",
+    "title": "Ecology of Infectious Disease — Agent-Based Models",
+    "section": "Software",
+    "text": "Software\nThe ABM was implemented in Java with a graphical simulation interface. As a condition of publication, the model code was made available as a software supplement to the Ecosphere paper. The original source files are retained and can be shared on request."
   },
   {
     "objectID": "projects/past/eeid.html#papers",

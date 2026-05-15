@@ -169,7 +169,13 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#simulation-sequence" id="toc-simulation-sequence" class="nav-link active" data-scroll-target="#simulation-sequence">Simulation Sequence</a></li>
+  <li><a href="#simulation-sequences" id="toc-simulation-sequences" class="nav-link active" data-scroll-target="#simulation-sequences">Simulation Sequences</a>
+  <ul class="collapse">
+  <li><a href="#location-and-disease-state" id="toc-location-and-disease-state" class="nav-link" data-scroll-target="#location-and-disease-state">Location and Disease State</a></li>
+  <li><a href="#contact-network" id="toc-contact-network" class="nav-link" data-scroll-target="#contact-network">Contact Network</a></li>
+  <li><a href="#disease-transmission-network" id="toc-disease-transmission-network" class="nav-link" data-scroll-target="#disease-transmission-network">Disease Transmission Network</a></li>
+  </ul></li>
+  <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software">Software</a></li>
   <li><a href="#papers" id="toc-papers" class="nav-link" data-scroll-target="#papers">Papers</a></li>
   </ul>
 </nav>
@@ -274,66 +280,83 @@ if (outputEl) {{
 </figure>
 </div>
 <hr>
-<section id="simulation-sequence" class="level2">
-<h2 class="anchored" data-anchor-id="simulation-sequence">Simulation Sequence</h2>
-<p>The table below shows six time steps from a single simulation realization, with time increasing from top to bottom. Each column shows a different representation of the same simulation state.</p>
+<section id="simulation-sequences" class="level2">
+<h2 class="anchored" data-anchor-id="simulation-sequences">Simulation Sequences</h2>
+<p>Each sequence below shows six time steps from a single simulation realization, with time increasing left to right then top to bottom. The three sequences are from independent simulation runs, each illustrating a different representation of the model state.</p>
+<section id="location-and-disease-state" class="level3">
+<h3 class="anchored" data-anchor-id="location-and-disease-state">Location and Disease State</h3>
+<p>Blue = susceptible; red = infected. Infection spreads from a small number of seed individuals; the large connected habitat block saturates quickly while more isolated patches resist longer.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 12%">
-<col style="width: 32%">
-<col style="width: 19%">
-<col style="width: 34%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Time step</th>
-<th style="text-align: center;">Location and Disease State</th>
-<th style="text-align: center;">Contact Network</th>
-<th style="text-align: center;">Disease Transmission Network</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">1</td>
 <td style="text-align: center;"><img src="../../img/eeid/loc-fig01-sm.png" class="img-fluid"></td>
-<td style="text-align: center;"><img src="../../img/eeid/contact-fig01-sm.png" class="img-fluid"></td>
-<td style="text-align: center;"><img src="../../img/eeid/disease-fig01-sm.png" class="img-fluid"></td>
+<td style="text-align: center;"><img src="../../img/eeid/loc-fig02-sm.png" class="img-fluid"></td>
+<td style="text-align: center;"><img src="../../img/eeid/loc-fig03-sm.png" class="img-fluid"></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">2</td>
-<td style="text-align: center;"><img src="../../img/eeid/loc-fig02-sm.png" class="img-fluid"></td>
-<td style="text-align: center;"><img src="../../img/eeid/contact-fig02-sm.png" class="img-fluid"></td>
-<td style="text-align: center;"><img src="../../img/eeid/disease-fig02-sm.png" class="img-fluid"></td>
+<td style="text-align: center;"><img src="../../img/eeid/loc-fig04-sm.png" class="img-fluid"></td>
+<td style="text-align: center;"><img src="../../img/eeid/loc-fig05-sm.png" class="img-fluid"></td>
+<td style="text-align: center;"><img src="../../img/eeid/loc-fig06-sm.png" class="img-fluid"></td>
 </tr>
+</tbody>
+</table>
+</section>
+<section id="contact-network" class="level3">
+<h3 class="anchored" data-anchor-id="contact-network">Contact Network</h3>
+<p>Agents are connected when within proximity of one another — potential transmission links. Node and edge color indicate degree (number of neighbors): dark blue = isolated; orange/red = highly connected. Dense clusters form in habitat patches where animals aggregate.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<tbody>
 <tr class="odd">
-<td style="text-align: center;">3</td>
-<td style="text-align: center;"><img src="../../img/eeid/loc-fig03-sm.png" class="img-fluid"></td>
+<td style="text-align: center;"><img src="../../img/eeid/contact-fig01-sm.png" class="img-fluid"></td>
+<td style="text-align: center;"><img src="../../img/eeid/contact-fig02-sm.png" class="img-fluid"></td>
 <td style="text-align: center;"><img src="../../img/eeid/contact-fig03-sm.png" class="img-fluid"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><img src="../../img/eeid/contact-fig04-sm.png" class="img-fluid"></td>
+<td style="text-align: center;"><img src="../../img/eeid/contact-fig05-sm.png" class="img-fluid"></td>
+<td style="text-align: center;"><img src="../../img/eeid/contact-fig06-sm.png" class="img-fluid"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="disease-transmission-network" class="level3">
+<h3 class="anchored" data-anchor-id="disease-transmission-network">Disease Transmission Network</h3>
+<p>Each color represents a distinct transmission chain, traceable to a different founding infection. Dense within-patch clusters are connected by occasional long-distance transmissions across the matrix.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img src="../../img/eeid/disease-fig01-sm.png" class="img-fluid"></td>
+<td style="text-align: center;"><img src="../../img/eeid/disease-fig02-sm.png" class="img-fluid"></td>
 <td style="text-align: center;"><img src="../../img/eeid/disease-fig03-sm.png" class="img-fluid"></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">4</td>
-<td style="text-align: center;"><img src="../../img/eeid/loc-fig04-sm.png" class="img-fluid"></td>
-<td style="text-align: center;"><img src="../../img/eeid/contact-fig04-sm.png" class="img-fluid"></td>
 <td style="text-align: center;"><img src="../../img/eeid/disease-fig04-sm.png" class="img-fluid"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">5</td>
-<td style="text-align: center;"><img src="../../img/eeid/loc-fig05-sm.png" class="img-fluid"></td>
-<td style="text-align: center;"><img src="../../img/eeid/contact-fig05-sm.png" class="img-fluid"></td>
 <td style="text-align: center;"><img src="../../img/eeid/disease-fig05-sm.png" class="img-fluid"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">6</td>
-<td style="text-align: center;"><img src="../../img/eeid/loc-fig06-sm.png" class="img-fluid"></td>
-<td style="text-align: center;"><img src="../../img/eeid/contact-fig06-sm.png" class="img-fluid"></td>
 <td style="text-align: center;"><img src="../../img/eeid/disease-fig06-sm.png" class="img-fluid"></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Location and Disease State</strong>: blue = susceptible, red = infected. Infection spreads from a small number of initial seed individuals; the large connected habitat block in the upper left becomes saturated while more isolated patches resist longer.</p>
-<p><strong>Contact Network</strong>: agents connected by proximity; edge and node color indicate the number of neighbors (node degree), from isolated individuals (dark blue) through increasingly connected individuals (orange/red). Dense clusters form in habitat patches where animals aggregate.</p>
-<p><strong>Disease Transmission Network</strong>: each color represents a distinct transmission chain, traceable to a different founding infection. Dense within-patch clusters are connected by occasional long-distance transmissions across the matrix.</p>
+<hr>
+</section>
+</section>
+<section id="software" class="level2">
+<h2 class="anchored" data-anchor-id="software">Software</h2>
+<p>The ABM was implemented in Java with a graphical simulation interface. As a condition of publication, the model code was made available as a software supplement to the <em>Ecosphere</em> paper. The original source files are retained and can be shared on request.</p>
 <hr>
 </section>
 <section id="papers" class="level2">
