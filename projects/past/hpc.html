@@ -270,11 +270,17 @@ if (outputEl) {{
 <section id="san-diego-supercomputer-center" class="level2">
 <h2 class="anchored" data-anchor-id="san-diego-supercomputer-center">San Diego Supercomputer Center</h2>
 <p>My first serious exposure to HPC came in 2000, when I attended the week-long NPACI Parallel Computing Institute at SDSC as a graduate student at UC San Diego. NPACI — the National Partnership for Advanced Computational Infrastructure — was NSF’s predecessor to TeraGrid and eventually XSEDE. The institute introduced me to parallel programming concepts and HPC environments at a time when I was still doing field ecology. The seed took a while to germinate.</p>
-<p>The more substantive SDSC collaboration came years later, when I partnered with researchers there to parallelize the 3D movement-based kernel density estimator (MKDE). The MKDE is a computationally intensive method I developed for estimating animal space use in three spatial dimensions — longitude, latitude, and altitude — from GPS telemetry data. Computing 3D MKDEs over a large dataset is embarrassingly parallel but slow enough to require distributed computing infrastructure. Working with Bob Sinkovits, Mahidhar Tatineni, Amit Chourasia, and Glenn Lockwood at SDSC, we implemented a parallelized version using OpenMP — parallelizing the core loops in C/C++ functions called from R — and ran it on Gordon, SDSC’s flash memory-based supercomputer, demonstrating it on eagle and condor telemetry data from coastal California. The result was a substantial speedup and a paper at XSEDE 2014. The mkde R package, which implements the estimator, is available on CRAN.</p>
+<p>The more substantive SDSC collaboration came years later, when I partnered with researchers there to parallelize the 3D movement-based kernel density estimator (MKDE). The 3D MKDE method for estimating animal space use in three spatial dimensions is computationally intensive. Computing 3D MKDEs over a large dataset is embarrassingly parallel but slow enough to require distributed computing infrastructure. Working with Bob Sinkovits, Mahidhar Tatineni, Amit Chourasia, and Glenn Lockwood at SDSC, we implemented a parallelized version using OpenMP — parallelizing the core loops in C/C++ functions called from R — and ran it on Gordon, SDSC’s flash memory-based supercomputer, demonstrating it on eagle and condor telemetry data from coastal California. The result was a substantial speedup and a paper at XSEDE 2014. The mkde R package, which implements the estimator, is available on CRAN.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../img/hpc/trestles_tracey_sheppard.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption>Jeff Tracey (left) and James Sheppard (right) at the Trestles supercomputer, San Diego Supercomputer Center. Trestles was an NSF-funded system at SDSC used for the 3D MKDE development and parallelization work.</figcaption>
+<figcaption>Jeff Tracey (left) and James Sheppard (right) by the Trestles supercomputer, at the San Diego Supercomputer Center.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/hpc/bob_james-mkde3d.jpeg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Robert Sinkovitz (left) and James Sheppard (right) during a planning session San Diego Supercomputer Center.</figcaption>
 </figure>
 </div>
 <video controls="" width="100%">
