@@ -1,22 +1,5 @@
 [
   {
-    "listing": "/projects/projects.html",
-    "items": [
-      "/projects/past/hpc.html",
-      "/projects/past/golden-eagles.html",
-      "/projects/past/condors.html",
-      "/projects/past/fire-fragmentation.html",
-      "/projects/past/wildlife-underpasses.html",
-      "/projects/past/eeid.html",
-      "/projects/past/bobcats.html",
-      "/projects/past/monitoring-design.html",
-      "/projects/past/ivory-billed.html",
-      "/projects/past/neural-net-movement.html",
-      "/projects/past/rattlesnakes.html",
-      "/projects/past/herp-surveys.html"
-    ]
-  },
-  {
     "listing": "/projects/current_projects.html",
     "items": [
       "/projects/current/walrus-pam.html",
@@ -25,6 +8,22 @@
       "/projects/current/suav-veg.html",
       "/projects/current/birdnet.html",
       "/projects/current/suav-maskcnn.html"
+    ]
+  },
+  {
+    "listing": "/projects/projects.html",
+    "items": [
+      "/projects/past/rattlesnakes.html",
+      "/projects/past/neural-net-movement.html",
+      "/projects/past/ivory-billed.html",
+      "/projects/past/monitoring-design.html",
+      "/projects/past/bobcats.html",
+      "/projects/past/eeid.html",
+      "/projects/past/wildlife-underpasses.html",
+      "/projects/past/condors.html",
+      "/projects/past/fire-fragmentation.html",
+      "/projects/past/golden-eagles.html",
+      "/projects/past/hpc.html"
     ]
   }
 ]
