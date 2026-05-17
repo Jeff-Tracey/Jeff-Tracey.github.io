@@ -1,16 +1,5 @@
 [
   {
-    "listing": "/projects/current_projects.html",
-    "items": [
-      "/projects/current/walrus-pam.html",
-      "/projects/current/suav-3d.html",
-      "/projects/current/vae-gan.html",
-      "/projects/current/suav-veg.html",
-      "/projects/current/birdnet.html",
-      "/projects/current/suav-maskcnn.html"
-    ]
-  },
-  {
     "listing": "/projects/projects.html",
     "items": [
       "/projects/past/rattlesnakes.html",
@@ -24,6 +13,17 @@
       "/projects/past/fire-fragmentation.html",
       "/projects/past/golden-eagles.html",
       "/projects/past/hpc.html"
+    ]
+  },
+  {
+    "listing": "/projects/current_projects.html",
+    "items": [
+      "/projects/current/walrus-pam.html",
+      "/projects/current/suav-3d.html",
+      "/projects/current/vae-gan.html",
+      "/projects/current/suav-veg.html",
+      "/projects/current/birdnet.html",
+      "/projects/current/suav-maskcnn.html"
     ]
   }
 ]
