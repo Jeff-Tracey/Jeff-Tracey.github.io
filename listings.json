@@ -18,12 +18,9 @@
   {
     "listing": "/projects/current_projects.html",
     "items": [
-      "/projects/current/walrus-pam.html",
-      "/projects/current/suav-3d.html",
-      "/projects/current/vae-gan.html",
-      "/projects/current/suav-veg.html",
-      "/projects/current/birdnet.html",
-      "/projects/current/suav-maskcnn.html"
+      "/projects/current/wildlife-cameras.html",
+      "/projects/current/geospatial-ai.html",
+      "/projects/current/bioacoustics.html"
     ]
   }
 ]
