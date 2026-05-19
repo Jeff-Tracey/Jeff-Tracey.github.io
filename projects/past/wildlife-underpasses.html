@@ -520,7 +520,13 @@ if (outputEl) {{
 <figcaption>Confusion matrix for hpar046 on the validation set. Rows are true labels; columns are predicted labels. Most off-diagonal mass is concentrated in a few ecologically sensible confusions. (Figure: Jeff A. Tracey)</figcaption>
 </figure>
 </div>
-<p>When the model was subsequently applied to the remaining 3 million unlabeled images and a subset of predictions were verified by human reviewers, overall accuracy was approximately 75% (Brehme et al.&nbsp;2022) — lower than the validation F1, as expected when moving from a held-out test set to true field deployment, but strong enough to be genuinely useful. Performance varied by class: roadrunner reached 94%, bobcat 83%, squirrel 82%; rabbit and coyote were harder at 64% and 66% respectively. The gap between validation performance and deployment performance is itself an important finding — it is the honest cost of moving from a controlled benchmark to the wild.</p>
+<p>When the model was subsequently applied to the remaining 3 million unlabeled images and a subset of predictions were verified by human reviewers, overall accuracy was approximately 75% — lower than the validation F1, as expected when moving from a held-out test set to true field deployment, but strong enough to be genuinely useful. Performance varied by class: roadrunner reached 94%, bobcat 83%, squirrel 82%; rabbit and coyote were harder at 64% and 66% respectively. The gap between validation performance and deployment performance is itself an important finding — it is the honest cost of moving from a controlled benchmark to the wild.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/underpass/deployment_accuracy_confusion_matrix.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption>Confusion matrix comparing model predictions to human verification on a subset of the 3 million unlabeled images. Rows are model-identified classes; columns are human-identified classes. Diagonal values show per-class accuracy. (Source: Brehme et al.&nbsp;2022)</figcaption>
+</figure>
+</div>
 <p>This experience — the scale of the problem, the class imbalance, the gap between what manual effort could achieve and what the dataset required — is what convinced me that deep learning for wildlife image classification was not a novelty but a necessity. It set the direction for the research program that followed.</p>
 <hr>
 </section>
