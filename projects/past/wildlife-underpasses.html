@@ -391,6 +391,35 @@ if (outputEl) {{
 </div>
 </div>
 </div>
+<p>The diversity of species using the structures was encouraging — and mostly consistent with the connectivity framing that motivates underpass construction. Roads are unambiguously bad for wildlife; underpasses are almost certainly a net positive. But the cameras also captured a few anecdotes worth noting. A Cooper’s hawk was observed actively hunting birds inside one of the structures. After cover was added to encourage small animal use, snakes began moving into the modified underpasses — apparently to hunt. Whether the confined geometry of an underpass benefits predators more than prey in those moments is an open question. The structures that help animals cross may also, occasionally, give predators a geometric advantage they wouldn’t have in open habitat.</p>
+<div class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/underpass/snake_rodent_hft01_a.jpg" class="img-fluid figure-img"></p>
+<figcaption>Snake and rodent sharing HFT01 simultaneously, 11:56 AM. The cover structure (concrete blocks) is visible in the background. (Photo: USGS)</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/underpass/snake_rodent_hft01_b.jpg" class="img-fluid figure-img"></p>
+<figcaption>Same encounter, one second later. The rodent is alert and moving toward the wall. (Photo: USGS)</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/underpass/rodent_hft01_night.jpg" class="img-fluid figure-img"></p>
+<figcaption>Rodent at the cover structure, HFT01, night. The blocks added to benefit small animals also concentrated prey in a confined space. (Photo: USGS)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
 <hr>
 </section>
 <section id="turning-3-million-images-into-data" class="level2">
@@ -470,7 +499,15 @@ if (outputEl) {{
 <h2 class="anchored" data-anchor-id="from-camera-traps-to-deep-learning">From Camera Traps to Deep Learning</h2>
 <p>The labeled dataset covered only 5% of the images. The remaining 3 million were unclassified.</p>
 <p>This was the moment that clarified something I had already suspected: manual classification, even with good software and volunteer labor, does not scale to modern camera trap deployments. The only path through the remaining images was automated classification — and that meant machine learning.</p>
-<p>I subsequently trained a <strong>ResNet50V2</strong> convolutional neural network on the labeled dataset to classify images into 17 categories. The class imbalance problem that was visible in the label counts (squirrel: ~5,200 images; snake: ~50) required careful attention during training. After a systematic hyperparameter search across 144 configurations, the best model achieved a mean F1 score of <strong>0.916</strong> across all 17 classes on the held-out validation set.</p>
+<p>The deep learning work came later, after I moved to USGS Advanced Research Computing. I trained a <strong>ResNet50V2</strong> convolutional neural network on the labeled dataset to classify images into 17 categories. The class imbalance problem that was visible in the label counts (squirrel: ~5,200 images; snake: ~50) required careful attention during training. Colleagues at WERC addressed the most severely underrepresented classes by supplementing the training set with images sourced from iNaturalist — adding labeled examples of rare taxa like snakes and lizards that the field cameras had captured too infrequently. That helped. The hyperparameter search included image augmentation strategies — random flips, rotations, scaling, blur, noise, color shifts, and others — to artificially expand the training set and improve generalization. Somewhat counterintuitively, the best-performing models used no augmentation at all.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/underpass/augmentation_test_grid.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Image augmentation techniques evaluated during model development, applied to a rabbit camera trap image. Each panel shows a different transformation. Despite systematic exploration, augmentation did not improve performance in the top models. (Figure: Jeff A. Tracey)</figcaption>
+</figure>
+</div>
+<p>Thinking through why augmentation failed was useful in itself. For augmentation to help, the transformed images need to resemble conditions the model will actually encounter in the field — motion blur, brightness variation, and color shifts are all realistic for camera trap imagery, but aggressive spatial transforms are not. An equally important constraint was that spatial transformations could not crop the subject animal out of the frame. An image labeled RABBIT that contains only gravel is a mislabeled training example, and enough of those actively degrade model performance. Enforcing that constraint limited how aggressively spatial augmentations could be applied — and may partly explain why the unaugmented models won.</p>
+<p>After a systematic hyperparameter search across 144 configurations, the best model achieved a mean F1 score of <strong>0.916</strong> across all 17 classes on the held-out validation set.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../img/underpass/hpar046_training_history.png" class="img-fluid figure-img" style="width:85.0%"></p>
