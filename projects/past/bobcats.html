@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2012-08-01">
-<meta name="description" content="Finite mixture models for GPS-tracked bobcat (Lynx rufus) movement in coastal southern California. Identified behavioral modes (foraging, resting, commuting) from step length and turning angle distributions.">
+<meta name="description" content="Finite mixture models for GPS-tracked bobcat (Lynx rufus) movement in coastal southern California. Identified behavioral modes from movement data and mapped them across the landscape to produce behavioral landscape maps.">
 
 <title>Bobcat Movement — Finite Mixture Models – Jeff A. Tracey, PhD</title>
 <style>
@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-158031087360bce0ff56dc785ce39e06.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-52d3edc4879e86859cfab57e7fc9f8d6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -169,46 +169,20 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#papers" id="toc-papers" class="nav-link active" data-scroll-target="#papers">Papers</a></li>
+  <li><a href="#the-behavioral-landscape-concept" id="toc-the-behavioral-landscape-concept" class="nav-link active" data-scroll-target="#the-behavioral-landscape-concept">The Behavioral Landscape Concept</a></li>
+  <li><a href="#study-system" id="toc-study-system" class="nav-link" data-scroll-target="#study-system">Study System</a></li>
+  <li><a href="#behavioral-landscape-maps" id="toc-behavioral-landscape-maps" class="nav-link" data-scroll-target="#behavioral-landscape-maps">Behavioral Landscape Maps</a></li>
+  <li><a href="#papers" id="toc-papers" class="nav-link" data-scroll-target="#papers">Papers</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7">Bobcat Movement — Finite Mixture Models</h1></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Bobcat Movement — Finite Mixture Models</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">field-ecology</div>
-    <div class="quarto-category">movement</div>
-    <div class="quarto-category">mammals</div>
-    <div class="quarto-category">statistical-modeling</div>
-  </div>
-  </div>
-
-<div>
-  <div class="description">
-    Finite mixture models for GPS-tracked bobcat (<em>Lynx rufus</em>) movement in coastal southern California. Identified behavioral modes (foraging, resting, commuting) from step length and turning angle distributions.
-  </div>
-</div>
+<header id="title-block-header">
 
 
-<div class="quarto-title-meta">
-
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">August 1, 2012</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-
+<p class="date">2012-08-01</p>
 </header>
 
 
@@ -264,8 +238,66 @@ if (outputEl) {{
 })();
 </script>
 <hr>
-<p><em>More content coming soon.</em></p>
+<p>Where an animal goes tells you part of the story. How it moves through different parts of the landscape tells you something deeper — what it is responding to, what it is avoiding, what it is ignoring. A bobcat crossing a road at speed is doing something different than a bobcat hunting the edge of a chaparral patch, even if both movements appear as points on a GPS track.</p>
+<p>This project developed a method for extracting those behavioral distinctions from GPS movement data and mapping them across the landscape — producing what we called a <strong>behavioral landscape</strong>: a map not of where the animal went, but of how the landscape shaped its behavior at every location.</p>
+<p>The work was a collaboration with Jun Zhu (University of Wisconsin–Madison), Erin Boydston, Lisa Lyren, and Robert Fisher (USGS Western Ecological Research Center), and Kevin R. Crooks (Colorado State University). The study system was GPS-tracked bobcats (<em>Lynx rufus</em>) in coastal southern California — a heavily urbanized, fragmented landscape where animals must navigate a matrix of natural habitat, roads, and development. The paper was selected for the cover of <em>Ecological Applications</em> 23(3), 2013.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/bobcat/eco_apps_cover.webp" class="img-fluid figure-img" style="width:30.0%"></p>
+<figcaption>Cover of <em>Ecological Applications</em> 23(3), 2013. (© Ecological Society of America)</figcaption>
+</figure>
+</div>
 <hr>
+<section id="the-behavioral-landscape-concept" class="level2">
+<h2 class="anchored" data-anchor-id="the-behavioral-landscape-concept">The Behavioral Landscape Concept</h2>
+<p>The core idea is that an animal’s movement at any location is a behavioral response to the landscape features around it. Those responses fall into a small number of qualitatively distinct modes — foraging, resting, commuting, avoiding — each with a characteristic statistical signature in the step length and turning angle distributions of the GPS track.</p>
+<p>A finite mixture model (FMM) decomposes the movement data into these latent behavioral components without requiring the analyst to specify them in advance. Each GPS step is assigned a probability of belonging to each component, and the landscape covariates associated with each component reveal what the animal is responding to.</p>
+<p>The result is a map: for every point in the landscape, what behavioral mode does this location tend to elicit? That is the behavioral landscape.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/bobcat/behavioral_landscape_conceptual.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption>Conceptual diagram of behavioral landscape types. (A) A landscape feature that attracts animals perpendicularly — they move toward or away from it. (B) A linear feature like a road or corridor edge that animals move parallel to. (C) A feature that elicits multi-directional movement — an area where animals slow, forage, or remain. (Figure: Jeff A. Tracey, © Ecological Society of America, reprinted with permission from <em>Ecological Applications</em>)</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="study-system" class="level2">
+<h2 class="anchored" data-anchor-id="study-system">Study System</h2>
+<p>Three GPS-tracked bobcats in coastal southern California provided the movement data. The landscape is a mosaic of natural chaparral and coastal scrub, fragmenting urban development, highways, and open space preserves — a challenging environment for a medium-sized predator with a large home range.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/bobcat/gps_tracks_landcover.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>GPS movement tracks for three bobcats (red, blue, green) overlaid on a land cover map of the study area in coastal southern California. Gray areas are developed; white areas are natural habitat. (Figure: Jeff A. Tracey, © Ecological Society of America, reprinted with permission from <em>Ecological Applications</em>)</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="behavioral-landscape-maps" class="level2">
+<h2 class="anchored" data-anchor-id="behavioral-landscape-maps">Behavioral Landscape Maps</h2>
+<p>Fitting the finite mixture model to each individual’s GPS data and associating the behavioral components with landscape covariates produced a continuous map of behavioral response across the landscape. Each location on the map is assigned the behavioral mode most likely to be elicited there — based on what the animal actually did when it was in places with similar landscape characteristics.</p>
+<p>Three behavioral components emerged consistently: movement parallel to landscape features (corridor-following), movement away from features (avoidance), and non-informative movement (the animal ignoring the feature). Roads, habitat edges, and urban development each produced distinct patterns of behavioral response.</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/bobcat/behavioral_landscape_map.png" class="img-fluid figure-img"></p>
+<figcaption>Behavioral landscape map for the study area. Colors indicate the most probable behavioral component at each location: orange (move parallel), light green (ignore), red (move away). Urban areas in dark red. Roads shown in black. (Figure: Jeff A. Tracey, © Ecological Society of America, reprinted with permission from <em>Ecological Applications</em>)</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/bobcat/lyru1_behavioral_landscape.png" class="img-fluid figure-img"></p>
+<figcaption>Individual behavioral landscape for one bobcat (LYRU1). The spatial structure of behavioral response is clearly visible — parallel movement along habitat edges, avoidance of the urban core, and non-informative movement in natural areas. (Figure: Jeff A. Tracey, © Ecological Society of America, reprinted with permission from <em>Ecological Applications</em>)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</section>
 <section id="papers" class="level2">
 <h2 class="anchored" data-anchor-id="papers">Papers</h2>
 <p>Tracey JA, Zhu J, Boydston E, Lyren L, Fisher RN, Crooks KR (2013). Mapping behavioral landscapes: a finite mixture modeling approach. <em>Ecological Applications</em> 23(3): 654–669. <a href="https://doi.org/10.1890/12-0687.1">https://doi.org/10.1890/12-0687.1</a></p>
