@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-158031087360bce0ff56dc785ce39e06.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-52d3edc4879e86859cfab57e7fc9f8d6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -164,46 +164,31 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#habitat-filter-model" id="toc-habitat-filter-model" class="nav-link active" data-scroll-target="#habitat-filter-model">Habitat Filter Model</a></li>
+  <li><a href="#network-construction" id="toc-network-construction" class="nav-link" data-scroll-target="#network-construction">Network Construction</a></li>
+  <li><a href="#what-the-network-revealed" id="toc-what-the-network-revealed" class="nav-link" data-scroll-target="#what-the-network-revealed">What the Network Revealed</a>
+  <ul class="collapse">
+  <li><a href="#component-structure" id="toc-component-structure" class="nav-link" data-scroll-target="#component-structure">Component Structure</a></li>
+  <li><a href="#network-backbone" id="toc-network-backbone" class="nav-link" data-scroll-target="#network-backbone">Network Backbone</a></li>
+  <li><a href="#centrality-and-connectivity" id="toc-centrality-and-connectivity" class="nav-link" data-scroll-target="#centrality-and-connectivity">Centrality and Connectivity</a></li>
+  </ul></li>
+  <li><a href="#contributions" id="toc-contributions" class="nav-link" data-scroll-target="#contributions">Contributions</a></li>
+  <li><a href="#report" id="toc-report" class="nav-link" data-scroll-target="#report">Report</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7">Ivory-billed Woodpecker Habitat Network Modeling</h1></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Ivory-billed Woodpecker Habitat Network Modeling</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">computational-ecology</div>
-    <div class="quarto-category">network-analysis</div>
-    <div class="quarto-category">spatial-analysis</div>
-    <div class="quarto-category">birds</div>
-    <div class="quarto-category">occupancy</div>
-  </div>
-  </div>
-
-<div>
-  <div class="description">
-    Habitat suitability and landscape connectivity modeling for the ivory-billed woodpecker (<em>Campephilus principalis</em>) in collaboration with Barry Noon and Curt Flather. Decision-tree habitat filter model applied to USFS FIA plot data; hex-grid network with gravity-model edge weights; network statistics for connectivity analysis. Early application of NetworkX.
-  </div>
-</div>
+<header id="title-block-header">
 
 
-<div class="quarto-title-meta">
-
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">January 1, 2010</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-
+<p class="date">2010-01-01</p>
 </header>
 
 
@@ -259,10 +244,94 @@ if (outputEl) {{
 })();
 </script>
 <hr>
-<p><em>Coming soon.</em></p>
-<p><strong>Report:</strong> Tracey, J.A., C.H. Flather, and B.R. Noon. 2010. Network Analysis of Potential Ivory-billed Woodpecker Habitat. Prepared for US Fish and Wildlife Service, Lower Mississippi Valley Joint Venture Office. 30 December 2010.</p>
+<p>The ivory-billed woodpecker (<em>Campephilus principalis</em>) was presumed extinct after 1944. Then, in 2004, video footage from the Big Woods of Arkansas suggested it might not be. That possibility — uncertain, contested, haunting — was enough to trigger a serious search effort under the Federal Endangered Species Act.</p>
+<p>If you are going to search for a bird that may or may not still exist, you need to know where to look. And if there are remnant individuals, you need to understand whether the landscape can actually support a viable population — whether the patches of suitable habitat are connected enough to matter.</p>
+<p>This project addressed both questions using a graph-theoretic approach to habitat network modeling. I did this work in collaboration with Barry Noon (Colorado State University) and Curt Flather (US Forest Service), with support from the US Fish and Wildlife Service Lower Mississippi Valley Joint Venture Office.</p>
+<hr>
+<section id="habitat-filter-model" class="level2">
+<h2 class="anchored" data-anchor-id="habitat-filter-model">Habitat Filter Model</h2>
+<p>The foundation for the network analysis was a habitat filter model developed in earlier work with Flather and Noon. The model was applied to US Forest Service Forest Inventory and Analysis (FIA) plot data to assign each plot a probability of being suitable ivory-billed woodpecker foraging habitat. The filter parameters were based largely on the ecological data James Tanner collected at the Singer Tract in Louisiana in the 1930s — the last well-documented population of the species.</p>
+<p>Plots with a greater-than-zero probability of being habitat became nodes in the network. In total: <strong>1,078 nodes</strong> distributed across the historic range of the species, from the lower Mississippi River valley to the Atlantic coastal plain.</p>
+<hr>
+</section>
+<section id="network-construction" class="level2">
+<h2 class="anchored" data-anchor-id="network-construction">Network Construction</h2>
+<p>In the graph-theoretic approach, habitat patches are nodes and potential movement corridors between them are edges. Two nodes were connected by an edge if they fell within a maximum distance threshold. We analyzed three thresholds — 30 km, 60 km, and 100 km — bracketing estimates of maximum dispersal distance derived from allometric relationships for large-bodied woodpeckers.</p>
+<p>Each edge was assigned a weight representing the cost of movement between nodes, as a function of distance. The standard “classical” formulation for edge weights is one-dimensional — it treats dispersal as a process along a line. We proposed an alternative <strong>2-dimensional formulation</strong> that treats dispersal as a process across an area, which is geometrically more appropriate for a landscape. The two formulations lead to meaningfully different results: the 2D model favors many short moves over one long move, while the 1D model is more permissive of long-distance jumps. We argued the 2D formulation is more biologically realistic, and present results primarily from that model.</p>
+<p>We also incorporated a <strong>gravity model</strong> formulation to estimate potential flux of individuals between nodes — weighting movement by both distance and habitat quality at the source and destination. The network was implemented in Python using the <a href="https://networkx.org">NetworkX</a> library.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/ibwo/habitat_quality_network.jpg" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>Habitat quality network at the 60 km distance threshold. Nodes are FIA plots with a greater-than-zero probability of being suitable ivory-billed woodpecker habitat. Node size and color (red = high, orange/yellow = low) indicate habitat quality H. Edges (green) connect nodes within 60 km. (Figure: Jeff A. Tracey)</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="what-the-network-revealed" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-network-revealed">What the Network Revealed</h2>
+<section id="component-structure" class="level3">
+<h3 class="anchored" data-anchor-id="component-structure">Component Structure</h3>
+<p>At the 30 km threshold, the network fragments into many disconnected components — patches of habitat too far apart to be reached in a single dispersal event. As the threshold increases to 60 and 100 km, components merge and the network becomes increasingly connected. At 60 km, two large clusters dominate: one along the lower Mississippi River and one along the Atlantic coastal plain. These correspond to the areas most frequently identified in post-1944 sighting reports.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/ibwo/component_structure.jpg" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>Component structure at the 60 km threshold. Nodes are colored by component membership. The dominant magenta component encompasses the well-connected habitat cluster along the lower Mississippi River. (Figure: Jeff A. Tracey)</figcaption>
+</figure>
+</div>
+</section>
+<section id="network-backbone" class="level3">
+<h3 class="anchored" data-anchor-id="network-backbone">Network Backbone</h3>
+<p>The minimum spanning tree identifies the set of edges that connect all nodes at minimum total cost — the skeletal backbone of the network. For conservation planning, this highlights which movement corridors are load-bearing: lose them, and the network falls apart.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/ibwo/minimum_spanning_tree.jpg" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>Minimum spanning tree for the 60 km network. Magenta edges form the minimum-cost backbone connecting all nodes. The tree reveals the critical corridors linking the two main habitat clusters. (Figure: Jeff A. Tracey)</figcaption>
+</figure>
+</div>
+</section>
+<section id="centrality-and-connectivity" class="level3">
+<h3 class="anchored" data-anchor-id="centrality-and-connectivity">Centrality and Connectivity</h3>
+<p>We computed multiple centrality metrics for each node: degree (number of connections), closeness (how quickly a node can reach all others), and betweenness (how often a node lies on shortest paths between other nodes). Betweenness centrality is particularly relevant for conservation — high-betweenness nodes are structural bridges, and their loss disproportionately fragments the network.</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/ibwo/closeness_centrality.jpg" class="img-fluid figure-img"></p>
+<figcaption>Closeness centrality at the 60 km threshold. Red nodes can reach all other nodes most efficiently — concentrated in the densely connected western cluster. (Figure: Jeff A. Tracey)</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/ibwo/betweenness_centrality.jpg" class="img-fluid figure-img"></p>
+<figcaption>Betweenness centrality at the 60 km threshold. High-betweenness nodes (red) are critical bridges between habitat clusters — losing them would disproportionately fragment the network. (Figure: Jeff A. Tracey)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="contributions" class="level2">
+<h2 class="anchored" data-anchor-id="contributions">Contributions</h2>
+<p>Beyond the ivory-billed woodpecker application, we made three methodological contributions to graph-theoretic landscape analysis:</p>
+<ol type="1">
+<li><strong>A 2D formulation of edge weights</strong> — more geometrically appropriate for spatial dispersal across a landscape than the standard 1D exponential model.</li>
+<li><strong>Gravity model flux</strong> — incorporating habitat quality at both source and destination nodes to estimate potential movement between patches.</li>
+<li><strong>Systematic comparison of network algorithms</strong> — degree, closeness, betweenness, k-cores, minimum spanning trees, and flux metrics evaluated together, providing a template for multi-metric landscape network analysis.</li>
+</ol>
+<p>The approach is general and was designed to be applicable to other species with broad geographic ranges — particularly useful for forecasting how habitat loss and climate-driven range shifts will alter landscape connectivity.</p>
+<hr>
+</section>
+<section id="report" class="level2">
+<h2 class="anchored" data-anchor-id="report">Report</h2>
+<p>Tracey JA, Flather CH, Noon BR (2010). Network Analysis of Potential Ivory-billed Woodpecker Habitat. Prepared for the US Fish and Wildlife Service, Lower Mississippi Valley Joint Venture Office. 30 December 2010.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
