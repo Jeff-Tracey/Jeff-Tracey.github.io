@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2013-01-01">
-<meta name="description" content="Camera trap and sensor monitoring of wildlife use of highway underpasses in southern California. Species detection, passage rate estimation, and infrastructure effectiveness assessment.">
+<meta name="description" content="Camera trap surveys of wildlife use of highway underpasses in San Diego County. Species detection, passage rate estimation, image classification, and the start of a deep learning research program.">
 
 <title>Wildlife Camera Surveys – Jeff A. Tracey, PhD</title>
 <style>
@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-158031087360bce0ff56dc785ce39e06.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-52d3edc4879e86859cfab57e7fc9f8d6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -169,46 +169,22 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#papers" id="toc-papers" class="nav-link active" data-scroll-target="#papers">Papers</a></li>
+  <li><a href="#study-design" id="toc-study-design" class="nav-link active" data-scroll-target="#study-design">Study Design</a></li>
+  <li><a href="#what-the-cameras-found" id="toc-what-the-cameras-found" class="nav-link" data-scroll-target="#what-the-cameras-found">What the Cameras Found</a></li>
+  <li><a href="#turning-3-million-images-into-data" id="toc-turning-3-million-images-into-data" class="nav-link" data-scroll-target="#turning-3-million-images-into-data">Turning 3 Million Images into Data</a></li>
+  <li><a href="#statistical-analysis" id="toc-statistical-analysis" class="nav-link" data-scroll-target="#statistical-analysis">Statistical Analysis</a></li>
+  <li><a href="#from-camera-traps-to-deep-learning" id="toc-from-camera-traps-to-deep-learning" class="nav-link" data-scroll-target="#from-camera-traps-to-deep-learning">From Camera Traps to Deep Learning</a></li>
+  <li><a href="#papers" id="toc-papers" class="nav-link" data-scroll-target="#papers">Papers</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7">Wildlife Camera Surveys</h1></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Wildlife Camera Surveys</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">field-ecology</div>
-    <div class="quarto-category">camera-traps</div>
-    <div class="quarto-category">mammals</div>
-    <div class="quarto-category">connectivity</div>
-  </div>
-  </div>
-
-<div>
-  <div class="description">
-    Camera trap and sensor monitoring of wildlife use of highway underpasses in southern California. Species detection, passage rate estimation, and infrastructure effectiveness assessment.
-  </div>
-</div>
+<header id="title-block-header">
 
 
-<div class="quarto-title-meta">
-
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">January 1, 2013</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-
+<p class="date">2013-01-01</p>
 </header>
 
 
@@ -264,8 +240,227 @@ if (outputEl) {{
 })();
 </script>
 <hr>
-<p><em>More content coming soon.</em></p>
+<p>Highway underpasses are built to let wildlife cross beneath roads — but do animals actually use them? And if you modify the structure, do they use it more? These are simple questions with complicated answers, and answering them requires data at a scale that is hard to collect.</p>
+<p>This project was a camera trap survey of wildlife use of eight highway underpasses in San Diego County, conducted in 2012–2013 while I was at the USGS Western Ecological Research Center. Cheryl Brehme and Carlton Rochester (USGS WERC) were co-investigators. I designed the study, installed and serviced the cameras, and managed the data.</p>
+<p>The project started as field ecology. It became, without quite intending it, the origin of a deep learning research program.</p>
 <hr>
+<section id="study-design" class="level2">
+<h2 class="anchored" data-anchor-id="study-design">Study Design</h2>
+<p>Eight underpasses spanning five highway corridors were monitored using Reconyx PC800 HyperFire camera traps — one of the most reliable systems available for long-term unattended deployment. Cameras were placed at the interior and exterior of each underpass to capture both passage events and approach behavior.</p>
+<p>The study used a Before-After Control-Impact (BACI) design: half the underpasses received structural modifications intended to reduce the perceived exposure of animals crossing, while the others served as controls. Data were collected across two seasons to support before/after comparisons.</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/underpass/underpass_cover_fig.jpg" class="img-fluid figure-img"></p>
+<figcaption>Eight underpass sites across five highway corridors in San Diego County. (Figure: Jeff A. Tracey)</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/underpass/reconyx_cameras.jpg" class="img-fluid figure-img"></p>
+<figcaption>Reconyx PC800 HyperFire cameras were used for all deployments — chosen for reliability, trigger speed, and battery life. (Photo: Jeff A. Tracey)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>One design decision I made early proved important later: each camera was configured to capture both motion-triggered images and simultaneous time-lapse images at regular intervals. This gave us a continuous time series of background frames — useful for detecting animals with low infrared signatures that might not reliably trigger the motion sensor, and essential as background reference images for computer vision work that came later.</p>
+<p>The result was over <strong>3.1 million images</strong> from two field seasons.</p>
+<hr>
+</section>
+<section id="what-the-cameras-found" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-cameras-found">What the Cameras Found</h2>
+<p>The underpasses were used by a remarkably diverse community of vertebrates — from mule deer and bobcats to roadrunners, lizards, and snakes. Most crossings happened at night. Coyotes were frequent and confident. Bobcats were more cautious. Rabbits used the corrugated metal culverts regularly. Gray fox appeared at some sites but not others.</p>
+<div class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/underpass/bobcat_svr01_night.jpg" class="img-fluid figure-img"></p>
+<figcaption>Bobcat, SVR01, night. (Photo: USGS)</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/underpass/gray_fox_spp01_night.jpg" class="img-fluid figure-img"></p>
+<figcaption>Gray fox, SPP01, night. (Photo: USGS)</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/underpass/coyote_vcs01_entering_day.jpg" class="img-fluid figure-img"></p>
+<figcaption>Coyote entering VCS01, daytime. (Photo: USGS)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/underpass/mule_deer_vcn02_night.jpg" class="img-fluid figure-img"></p>
+<figcaption>Mule deer buck, VCN02, night. (Photo: USGS)</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/underpass/rabbit_svr01_culvert_day.jpg" class="img-fluid figure-img"></p>
+<figcaption>Rabbit in corrugated culvert, SVR01. (Photo: USGS)</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/underpass/skunk_kits_vcm01_night.jpg" class="img-fluid figure-img"></p>
+<figcaption>Striped skunk with kits, VCM01, night. (Photo: USGS)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/underpass/spotted_skunk_spp03_night.jpg" class="img-fluid figure-img"></p>
+<figcaption>Spotted skunk, SPP03, night. (Photo: USGS)</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/underpass/longtail_weasel_spp03_day.jpg" class="img-fluid figure-img"></p>
+<figcaption>Long-tailed weasel, SPP03, daytime. (Photo: USGS)</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/underpass/towhee_vcn01_day.jpg" class="img-fluid figure-img"></p>
+<figcaption>California towhee inside VCN01. (Photo: USGS)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/underpass/woodrat_vcn01_night.jpg" class="img-fluid figure-img"></p>
+<figcaption>Woodrat (<em>Neotoma</em>), VCN01, night. (Photo: USGS)</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/underpass/garter_snake_vcn01_day.jpg" class="img-fluid figure-img"></p>
+<figcaption>Garter snake along the wall, VCN01. (Photo: USGS)</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/underpass/lizard_vcn01_day.jpg" class="img-fluid figure-img"></p>
+<figcaption>Lizard (<em>Sceloporus</em>), VCN01, daytime. (Photo: USGS)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="turning-3-million-images-into-data" class="level2">
+<h2 class="anchored" data-anchor-id="turning-3-million-images-into-data">Turning 3 Million Images into Data</h2>
+<p>Collecting the images was the easy part. With 3.1 million frames and a taxonomically diverse species list, classification at scale was the central challenge.</p>
+<p>I wrote a custom Java application — the USGS Image Processor — to make manual classification tractable. The program loaded camera trap images in sequence, displayed the current frame alongside navigation controls, and let the user assign one or more species labels per image, record individual counts, and flag image quality. Completed sessions were exported as CSV files for analysis.</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/underpass/java_image_processor.png" class="img-fluid figure-img"></p>
+<figcaption>The USGS Image Processor: custom Java application built to support rapid manual classification of camera trap images. (Screenshot: Jeff A. Tracey)</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/underpass/java_prog_csv_export.png" class="img-fluid figure-img"></p>
+<figcaption>CSV export from the Image Processor — each row is one classified image with species labels, counts, and metadata. (Screenshot: Jeff A. Tracey)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>Even with the software, manual classification of millions of images was not feasible for one lab. I recruited a team of USGS field technicians and enlisted volunteer citizen scientists from the <strong>San Diego Tracking Team</strong>, who contributed substantial effort to working through the image backlog.</p>
+<p>The result, after what I can only describe as a heroic collective effort: <strong>152,594 labeled images</strong> — roughly 5% of the total dataset, and enough to support statistical analysis and, eventually, model training.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/underpass/labeled_images_by_taxon_barchart.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>Labeled images by taxonomic group across the classified dataset. Small mammals and squirrels dominated numerically; bobcat and snake images were rare — a class imbalance that would later complicate machine learning. (Figure: Jeff A. Tracey)</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="statistical-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-analysis">Statistical Analysis</h2>
+<p>With the labeled dataset in hand, I analyzed species activity patterns using the BACI design. For each taxon, I fit mixed models estimating mean images per day as a function of treatment group (control vs.&nbsp;modified underpass), year (2012 vs.&nbsp;2013), and their interaction — the key BACI term.</p>
+<p>I also modeled species use of underpass interiors relative to the exterior approaches, and compared the species composition detected inside and outside the structures across sites.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/underpass/mean_images_per_day_interaction.jpg" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption>Mean images per day (± 95% CI) for control and treatment underpasses across 2012 and 2013, for 10 taxa. The BACI interaction term tests whether treatment and control groups changed differently between years. (Figure: Jeff A. Tracey)</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/underpass/interior_exterior_species_comparison.jpg" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>Relative activity of small vertebrate species at exterior camera positions vs.&nbsp;interior camera positions, by underpass site. Bars show mean detection rate; the difference panel shows which species used the interior more or less than the exterior approach. (Figure: Jeff A. Tracey)</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="from-camera-traps-to-deep-learning" class="level2">
+<h2 class="anchored" data-anchor-id="from-camera-traps-to-deep-learning">From Camera Traps to Deep Learning</h2>
+<p>The labeled dataset covered only 5% of the images. The remaining 3 million were unclassified.</p>
+<p>This was the moment that clarified something I had already suspected: manual classification, even with good software and volunteer labor, does not scale to modern camera trap deployments. The only path through the remaining images was automated classification — and that meant machine learning.</p>
+<p>I subsequently trained a <strong>ResNet50V2</strong> convolutional neural network on the labeled dataset to classify images into 17 categories. The class imbalance problem that was visible in the label counts (squirrel: ~5,200 images; snake: ~50) required careful attention during training. After a systematic hyperparameter search across 144 configurations, the best model achieved a mean F1 score of <strong>0.916</strong> across all 17 classes on the held-out validation set.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/underpass/hpar046_training_history.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>Training history for the best-performing model (hpar046): training and validation accuracy and loss over 87 epochs. (Figure: Jeff A. Tracey)</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/underpass/hpar046_confusion_matrix.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>Confusion matrix for hpar046 on the validation set. Rows are true labels; columns are predicted labels. Most off-diagonal mass is concentrated in a few ecologically sensible confusions. (Figure: Jeff A. Tracey)</figcaption>
+</figure>
+</div>
+<p>This experience — the scale of the problem, the class imbalance, the gap between what manual effort could achieve and what the dataset required — is what convinced me that deep learning for wildlife image classification was not a novelty but a necessity. It set the direction for the research program that followed.</p>
+<hr>
+</section>
 <section id="papers" class="level2">
 <h2 class="anchored" data-anchor-id="papers">Papers</h2>
 <p>Brehme CS, Tracey JA, Ewing BAI, Hobbs MT, Launer AE, Matsuda T, Adelsheim EMC, Fisher RN (2021). Responses of migratory amphibians to barrier fencing inform the spacing of road underpasses: a case study with California tiger salamanders (<em>Ambystoma californiense</em>) in Stanford, CA, USA. <em>Global Ecology and Conservation</em> 31: e01857.</p>
