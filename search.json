@@ -452,7 +452,7 @@
     "href": "projects/past/scientific-visualization.html#coastal-bathymetry-and-sea-level",
     "title": "Scientific Visualization",
     "section": "Coastal Bathymetry and Sea Level",
-    "text": "Coastal Bathymetry and Sea Level\nCombining coastal terrain with seafloor bathymetry in a single 3D model reveals the underwater landscape adjacent to the shore — and what happens to it as sea levels rise. These visualizations were built from NOAA and USGS digital elevation data using Python and ParaView.\n\n\n\n3D bathymetric visualization of the Southern California coast, showing seafloor topography including the submarine canyon system. (Figure: Jeff A. Tracey)\n\n\n\n\n\nSea level rise scenario for the San Diego coast and Mission Bay. Red markers indicate monitoring locations that fall below projected sea level. The inland flooding of Mission Bay and surrounding lowlands is clearly visible. (Figure: Jeff A. Tracey)"
+    "text": "Coastal Bathymetry and Sea Level\nCombining coastal terrain with seafloor bathymetry in a single 3D model reveals the underwater landscape adjacent to the shore — and what happens to it as sea levels rise. These visualizations were built from NOAA and USGS digital elevation data using Python and ParaView.\n\n\n\n3D bathymetric visualization of the Southern California coast. The submarine canyon cutting through the continental shelf is La Jolla Canyon. (Figure: Jeff A. Tracey)\n\n\n\n\n\nSea level rise scenario for the San Diego coast and Mission Bay. Red markers indicate corners of Marine Protected Area (MPA) boundaries. The inland flooding of Mission Bay and surrounding lowlands is clearly visible. (Figure: Jeff A. Tracey)"
   },
   {
     "objectID": "projects/past/rattlesnakes.html",
