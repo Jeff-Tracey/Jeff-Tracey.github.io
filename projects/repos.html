@@ -177,8 +177,13 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
   <li><a href="#uav_pytools" id="toc-uav_pytools" class="nav-link" data-scroll-target="#uav_pytools">uav_pytools</a></li>
   <li><a href="#megadetector-pipeline" id="toc-megadetector-pipeline" class="nav-link" data-scroll-target="#megadetector-pipeline">MegaDetector Pipeline</a></li>
   </ul></li>
+  <li><a href="#java" id="toc-java" class="nav-link" data-scroll-target="#java">Java</a>
+  <ul class="collapse">
+  <li><a href="#eeid-abm-agent-based-disease-model" id="toc-eeid-abm-agent-based-disease-model" class="nav-link" data-scroll-target="#eeid-abm-agent-based-disease-model">eeid-abm — Agent-Based Disease Model</a></li>
+  </ul></li>
   <li><a href="#r-examples" id="toc-r-examples" class="nav-link" data-scroll-target="#r-examples">R Examples</a>
   <ul class="collapse">
+  <li><a href="#pareto-ranking-spatial-conservation-prioritization" id="toc-pareto-ranking-spatial-conservation-prioritization" class="nav-link" data-scroll-target="#pareto-ranking-spatial-conservation-prioritization">pareto-ranking — Spatial Conservation Prioritization</a></li>
   <li><a href="#r_large_raster" id="toc-r_large_raster" class="nav-link" data-scroll-target="#r_large_raster">r_large_raster</a></li>
   </ul></li>
   </ul>
@@ -296,8 +301,30 @@ if (outputEl) {{
 <hr>
 </section>
 </section>
+<section id="java" class="level2">
+<h2 class="anchored" data-anchor-id="java">Java</h2>
+<section id="eeid-abm-agent-based-disease-model" class="level3">
+<h3 class="anchored" data-anchor-id="eeid-abm-agent-based-disease-model">eeid-abm — Agent-Based Disease Model</h3>
+<p>Agent-based model (ABM) in Java for studying how habitat fragmentation affects infectious disease dynamics in wildlife populations. Simulated bobcats move through a spatially explicit landscape derived from actual land cover data, form proximity-based contact networks, and transmit infection to neighbors. Published as a software supplement to the <em>Ecosphere</em> paper.</p>
+<ul>
+<li><strong>GitHub:</strong> <a href="https://github.com/Jeff-Tracey/eeid-abm">https://github.com/Jeff-Tracey/eeid-abm</a></li>
+<li><strong>Paper:</strong> Tracey JA, Bevins SN, VandeWoude S, Crooks KR (2014). An agent-based movement model to assess the impact of landscape fragmentation on disease transmission. <em>Ecosphere</em> 5(9): 1–24. <a href="https://doi.org/10.1890/ES13-00376.1">https://doi.org/10.1890/ES13-00376.1</a></li>
+<li><strong>Project:</strong> <a href="../projects/past/eeid.html">Ecology of Infectious Disease — Agent-Based Models</a></li>
+</ul>
+<hr>
+</section>
+</section>
 <section id="r-examples" class="level2">
 <h2 class="anchored" data-anchor-id="r-examples">R Examples</h2>
+<section id="pareto-ranking-spatial-conservation-prioritization" class="level3">
+<h3 class="anchored" data-anchor-id="pareto-ranking-spatial-conservation-prioritization">pareto-ranking — Spatial Conservation Prioritization</h3>
+<p>R code (with supporting C/C++ functions) for Pareto ranking of conserved areas threatened by wildfire and urban fragmentation. Identifies monitoring and management priorities by ranking sites jointly on fire risk, biodiversity value, and landscape connectivity — without collapsing them into a single score.</p>
+<ul>
+<li><strong>GitHub:</strong> <a href="https://github.com/Jeff-Tracey/pareto-ranking">https://github.com/Jeff-Tracey/pareto-ranking</a></li>
+<li><strong>Paper:</strong> Tracey JA, Rochester CJ, Hathaway SA, et al.&nbsp;(2018). Prioritizing conserved areas threatened by wildfire and fragmentation for monitoring and management. <em>PLoS ONE</em> 13(9): e0200203. <a href="https://doi.org/10.1371/journal.pone.0200203">https://doi.org/10.1371/journal.pone.0200203</a></li>
+<li><strong>Project:</strong> <a href="../projects/past/fire-fragmentation.html">Fire, Fragmentation, and Conservation Prioritization</a></li>
+</ul>
+</section>
 <section id="r_large_raster" class="level3">
 <h3 class="anchored" data-anchor-id="r_large_raster">r_large_raster</h3>
 <p>R examples for working with large raster datasets that don’t fit in memory — tiling, Virtual Raster Datasets (VRTs), and parallel processing. Developed for NAIP multispectral imagery using <code>terra</code> and <code>stars</code>. Includes two parallel implementations (base <code>parallel</code> and <code>future</code>/<code>future.apply</code>) and HPC examples using MPI.</p>
