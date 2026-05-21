@@ -11,28 +11,21 @@
     "href": "mission/mission.html#the-vision",
     "title": "Mission",
     "section": "The Vision",
-    "text": "The Vision\nImagine a world where local communities have access to the tools, data, and scientific support to understand and protect the ecosystems in which they live.\nNetworks of community-based ecological monitoring systems where citizen scientists aren’t just data suppliers — they define the questions, gather data, advocate for protection, and drive conservation and management.\nA picture of your local ecosystem, situated within the broader one. Local communities bring what no remote sensor captures: lived knowledge of the place, generational observation, the kind of noticing that comes from being there. The science provides the analytical infrastructure and the broader context. Each informs the other."
+    "text": "The Vision\nI imagine a world where local communities have access to the tools, data, and scientific support to understand and protect the ecosystems in which they live. The people who live within a bioregion — who know its rhythms, notice its changes, and have a stake in its future — are in a prime position to do great work for the Earth. What they need is the scientific infrastructure to understand and act on what is actually happening in the places they know: low-cost sensors, AI tools, and partnerships with researchers who can provide the population-level view and broader context that local experience alone cannot supply. Together, these form networks of community-based ecological monitoring where citizen scientists aren’t just data suppliers — they define the questions, gather data, advocate for protection, and drive conservation and management. In short, this is about democratizing ecological research, conservation, and advocacy — putting the means of understanding and protecting nature into the hands of the people who give a damn."
   },
   {
-    "objectID": "mission/mission.html#what-this-looks-like-in-practice",
-    "href": "mission/mission.html#what-this-looks-like-in-practice",
+    "objectID": "mission/mission.html#the-challenge",
+    "href": "mission/mission.html#the-challenge",
     "title": "Mission",
-    "section": "What This Looks Like in Practice",
-    "text": "What This Looks Like in Practice\nTo Be Completed."
-  },
-  {
-    "objectID": "mission/mission.html#training-as-mission-infrastructure",
-    "href": "mission/mission.html#training-as-mission-infrastructure",
-    "title": "Mission",
-    "section": "Training as Mission Infrastructure",
-    "text": "Training as Mission Infrastructure\nThe challenge before us cannot be met by a handful of people who know these tools. We need ecologists, conservation scientists, tribal environmental staff, and STEM students who understand not just AI, but the ecology- and conservation-specific aspects of applying it."
+    "section": "The Challenge",
+    "text": "The Challenge\nThe current moment is not friendly to this work — funding for science, education, and environmental protection is contracting, ecological awareness is declining, and the regulatory frameworks that once provided a floor are eroding. At the same time, biodiversity is in freefall, ecological functioning and complexity are compromised, and the effects of climate change adversely affect the daily reality of people. This means that the benefits that nature provides to humankind are also compromised, to the detriment of us all. Meeting this challenge requires more than incremental effort; it requires a different way of thinking about what conservation science is and who it is for.\nThe challenge before us cannot be met by a handful of people who know these tools. We need ecologists, conservation scientists, practitioners of traditional ecological knowledge (TEK), and STEM students who understand not just AI, but the ecology- and conservation-specific aspects of applying it."
   },
   {
     "objectID": "mission/mission.html#listening-to-the-earth",
     "href": "mission/mission.html#listening-to-the-earth",
     "title": "Mission",
     "section": "Listening to the Earth",
-    "text": "Listening to the Earth\nAt the core of this vision is service of something bigger: a genuine relationship between people and the living systems they (and we) depend on.\nThe sensors and the models are expressions of care, not replacements for it. We can be technically sophisticated and still be creatures of this planet — embedded in it, accountable to it.\nIf any of this resonates with you — as a researcher, funder, student, collaborator, or someone who simply cares about wild places — get in touch."
+    "text": "Listening to the Earth\nAt the core of this vision is service of something bigger: a genuine relationship between people and the living systems they (that is, we) depend on. The sensors and the models are, in a sense, tools for listening to the Earth — and AI models can provide genuinely useful information for conservation decision-making. Technology, used appropriately, is an expression of care, not a replacement for it. We can be technically sophisticated and still be creatures of this planet — embedded in it, accountable to it.\nIf any of this resonates with you — as a researcher, funder, student, collaborator, or someone who simply cares about wild places — get in touch."
   },
   {
     "objectID": "about/about.html",
