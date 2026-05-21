@@ -162,32 +162,8 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#r-packages" id="toc-r-packages" class="nav-link active" data-scroll-target="#r-packages">R Packages</a>
-  <ul class="collapse">
-  <li><a href="#mkde-movement-kernel-density-estimation" id="toc-mkde-movement-kernel-density-estimation" class="nav-link" data-scroll-target="#mkde-movement-kernel-density-estimation">mkde — Movement Kernel Density Estimation</a></li>
-  </ul></li>
-  <li><a href="#python-tools" id="toc-python-tools" class="nav-link" data-scroll-target="#python-tools">Python Tools</a>
-  <ul class="collapse">
-  <li><a href="#easy_birdnet" id="toc-easy_birdnet" class="nav-link" data-scroll-target="#easy_birdnet">easy_birdnet</a></li>
-  <li><a href="#uav_pytools" id="toc-uav_pytools" class="nav-link" data-scroll-target="#uav_pytools">uav_pytools</a></li>
-  <li><a href="#megadetector-pipeline" id="toc-megadetector-pipeline" class="nav-link" data-scroll-target="#megadetector-pipeline">MegaDetector Pipeline</a></li>
-  </ul></li>
-  <li><a href="#java" id="toc-java" class="nav-link" data-scroll-target="#java">Java</a>
-  <ul class="collapse">
-  <li><a href="#eeid-abm-agent-based-disease-model" id="toc-eeid-abm-agent-based-disease-model" class="nav-link" data-scroll-target="#eeid-abm-agent-based-disease-model">eeid-abm — Agent-Based Disease Model</a></li>
-  </ul></li>
-  <li><a href="#r-examples" id="toc-r-examples" class="nav-link" data-scroll-target="#r-examples">R Examples</a>
-  <ul class="collapse">
-  <li><a href="#pareto-ranking-spatial-conservation-prioritization" id="toc-pareto-ranking-spatial-conservation-prioritization" class="nav-link" data-scroll-target="#pareto-ranking-spatial-conservation-prioritization">pareto-ranking — Spatial Conservation Prioritization</a></li>
-  <li><a href="#r_large_raster" id="toc-r_large_raster" class="nav-link" data-scroll-target="#r_large_raster">r_large_raster</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -263,79 +239,59 @@ if (outputEl) {{
 })();
 </script>
 <hr>
-<section id="r-packages" class="level2">
-<h2 class="anchored" data-anchor-id="r-packages">R Packages</h2>
-<section id="mkde-movement-kernel-density-estimation" class="level3">
-<h3 class="anchored" data-anchor-id="mkde-movement-kernel-density-estimation">mkde — Movement Kernel Density Estimation</h3>
-<p>R package for 2D and 3D movement-based kernel density estimation (MKDE) for animal home range and space use analysis. Developed in conjunction with the California condor 3D MKDE project; now maintained by the San Diego Supercomputer Center (SDSC).</p>
+<p><strong>easy_birdnet</strong></p>
+<p>Convenience wrapper for BirdNET bird call detection. Runs BirdNET on one or more audio files from AudioMoth or Song Meter recorders and produces a CSV table and detection plot per file. Supports batch and recursive directory modes.</p>
 <ul>
+<li><strong>Language:</strong> Python</li>
+<li><strong>GitHub:</strong> <a href="https://github.com/Jeff-Tracey/easy_birdnet">https://github.com/Jeff-Tracey/easy_birdnet</a></li>
+<li><strong>License:</strong> RAIL Non-Commercial</li>
+</ul>
+<hr>
+<p><strong>uav_pytools</strong></p>
+<p>Python utilities for DJI UAV mission planning, data management, and project setup. Developed for ecological field work with the DJI Mavic 3M (multispectral) and DJI Air 3S. Includes tools for GSD calculation, flight path export, image QC, RGB/multispectral splitting for WebODM, SRT telemetry parsing, and project directory management.</p>
+<ul>
+<li><strong>Language:</strong> Python</li>
+<li><strong>GitHub:</strong> <a href="https://github.com/Jeff-Tracey/uav_pytools">https://github.com/Jeff-Tracey/uav_pytools</a></li>
+<li><strong>License:</strong> RAIL Non-Commercial</li>
+</ul>
+<hr>
+<p><strong>r_large_raster</strong></p>
+<p>R examples for working with large raster datasets that don’t fit in memory — tiling, Virtual Raster Datasets (VRTs), and parallel processing. Developed for NAIP multispectral imagery using <code>terra</code> and <code>stars</code>. Includes two parallel implementations (base <code>parallel</code> and <code>future</code>/<code>future.apply</code>) and HPC examples using MPI.</p>
+<ul>
+<li><strong>Language:</strong> R</li>
+<li><strong>GitHub:</strong> <a href="https://github.com/Jeff-Tracey/r_large_raster">https://github.com/Jeff-Tracey/r_large_raster</a></li>
+<li><strong>License:</strong> RAIL Non-Commercial</li>
+</ul>
+<hr>
+<p><strong>mkde</strong></p>
+<p>R package for 2D and 3D movement-based kernel density estimation (MKDE) for animal home range and space use analysis. Developed in conjunction with the California condor 3D MKDE project; maintained on CRAN.</p>
+<ul>
+<li><strong>Language:</strong> R</li>
 <li><strong>CRAN:</strong> <a href="https://cran.r-project.org/package=mkde">https://cran.r-project.org/package=mkde</a></li>
 <li><strong>Paper:</strong> Tracey JA, Sheppard J, Zhu J, Wei F, Swaisgood RR, Fisher RN (2014). Movement-Based Estimation and Visualization of Space Use in 3D for Wildlife Ecology and Conservation. <em>PLOS ONE</em> 9(7): e101205. <a href="https://doi.org/10.1371/journal.pone.0101205">https://doi.org/10.1371/journal.pone.0101205</a></li>
 <li><strong>Project:</strong> <a href="../projects/past/condors.html">California Condor Space Use</a></li>
 <li><strong>Tutorial:</strong> Animal Space Use in 2D and 3D <em>(coming soon)</em></li>
 </ul>
 <hr>
-</section>
-</section>
-<section id="python-tools" class="level2">
-<h2 class="anchored" data-anchor-id="python-tools">Python Tools</h2>
-<section id="easy_birdnet" class="level3">
-<h3 class="anchored" data-anchor-id="easy_birdnet">easy_birdnet</h3>
-<p>Convenience wrapper for BirdNET bird call detection. Runs BirdNET on one or more audio files from AudioMoth or Song Meter recorders and produces a CSV table and detection plot per file. Supports batch and recursive directory modes.</p>
-<ul>
-<li><strong>GitHub:</strong> <a href="https://github.com/Jeff-Tracey/easy_birdnet">https://github.com/Jeff-Tracey/easy_birdnet</a></li>
-<li><strong>License:</strong> RAIL Non-Commercial</li>
-</ul>
-</section>
-<section id="uav_pytools" class="level3">
-<h3 class="anchored" data-anchor-id="uav_pytools">uav_pytools</h3>
-<p>Python utilities for DJI UAV mission planning, data management, and project setup. Developed for ecological field work with the DJI Mavic 3M (multispectral) and DJI Air 3S. Includes tools for GSD calculation, flight path export, image QC, RGB/multispectral splitting for WebODM, SRT telemetry parsing, and project directory management.</p>
-<ul>
-<li><strong>GitHub:</strong> <a href="https://github.com/Jeff-Tracey/uav_pytools">https://github.com/Jeff-Tracey/uav_pytools</a></li>
-<li><strong>License:</strong> RAIL Non-Commercial</li>
-</ul>
-</section>
-<section id="megadetector-pipeline" class="level3">
-<h3 class="anchored" data-anchor-id="megadetector-pipeline">MegaDetector Pipeline</h3>
-<p><em>Coming soon.</em></p>
-<hr>
-</section>
-</section>
-<section id="java" class="level2">
-<h2 class="anchored" data-anchor-id="java">Java</h2>
-<section id="eeid-abm-agent-based-disease-model" class="level3">
-<h3 class="anchored" data-anchor-id="eeid-abm-agent-based-disease-model">eeid-abm — Agent-Based Disease Model</h3>
-<p>Agent-based model (ABM) in Java for studying how habitat fragmentation affects infectious disease dynamics in wildlife populations. Simulated bobcats move through a spatially explicit landscape derived from actual land cover data, form proximity-based contact networks, and transmit infection to neighbors. Published as a software supplement to the <em>Ecosphere</em> paper.</p>
-<ul>
-<li><strong>GitHub:</strong> <a href="https://github.com/Jeff-Tracey/eeid-abm">https://github.com/Jeff-Tracey/eeid-abm</a></li>
-<li><strong>Paper:</strong> Tracey JA, Bevins SN, VandeWoude S, Crooks KR (2014). An agent-based movement model to assess the impact of landscape fragmentation on disease transmission. <em>Ecosphere</em> 5(9): 1–24. <a href="https://doi.org/10.1890/ES13-00376.1">https://doi.org/10.1890/ES13-00376.1</a></li>
-<li><strong>Project:</strong> <a href="../projects/past/eeid.html">Ecology of Infectious Disease — Agent-Based Models</a></li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="r-examples" class="level2">
-<h2 class="anchored" data-anchor-id="r-examples">R Examples</h2>
-<section id="pareto-ranking-spatial-conservation-prioritization" class="level3">
-<h3 class="anchored" data-anchor-id="pareto-ranking-spatial-conservation-prioritization">pareto-ranking — Spatial Conservation Prioritization</h3>
+<p><strong>pareto-ranking</strong></p>
 <p>R code (with supporting C/C++ functions) for Pareto ranking of conserved areas threatened by wildfire and urban fragmentation. Identifies monitoring and management priorities by ranking sites jointly on fire risk, biodiversity value, and landscape connectivity — without collapsing them into a single score.</p>
 <ul>
+<li><strong>Language:</strong> R / C++</li>
 <li><strong>GitHub:</strong> <a href="https://github.com/Jeff-Tracey/pareto-ranking">https://github.com/Jeff-Tracey/pareto-ranking</a></li>
 <li><strong>Paper:</strong> Tracey JA, Rochester CJ, Hathaway SA, et al.&nbsp;(2018). Prioritizing conserved areas threatened by wildfire and fragmentation for monitoring and management. <em>PLoS ONE</em> 13(9): e0200203. <a href="https://doi.org/10.1371/journal.pone.0200203">https://doi.org/10.1371/journal.pone.0200203</a></li>
 <li><strong>Project:</strong> <a href="../projects/past/fire-fragmentation.html">Fire, Fragmentation, and Conservation Prioritization</a></li>
 </ul>
-</section>
-<section id="r_large_raster" class="level3">
-<h3 class="anchored" data-anchor-id="r_large_raster">r_large_raster</h3>
-<p>R examples for working with large raster datasets that don’t fit in memory — tiling, Virtual Raster Datasets (VRTs), and parallel processing. Developed for NAIP multispectral imagery using <code>terra</code> and <code>stars</code>. Includes two parallel implementations (base <code>parallel</code> and <code>future</code>/<code>future.apply</code>) and HPC examples using MPI.</p>
+<hr>
+<p><strong>eeid-abm</strong></p>
+<p>Agent-based model (ABM) for studying how habitat fragmentation affects infectious disease dynamics in wildlife populations. Simulated bobcats move through a spatially explicit landscape derived from actual land cover data, form proximity-based contact networks, and transmit infection to neighbors. Published as a software supplement to the <em>Ecosphere</em> paper.</p>
 <ul>
-<li><strong>GitHub:</strong> <a href="https://github.com/Jeff-Tracey/r_large_raster">https://github.com/Jeff-Tracey/r_large_raster</a></li>
-<li><strong>License:</strong> RAIL Non-Commercial</li>
+<li><strong>Language:</strong> Java</li>
+<li><strong>GitHub:</strong> <a href="https://github.com/Jeff-Tracey/eeid-abm">https://github.com/Jeff-Tracey/eeid-abm</a></li>
+<li><strong>Paper:</strong> Tracey JA, Bevins SN, VandeWoude S, Crooks KR (2014). An agent-based movement model to assess the impact of landscape fragmentation on disease transmission. <em>Ecosphere</em> 5(9): 1–24. <a href="https://doi.org/10.1890/ES13-00376.1">https://doi.org/10.1890/ES13-00376.1</a></li>
+<li><strong>Project:</strong> <a href="../projects/past/eeid.html">Ecology of Infectious Disease — Agent-Based Models</a></li>
 </ul>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
