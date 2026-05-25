@@ -273,13 +273,13 @@ if (outputEl) {{
 <h2 class="anchored" data-anchor-id="san-diego-supercomputer-center">San Diego Supercomputer Center</h2>
 <p>My first serious exposure to HPC came in 2000, when I attended the week-long NPACI Parallel Computing Institute at the San Diego Supercomputer Center (<a href="https://www.sdsc.edu">SDSC</a>) as a graduate student at UC San Diego. NPACI — the National Partnership for Advanced Computational Infrastructure — was NSF’s predecessor to TeraGrid and eventually XSEDE. The institute introduced me to parallel programming concepts and HPC environments at a time when I was still doing field ecology.</p>
 <p>Years later, when James Sheppard and I partnered with SDSC researchers Bob Sinkovits and Glenn Lockwood to optimize and parallelize the 3D movement-based kernel density estimator (MKDE). The 3D MKDE method for estimating animal space use in three spatial dimensions is computationally intensive. Computing 3D MKDEs over a large dataset is embarrassingly parallel but slow enough to require distributed computing infrastructure. We implemented a parallelized version using OpenMP — parallelizing the core loops in C/C++ functions called from R — and ran it on Gordon, SDSC’s flash memory-based supercomputer, demonstrating it on eagle and condor telemetry data from coastal California. The result was a substantial speedup and a paper at XSEDE 2014. The mkde R package, which implements the estimator, is available on CRAN.</p>
-<div style="display:flex; gap:1.5em; align-items:flex-start; margin:1em 0;">
-  <figure style="margin:0;" class="figure">
-    <img src="../../img/hpc/trestles_tracey_sheppard.jpg" style="height:260px; width:auto; display:block;" class="figure-img">
+<div style="display:flex; gap:1.5em; align-items:flex-start; flex-wrap:wrap; margin:1em 0;">
+  <figure style="margin:0; flex:1 1 250px; min-width:0;" class="figure">
+    <img src="../../img/hpc/trestles_tracey_sheppard.jpg" style="width:100%; height:auto; display:block;" class="figure-img">
     <figcaption style="font-size:0.85em; color:#666; margin-top:0.4em;">Jeff Tracey (left) and James Sheppard (right) by the Trestles supercomputer, at the San Diego Supercomputer Center.</figcaption>
   </figure>
-  <figure style="margin:0;" class="figure">
-    <img src="../../img/hpc/bob_james-mkde3d.jpeg" style="height:260px; width:auto; display:block;" class="figure-img">
+  <figure style="margin:0; flex:1 1 250px; min-width:0;" class="figure">
+    <img src="../../img/hpc/bob_james-mkde3d.jpeg" style="width:100%; height:auto; display:block;" class="figure-img">
     <figcaption style="font-size:0.85em; color:#666; margin-top:0.4em;">Robert Sinkovits (left) and James Sheppard (right) during a planning session at the San Diego Supercomputer Center.</figcaption>
   </figure>
 </div>
@@ -301,13 +301,13 @@ if (outputEl) {{
 <p>My relationship with ARC began when I developed and taught a workshop on R for HPC — introducing USGS researchers to parallel computing in R on ARC’s systems. ARC supported my attendance at several annual Supercomputing (<a href="https://supercomputing.org">SC</a>) conferences, as part of that teaching relationship. At SC19, Natalya Rapstine and I presented a poster and extended abstract on deep learning methods for unsupervised clustering of telemetry data. The method used a deep recurrent autoencoder with LSTM units to encode movement sequences, followed by Deep Embedded Clustering (DEC) to classify move steps into behavioral modes — without requiring labeled training data. Applied to both simulated data and golden eagle GPS telemetry from San Diego County, run on Tallgrass’s NVIDIA V100 GPU nodes. DEC outperformed baseline K-means across all experiments.</p>
 <p>ARC’s first supercomputer was Yeti — a system that set the foundation for what became a serious USGS HPC program. Yeti has since been decommissioned as it was used well beyond its service life.</p>
 <p>Yeti was followed by Denali and Tallgrass — two Cray systems that brought substantially more compute power and enabled the kinds of large-scale AI/ML workflows that are now central to ecological research. I used Tallgrass extensively as it was designed for AI/ML workloads and had six nodes with NVIDIA V100 Tesla GPUs. More recently, ARC acquired the Hovenweep superocomputer, which provided a replacement for Yeti.</p>
-<div style="display:flex; gap:1.5em; align-items:flex-start; margin:1em 0;">
-  <figure style="margin:0;" class="figure">
-    <img src="../../img/hpc/IMG_0219.jpeg" style="height:320px; width:auto; display:block;" class="figure-img">
+<div style="display:flex; gap:1.5em; align-items:flex-start; flex-wrap:wrap; margin:1em 0;">
+  <figure style="margin:0; flex:1 1 250px; min-width:0;" class="figure">
+    <img src="../../img/hpc/IMG_0219.jpeg" style="width:100%; height:auto; display:block;" class="figure-img">
     <figcaption style="font-size:0.85em; color:#666; margin-top:0.4em;">Yeti — USGS ARC's first supercomputer. An IBM system that established the foundation for federal HPC in ecological research. Now decommissioned. (Photo: Jeff A. Tracey)</figcaption>
   </figure>
-  <figure style="margin:0;" class="figure">
-    <img src="../../img/hpc/arc_denali_tallgrass.jpg" style="height:320px; width:auto; display:block;" class="figure-img">
+  <figure style="margin:0; flex:1 1 250px; min-width:0;" class="figure">
+    <img src="../../img/hpc/arc_denali_tallgrass.jpg" style="width:100%; height:auto; display:block;" class="figure-img">
     <figcaption style="font-size:0.85em; color:#666; margin-top:0.4em;">Denali (center, Denali mountain graphic) and Tallgrass (left, zebra-stripe panels) — USGS ARC Cray supercomputers. The USGS logo is visible on the Tallgrass cabinet at left. These systems supported large-scale ecological simulation, movement modeling, and deep learning workflows. (Photo: Jeff Falgout, USGS)</figcaption>
   </figure>
 </div>
@@ -322,13 +322,13 @@ if (outputEl) {{
 </figure>
 </div>
 <p>The last Supercomputing conference (SC) I attened in person as a member of ARC was SC23. During this meeting, ARC represented USGS at a booth in the exhibit hall, where we engaged with researchers, vendors, and other attendees.</p>
-<div style="display:flex; gap:1.5em; align-items:flex-start; margin:1em 0;">
-  <figure style="margin:0;" class="figure">
-    <img src="../../img/hpc/sc23_booth_a.png" style="height:320px; width:auto; display:block;" class="figure-img">
+<div style="display:flex; gap:1.5em; align-items:flex-start; flex-wrap:wrap; margin:1em 0;">
+  <figure style="margin:0; flex:1 1 250px; min-width:0;" class="figure">
+    <img src="../../img/hpc/sc23_booth_a.png" style="width:100%; height:auto; display:block;" class="figure-img">
     <figcaption style="font-size:0.85em; color:#666; margin-top:0.4em;">USGS ARC booth at Supercomputing 23, Denver. Left to right: Phil O., and Jeff Tracey. (Photo: USGS)</figcaption>
   </figure>
-  <figure style="margin:0;" class="figure">
-    <img src="../../img/hpc/sc23_booth_b.jpg" style="height:320px; width:auto; display:block;" class="figure-img">
+  <figure style="margin:0; flex:1 1 250px; min-width:0;" class="figure">
+    <img src="../../img/hpc/sc23_booth_b.jpg" style="width:100%; height:auto; display:block;" class="figure-img">
     <figcaption style="font-size:0.85em; color:#666; margin-top:0.4em;">USGS ARC booth at Supercomputing 23. Left to right: colleagues from Colorado School of Mines, Leah C., Janice G. (ARC team lead), Phil O. (Photo: USGS)</figcaption>
   </figure>
 </div>
