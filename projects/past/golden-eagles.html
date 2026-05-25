@@ -275,10 +275,10 @@ if (outputEl) {{
 <hr>
 <section id="the-study" class="level2">
 <h2 class="anchored" data-anchor-id="the-study">The Study</h2>
-<p>I was fortunate enough to play a large role in a GPS telemetry study of golden eagles (<em>Aquila chrysaetos</em>) in southern California. Our focus was on eagle habitat use and response to urbanization in our region. During the course of the study, eagles we tracked went as far south as Baja California Sur, Mexico and as far north as Alberta, Canada.</p>
+<p>I was fortunate enough to play a large role in a GPS telemetry study of golden eagles (<em>Aquila chrysaetos</em>) in southern California. Our focus was on eagle habitat use and response to urbanization in our region. During the course of the study, however, some eagles that we tracked went as far south as Baja California Sur, Mexico and as far north as Alberta, Canada.</p>
 <p>This project grew out of a need to understand how golden eagles were using the urban-wildland landscape east of San Diego — a mosaic of chaparral, grassland, oak woodland, and agricultural land and pastures alongside urban and suburban development, roads, and freeways in one of the fastest-growing urban areas in California.</p>
 <p>After our team’s PI, Robert Fisher, secured funding for the project, Pete Bloom, Jeremy Sebes (a USGS field technician), and I got the study off the ground in early fall 2014. Pete Bloom — one of the foremost raptor biologists in the western US — led the eagle trapping effort and was involved in all other aspects of the study. Pete’s expertise was essential; capturing a golden eagle requires a lot of technique and experience and, as Pete explained to us, can be hazardous to one’s health if done incorrectly.</p>
-<p>For a few years I supervised the field work while also managing the data pipeline and doing the analysis. Eventually Melanie Madden — an actual bird biologist — took over field supervision, which was exactly right. I shifted fully to data management, modeling, and the computational aspects of the project.</p>
+<p>For a few years I supervised the field work while also managing the datasets and doing the analysis. Eventually Melanie Madden — an actual bird biologist — took over field supervision, which was exactly right. I shifted fully to data management, modeling, and the computational aspects of the project.</p>
 <p>This page is not so much about the study and our findings. It is a story about one Golden Eagle – the first male we captured on Otay Mountain (M001) in December 2014.</p>
 <hr>
 </section>
@@ -347,11 +347,11 @@ if (outputEl) {{
 <figcaption>A view of M001’s territory from Google Earth 2014 imagery. Urban Chula Vista and Otay Ranch are visible at left — the development pressure that motivated the habitat selection analysis. Rancho Jamul Ecological Reserve and San Diego National Wildlife Refuge occupy the wildland block in the center. (Image: Google Earth 2014)</figcaption>
 </figure>
 </div>
-<p>The terrain and land cover context for the eagle telemetry study, visualized in ParaView from a digital elevation model with land use/land cover overlay. Urban areas in gray; natural vegetation in green; developed/disturbed areas in orange.</p>
+<p>In order to visualize the movement of M001 (and other eagles in the area), I used ParaView to plot the movement trajectories in relation to terrain and land cover. The purpose ws to illustrate eagle movement in relation to proposed urbn developments in the area.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../img/eagles/Elev-LU2-2014-fig1.png" class="img-fluid figure-img"></p>
-<figcaption>Top-down view of the study area terrain and land use/land cover. Urban San Diego is visible at left; wildland habitat extends to the east. <em>(Visualization: J. A. Tracey)</em></figcaption>
+<figcaption>Top-down view of the study area terrain and land use/land cover. Urban San Diego is visible at left; wildland habitat extends to the east. Urban areas in gray; natural vegetation in green; low-density development in orange, and disturbed areas in yellow. <em>(Visualization: J. A. Tracey)</em></figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -406,7 +406,7 @@ if (outputEl) {{
 </video></section>
 <section id="habitat-selection-and-urban-avoidance" class="level2">
 <h2 class="anchored" data-anchor-id="habitat-selection-and-urban-avoidance">Habitat Selection and Urban Avoidance</h2>
-<p>Golden eagles in San Diego County strongly avoid urban areas, with habitat use increasing sharply with distance from development. The relationship is non-linear: use probability rises steeply from the urban edge, peaks around 2km out, then levels off into wildland habitat.</p>
+<p>I built a habitat model so that we could better understand golden eagle movement in relation to the urban-habitat boundary and terrain. The results showed that golden eagles in San Diego County strongly avoid urban areas, with habitat use increasing sharply with distance from development. The relationship is non-linear: use probability rises steeply from the urban edge, peaks around 2km out, then levels off into wildland habitat.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../img/eagles/eagle_urban_edge_avoidance_curve.jpg" class="img-fluid figure-img"></p>
@@ -458,6 +458,7 @@ if (outputEl) {{
 <li><a href="https://bloom.bio">Pete Bloom</a> — raptor biologist; eagle trapping and field work</li>
 <li>Todd Katzner — USGS Forest and Rangeland Ecosystem Science Center; eagle ecology and movement</li>
 <li>Robert N. Fisher — USGS Western Ecological Research Center; project PI</li>
+<li>Jeremy Sebes (played an instrumental role in the field work) and Melanie Madden (took over project manamgement after the first year or so of the project)</li>
 </ul>
 
 
