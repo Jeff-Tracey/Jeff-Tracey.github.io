@@ -252,7 +252,7 @@ if (outputEl) {{
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../img/mkde/MKDE-TopFig.jpg" class="img-fluid figure-img"></p>
-<figcaption>Probabilistic 3D space use by a California condor (left) and a condor fitted with a GPS telemetry device (right). Collaboration between Jeff A. Tracey and San Diego Zoo Wildlife Alliance.</figcaption>
+<figcaption>Probabilistic 3D space use by a California condor (left) and a condor fitted with a GPS telemetry device (right). Collaboration between Jeff A. Tracey and San Diego Zoo Wildlife Alliance. <em>(Visualization: J. A. Tracey)</em></figcaption>
 </figure>
 </div>
 <hr>
@@ -263,7 +263,7 @@ if (outputEl) {{
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../img/mkde/HomeRangeComparison.jpg" class="img-fluid figure-img"></p>
-<figcaption><strong>Figure 1:</strong> Four common methods for describing animal space use. Red points are observed locations. Nonparametric methods (top row): minimum convex polygon and LoCoH, with different convex hulls in shades of gray. Kernel-based methods (bottom row): higher density regions in darker gray.</figcaption>
+<figcaption><strong>Figure 1:</strong> Four common methods for describing animal space use. Red points are observed locations. Nonparametric methods (top row): minimum convex polygon and LoCoH, with different convex hulls in shades of gray. Kernel-based methods (bottom row): higher density regions in darker gray. <em>(Visualization: J. A. Tracey)</em></figcaption>
 </figure>
 </div>
 <p>All of these methods share a common limitation: they operate in two spatial dimensions. Some species, however, have an important vertical component to their space use. Until this project, very little work had extended 2D methods to handle full 3D location data.</p>
@@ -271,18 +271,11 @@ if (outputEl) {{
 </section>
 <section id="estimating-animal-space-use-in-3d" class="level2">
 <h2 class="anchored" data-anchor-id="estimating-animal-space-use-in-3d">Estimating Animal Space Use in 3D</h2>
-<p>This work began as a collaboration between Jeff A. Tracey and Dr.&nbsp;James K. Sheppard of the San Diego Zoo’s Institute for Conservation Research (now <a href="https://sandiegozooglobal.org">San Diego Zoo Wildlife Alliance</a>) to extend the MKDE approach to three spatial dimensions. The motivation was the spatial ecology of reintroduced California condors (<em>Gymnogyps californianus</em>) and risks they face from wind energy development along the US-Mexico border. The methods, however, apply to any species that can be tracked with biotelemetry and has significant vertical movement — birds, marine mammals, sea turtles, arboreal species.</p>
+<p>This work began as a collaboration between Jeff A. Tracey and Dr.&nbsp;James K. Sheppard of the San Diego Zoo’s Institute for Conservation Research (now <a href="https://sandiegozooglobal.org">San Diego Zoo Wildlife Alliance</a>) to extend the MKDE approach to three spatial dimensions. The motivation was the spatial ecology of reintroduced California condors (<em>Gymnogyps californianus</em>) and risks they face from wind energy development along the US-Mexico border. As the project developed, we formed a collaboration with Robert Sinkovits from the San Diego Supercomputer Center <a href="https://www.sdsc.edu">(SDSC)</a>, a collaboration that was soon expanded to include Amit Chourasia, and Glenn Lockwood from SDSC. The methods, however, apply to any species that can be tracked with biotelemetry and has significant vertical movement — birds, marine mammals, sea turtles, arboreal species.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/1/11/California-condor-gymnogyps-californianus-078_%2821196759264%29.jpg" class="img-fluid figure-img"></p>
 <figcaption><strong>Figure 2:</strong> A California condor in flight. (photo Don Graham, CC BY-SA 2.0)</figcaption>
-</figure>
-</div>
-<p>The proposed Sempra wind farm in Baja, Mexico, sits in a corridor used by condors reintroduced by the San Diego Zoo. One bird released in Baja flew through the proposed installation area in 2007.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../img/mkde/SempraWindfarm01.png" class="img-fluid figure-img"></p>
-<figcaption><strong>Figure 3:</strong> 3D model of a proposed wind farm along the US-Mexico border in Baja, Mexico. Turbine locations, tower heights, and rotor radii are consistent with the proposed installation.</figcaption>
 </figure>
 </div>
 <hr>
@@ -293,27 +286,27 @@ if (outputEl) {{
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../img/mkde/MKDE-Steps.jpg" class="img-fluid figure-img"></p>
-<figcaption><strong>Figure 4:</strong> Steps involved in building and visualizing a 3D MKDE.</figcaption>
+<figcaption><strong>Figure 4:</strong> Steps involved in building and visualizing a 3D MKDE. <em>(Visualization: J. A. Tracey)</em></figcaption>
 </figure>
 </div>
 <p>Once the 3D MKDE is calculated, contour surfaces at specified probability levels (e.g., 50%, 75%, 95%, 99%) describe the volume of space used with corresponding probability. These can be visualized in 3D using tools such as ParaView, VisIt, or Mayavi.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../img/mkde/mkde-3d-condor217-fig01.jpg" class="img-fluid figure-img"></p>
-<figcaption><strong>Figure 5:</strong> Condor movement data (red spheres = observed locations, red lines = interpolated path) with 99%, 95%, 75%, and 50% contours of a 3D MKDE.</figcaption>
+<figcaption><strong>Figure 5:</strong> Condor movement data (red spheres = observed locations, red lines = interpolated path) with 99%, 95%, 75%, and 50% contours of a 3D MKDE. <em>(Visualization: J. A. Tracey)</em></figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../img/mkde/mkde-3d-condor217-fig02.jpg" class="img-fluid figure-img"></p>
-<figcaption><strong>Figure 6:</strong> Side view of condor movement data and 3D MKDE contours.</figcaption>
+<figcaption><strong>Figure 6:</strong> Side view of condor movement data and 3D MKDE contours. <em>(Visualization: J. A. Tracey)</em></figcaption>
 </figure>
 </div>
 <hr>
 </section>
 <section id="high-performance-computing" class="level2">
 <h2 class="anchored" data-anchor-id="high-performance-computing">High-Performance Computing</h2>
-<p>The computations involved in 3D MKDE are demanding. In 2013, this collaboration expanded to include Robert Sinkovits, Amit Chourasia, and Glenn Lockwood at the <a href="https://www.sdsc.edu">San Diego Supercomputer Center</a> (SDSC). SDSC provided technical expertise including optimization of the core C++ code, parallelization of the algorithms, access to HPC resources, and scientific visualization support.</p>
+<p>In 2014, we submitted a 3D MKDE animation for the XSEDE Visualation Showcase. Because we had to compute large 3D MKDEs over two-day time intervals, we decided to process them in parallel on the Gordon supercomputer at SDSC. After Robert (Bob) optimized of the core C++ code, Glenn Lockwood and I parallelized the 3D MKDE computations using OpenMP. Once the MKDEs were computed, Amit Chourasia took the lead in creating the animatio using VisIt software.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="https://www.sdsc.edu/news/2012/PR030512_gordon.html"><img src="https://www.sdsc.edu/_files/images/news_items/PR120711_gordon.jpg" class="img-fluid figure-img"></a></p>
@@ -321,6 +314,18 @@ if (outputEl) {{
 </figure>
 </div>
 <p>A paper describing the computational aspects of the methodology was presented at the XSEDE14 conference, along with an animation for the conference’s Visualization Showcase. In this visualization, 3D MKDEs for a breeding pair of California condors were calculated within a two-day moving window over several years on SDSC’s Gordon supercomputer and animated using VisIt software.</p>
+<video controls="" width="100%">
+  <source src="../../img/mkde/condor_pair_mkde.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<p><em>3D MKDE home ranges for a pair of California condors (<em>Gymnogyps californianus</em>), animated over a moving time window. The volumetric space use estimates capture both horizontal and vertical dimensions of flight — condors regularly soar above 1,500 m. Computed in collaboration with the San Diego Supercomputer Center. (Visualization: J. A. Tracey, J. K. Sheppard, R. Sinkovits, and A. Chourasia)</em></p>
+<p>A Sempra wind farm that was proposed for construction in Baja, Mexico (now built) overlapped an area that was used by a condor that reintroduced by the San Diego Wildlife Alliance i Baja. One bird released in Baja flew through the proposed installation area in 2007. We constructed 3D Models of the proposed windfarm so that we could visualize, in 3D, the movement route of the condor in relation th the turbines.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/mkde/SempraWindfarm01.png" class="img-fluid figure-img"></p>
+<figcaption><strong>Figure 3:</strong> 3D model of a proposed wind farm along the US-Mexico border in Baja, Mexico. Turbine locations, tower heights, and rotor radii are consistent with the proposed installation. <em>(Visualization: J. A. Tracey)</em></figcaption>
+</figure>
+</div>
 <hr>
 </section>
 <section id="software" class="level2">
@@ -332,7 +337,7 @@ if (outputEl) {{
 <h2 class="anchored" data-anchor-id="products">Products</h2>
 <ul>
 <li><strong>R Package:</strong> <a href="https://cran.r-project.org/package=mkde"><code>mkde</code></a> on CRAN</li>
-<li><strong>Paper:</strong> Tracey JA, Sheppard J, Zhu J, Wei F, Swaisgood RR, Fisher RN (2014). Movement-Based Estimation and Visualization of Space Use in 3D for Wildlife Ecology and Conservation. <em>PLOS ONE</em> 9(7): e101205. <a href="https://doi.org/10.1371/journal.pone.0101205">https://doi.org/10.1371/journal.pone.0101205</a></li>
+<li><strong>Paper:</strong> Tracey JA, Sheppard J, Zhu J, Wei F, Swaisgood RR, Fisher RN (2014). Movement-Based Estimation and Visualization of Space Use in 3D for Wildlife Ecologyand Conservation. <em>PLOS ONE</em> 9(7): e101205. <a href="https://doi.org/10.1371/journal.pone.0101205">https://doi.org/10.1371/journal.pone.0101205</a></li>
 <li><strong>XSEDE14 Proceedings Paper:</strong> Tracey JA, Sheppard JK, Lockwood GK, Chourasia A, Tatineni M, Fisher RN, Sinkovits RS (2014). Efficient 3D movement-based kernel density estimator and application to wildlife ecology. <em>Proceedings of the 2014 Annual Conference on Extreme Science and Engineering Discovery Environment</em>, pp.&nbsp;1–8. <a href="https://doi.org/10.1145/2616498.2616522">https://doi.org/10.1145/2616498.2616522</a></li>
 <li><strong>XSEDE14 Visualization Showcase:</strong> Animated 3D MKDEs for a breeding condor pair</li>
 </ul>
