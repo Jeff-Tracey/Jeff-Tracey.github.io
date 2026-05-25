@@ -169,7 +169,11 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#code" id="toc-code" class="nav-link active" data-scroll-target="#code">Code</a></li>
+  <li><a href="#the-problem" id="toc-the-problem" class="nav-link active" data-scroll-target="#the-problem">The Problem</a></li>
+  <li><a href="#study-area" id="toc-study-area" class="nav-link" data-scroll-target="#study-area">Study Area</a></li>
+  <li><a href="#the-approach" id="toc-the-approach" class="nav-link" data-scroll-target="#the-approach">The Approach</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
+  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">Code</a></li>
   <li><a href="#papers" id="toc-papers" class="nav-link" data-scroll-target="#papers">Papers</a></li>
   </ul>
 </nav>
@@ -265,8 +269,63 @@ if (outputEl) {{
 })();
 </script>
 <hr>
-<p><em>More content coming soon.</em></p>
+<section id="the-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem">The Problem</h2>
+<p>San Diego County is a global biodiversity hotspot — one of the most species-rich and endemic-laden regions in North America — and it is also one of the most threatened. The combination of urban expansion, a fragmented landscape of conserved lands surrounded by development, and an intensifying fire regime driven by climate change creates overlapping threats that no single analysis could adequately capture. Conserved areas face different combinations of these pressures, and with limited resources for monitoring and management, knowing <em>where</em> to focus becomes a genuinely hard problem.</p>
+<p>The question I set out to address, with my co-authors, was: how do you prioritize conserved areas when the threats are multiple, the ecological values are multiple, and no single criterion dominates? Traditional approaches to spatial prioritization rank sites on a single score, which requires weighting incommensurable criteria against each other — a choice that is both scientifically arbitrary and politically loaded. We took a different approach.</p>
 <hr>
+</section>
+<section id="study-area" class="level2">
+<h2 class="anchored" data-anchor-id="study-area">Study Area</h2>
+<p>The study focused on conserved lands within San Diego County — national forests, national wildlife refuges, state parks, reserves, and privately conserved areas. The county spans a strong climate gradient from the Pacific coast eastward through chaparral and oak woodland into desert, and the conserved areas are distributed unevenly across these zones.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/fire/study-area.jpg" class="img-fluid figure-img"></p>
+<figcaption>San Diego County study area, showing conserved lands and the climate zones used to structure the analysis. The coastal zone transitions to chaparral and then desert from west to east. <em>(Figure from Tracey et al.&nbsp;2018, PLoS ONE, CC BY 4.0)</em></figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="the-approach" class="level2">
+<h2 class="anchored" data-anchor-id="the-approach">The Approach</h2>
+<p>The core methodological contribution of this work is the application of Pareto ranking to spatial conservation prioritization. Pareto ranking comes from multi-objective optimization: a solution A dominates solution B if A is at least as good as B on every criterion and strictly better on at least one. Solutions that are not dominated by any other solution form the Pareto front — the set of efficient trade-offs. By iteratively removing Pareto fronts, you assign every spatial unit a rank: rank 1 is the undominated set (highest priority), rank 2 is undominated after rank 1 is removed, and so on.</p>
+<p>The approach works on five categories of criteria:</p>
+<ul>
+<li><strong>Fire threat</strong> — number of historical fires, ignition probability, and fire return interval departure (FRID), a measure of how much fire frequency has deviated from its historical range</li>
+<li><strong>Fragmentation threat</strong> — road density, development density, and habitat patch area</li>
+<li><strong>Species richness</strong> — species distribution models (SDMs) combined across plants, herpetofauna, birds, and mammals</li>
+<li><strong>Genetic diversity</strong> — within-population diversity for a panel of focal species</li>
+<li><strong>Genetic divergence</strong> — between-population divergence, reflecting evolutionary distinctiveness</li>
+</ul>
+<p>The method avoids the need to weight criteria against each other. Instead, it identifies which conserved areas are most threatened across the most criteria simultaneously.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/fire/pareto-flowchart.jpg" class="img-fluid figure-img"></p>
+<figcaption>Flowchart of the Pareto ranking prioritization method. Criteria are organized into threat and value dimensions; Pareto ranking identifies conserved areas that are simultaneously high-value and high-threat without requiring explicit weights. <em>(Figure from Tracey et al.&nbsp;2018, PLoS ONE, CC BY 4.0)</em></figcaption>
+</figure>
+</div>
+<p>I wrote the Pareto ranking code in R and it is publicly available (see below). The SDMs were developed by co-authors with expertise in each taxon group; the genetic data came from the <a href="https://mvz.berkeley.edu/">UC Berkeley Museum of Vertebrate Zoology</a> and co-authors at the <a href="https://www.usgs.gov/centers/werc">USGS Western Ecological Research Center</a>. The full analysis ran across roughly 50m grid cells covering the conserved land network of the county.</p>
+<hr>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<p>The spatial prioritization revealed a clear pattern: the highest-priority conserved areas — those in the first few Pareto ranks — are concentrated along the eastern edge of the urban footprint, in the coastal and transitional climate zones. These are the areas where fire threat, fragmentation pressure, species richness, and genetic diversity coincide. They are also the areas under the most active development pressure.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/fire/rank-map.jpg" class="img-fluid figure-img"></p>
+<figcaption>Pareto rank map for the combined fire, fragmentation, species richness, and genetic diversity criteria. Lower rank numbers (warmer colors) indicate higher priority — these areas are simultaneously the most biodiverse and most threatened. The concentration of high-priority cells along the urban-wildland interface in the coastal and transitional zones is the central finding. <em>(Figure from Tracey et al.&nbsp;2018, PLoS ONE, CC BY 4.0)</em></figcaption>
+</figure>
+</div>
+<p>Breaking the results down by criterion combination shows that fire and fragmentation threats, on their own, are distributed differently than when biodiversity criteria are included. Adding genetic data shifts priority toward areas that would be overlooked by a species richness-only analysis — places with high evolutionary distinctiveness that are not necessarily the most species-rich.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/fire/cell-ranks-combined.jpg" class="img-fluid figure-img"></p>
+<figcaption>Cell-level Pareto ranks for the fully combined criterion set (fire + fragmentation + species richness + genetic data), colorblind-safe palette. Each cell represents a 50m grid unit within a conserved area. The rank gradient captures the joint threat-value signal across all criteria simultaneously. <em>(Figure from Tracey et al.&nbsp;2018, PLoS ONE, CC BY 4.0)</em></figcaption>
+</figure>
+</div>
+<p>The practical output is a ranked list of conserved areas that can directly inform monitoring resource allocation — field crews, camera traps, acoustic sensors — and management intervention priorities.</p>
+<hr>
+</section>
 <section id="code" class="level2">
 <h2 class="anchored" data-anchor-id="code">Code</h2>
 <p>The Pareto ranking code used for spatial conservation prioritization is publicly available on GitHub:</p>
