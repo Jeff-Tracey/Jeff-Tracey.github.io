@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2006-06-01">
-<meta name="description" content="PhD dissertation work: neural network models for predicting animal movement steps. Used von Mises and gamma output distributions to model turning angle and step length. Early application of deep learning concepts to ecological movement data.">
+<meta name="description" content="PhD dissertation work: agent-based movement models powered by neural networks, with FMM and HMM behavioral state selection. Von Mises and gamma distributions for turning angle and step length; GA optimization. Applied to puma movement in southern California.">
 
 <title>Neural Network Movement Models – Jeff A. Tracey, PhD</title>
 <style>
@@ -170,6 +170,7 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
    
   <ul>
   <li><a href="#network-architecture" id="toc-network-architecture" class="nav-link active" data-scroll-target="#network-architecture">Network Architecture</a></li>
+  <li><a href="#behavioral-state-selection-fmm-and-hmm" id="toc-behavioral-state-selection-fmm-and-hmm" class="nav-link" data-scroll-target="#behavioral-state-selection-fmm-and-hmm">Behavioral State Selection: FMM and HMM</a></li>
   <li><a href="#training-with-a-genetic-algorithm" id="toc-training-with-a-genetic-algorithm" class="nav-link" data-scroll-target="#training-with-a-genetic-algorithm">Training with a Genetic Algorithm</a></li>
   <li><a href="#agent-based-simulation-framework" id="toc-agent-based-simulation-framework" class="nav-link" data-scroll-target="#agent-based-simulation-framework">Agent-Based Simulation Framework</a></li>
   <li><a href="#simulations-puma-movement-in-southern-california" id="toc-simulations-puma-movement-in-southern-california" class="nav-link" data-scroll-target="#simulations-puma-movement-in-southern-california">Simulations — Puma Movement in Southern California</a></li>
@@ -188,12 +189,14 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
     <div class="quarto-category">neural-networks</div>
     <div class="quarto-category">statistical-modeling</div>
     <div class="quarto-category">computational-ecology</div>
+    <div class="quarto-category">behavioral-states</div>
+    <div class="quarto-category">hmm</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    PhD dissertation work: neural network models for predicting animal movement steps. Used von Mises and gamma output distributions to model turning angle and step length. Early application of deep learning concepts to ecological movement data.
+    PhD dissertation work: agent-based movement models powered by neural networks, with FMM and HMM behavioral state selection. Von Mises and gamma distributions for turning angle and step length; GA optimization. Applied to puma movement in southern California.
   </div>
 </div>
 
@@ -270,7 +273,7 @@ if (outputEl) {{
 <hr>
 <p>This work dates to my PhD dissertation at Colorado State University, completed in 2006. I mention that not as a historical footnote but because it matters: I have been thinking about neural networks, animal behavior, and landscape ecology for twenty years. The tools have changed beyond recognition — from hand-coded networks fit on desktop workstations to transformer architectures trained on GPU clusters — but the questions I was asking then are the same questions driving my current work. Connectivity. Movement. How animals respond to the landscape they live in. How we build models that are honest about that complexity.</p>
 <p>I came to deep learning not through a crash course but through a long arc that started here. That context shapes how I build models, what I think they can and can’t do, and what questions I think are worth asking.</p>
-<p>The core idea: use a neural network to model how an animal’s next movement step depends on the surrounding landscape. Step length and turning angle are modeled jointly — step length with a gamma distribution, turning angle with a von Mises distribution. When multiple landscape features compete for influence, a finite mixture structure assigns a mixing weight to each, letting the model capture multi-modal movement decisions.</p>
+<p>The core idea: use a neural network to model how an animal’s next movement step depends on the surrounding landscape. Step length and turning angle are modeled jointly — step length with a gamma distribution, turning angle with a von Mises distribution. When multiple landscape features compete for influence, the network assigns a mixing weight to each, letting the model capture multi-modal movement decisions. And when behavior itself is a hidden variable — the animal is in one of several unobserved states, each with its own movement dynamics — the model can represent that too, using either a finite mixture or a hidden Markov structure for behavioral state selection.</p>
 <hr>
 <section id="network-architecture" class="level2">
 <h2 class="anchored" data-anchor-id="network-architecture">Network Architecture</h2>
@@ -293,6 +296,18 @@ if (outputEl) {{
 <figcaption>Example von Mises mixture output — the predicted turning angle distribution for one animal at one step. The bimodal shape reflects a real behavioral decision: the animal is balancing attraction toward one feature against another. A unimodal distribution would miss this entirely.</figcaption>
 </figure>
 </div>
+<hr>
+</section>
+<section id="behavioral-state-selection-fmm-and-hmm" class="level2">
+<h2 class="anchored" data-anchor-id="behavioral-state-selection-fmm-and-hmm">Behavioral State Selection: FMM and HMM</h2>
+<p>The network architecture solves one problem: how to map landscape inputs to movement distribution parameters. But it leaves a second problem open — what behavioral state is the animal in right now?</p>
+<p>A foraging animal and a commuting animal have different movement dynamics even if they’re standing in the same place facing the same landscape. Step lengths differ. Turning angle distributions differ. Any honest movement model has to account for this, and the state itself is never directly observed — only the movement outcomes are. The behavioral state is hidden.</p>
+<p>I implemented two alternative model structures for state selection in the move effector:</p>
+<p><strong>Finite Mixture Model (FMM).</strong> State selection at each step is independent of the previous state — the probability of being in any given behavioral state depends only on the current inputs, not on what the animal was doing a moment ago. This is the simpler, more parsimonious model. It captures the multi-modal structure of movement (multiple possible behaviors at any location) without modeling the transitions between them.</p>
+<p><strong>Hidden Markov Model (HMM).</strong> State selection is governed by a transition matrix whose entries give the probability of moving from state <em>i</em> to state <em>j</em> at each step. Behavioral persistence is captured explicitly: an animal in a foraging state tends to stay foraging; an animal in a fast-transit state tends to keep moving. The forward algorithm updates state probabilities as the path unfolds.</p>
+<p>In both cases, the neural network outputs the parameters of the active state model — including, in the HMM formulation, the elements of the transition matrix itself. The GA then optimizes all of these jointly.</p>
+<p>The choice between FMM and HMM is a model selection question, answerable by likelihood-based methods. Running both and comparing was part of the point — the framework was designed to support it.</p>
+<p>It is worth noting that the HMM approach I was developing in 2004–2006 is now the dominant paradigm in movement ecology, implemented in widely-used packages such as <em>moveHMM</em> and <em>momentuHMM</em>. The underlying structure — hidden behavioral states, observation-driven emission distributions, Markov transition dynamics — is the same. The implementation pathway here (neural network parameterization, genetic algorithm fitting, agent-based simulation framework) was unconventional then and remains distinctive now.</p>
 <hr>
 </section>
 <section id="training-with-a-genetic-algorithm" class="level2">
@@ -344,7 +359,6 @@ if (outputEl) {{
 <figcaption>All simulated paths combined — points and lines for all trials overlaid. The density of simulated locations reveals the movement corridors the model learned from the observed data: concentrated in open space and habitat patches, thinning across agricultural land, absent from urban core.</figcaption>
 </figure>
 </div>
-<p><em>More content coming soon.</em></p>
 <hr>
 </section>
 <section id="papers" class="level2">
