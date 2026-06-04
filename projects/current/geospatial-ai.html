@@ -164,8 +164,15 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#vegetation-analysis" id="toc-vegetation-analysis" class="nav-link active" data-scroll-target="#vegetation-analysis">Vegetation Analysis</a></li>
+  <li><a href="#marine-wildlife-detection" id="toc-marine-wildlife-detection" class="nav-link" data-scroll-target="#marine-wildlife-detection">Marine Wildlife Detection</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -264,17 +271,59 @@ if (outputEl) {{
 <p>The orthomosaics below are from a recent flight over a chaparral site. The RGB image shows the scene as it appeared from the air; the false color composite (R-G-NIR) renders near-infrared as blue, making photosynthetically active vegetation stand out clearly from bare ground and dry material.</p>
 <div class="img-pair">
   <figure class="figure">
-    <img src="../../img/geospatial-ai/orthophoto_RGB.png" class="figure-img">
-    <figcaption style="font-size:0.85em; color:#666; margin-top:0.4em;">RGB orthomosaic. Chaparral with a trail corridor visible through the canopy. (Photo: Jeff A. Tracey)</figcaption>
+    <img src="../../img/geospatial-ai/orthophoto_RGB.jpeg" class="figure-img">
+    <figcaption style="font-size:0.85em; color:#666; margin-top:0.4em;">RGB orthomosaic. Chaparral with a trail corridor visible through the canopy. © Jeff A. Tracey 2026</figcaption>
   </figure>
   <figure class="figure">
-    <img src="../../img/geospatial-ai/orthophoto_NIR.png" class="figure-img">
-    <figcaption style="font-size:0.85em; color:#666; margin-top:0.4em;">False color composite (R-G-NIR). Healthy photosynthetically active vegetation rendered in blue; bare ground and dry material in gold. (Photo: Jeff A. Tracey)</figcaption>
+    <img src="../../img/geospatial-ai/orthophoto_NIR.jpeg" class="figure-img">
+    <figcaption style="font-size:0.85em; color:#666; margin-top:0.4em;">False color composite (R-G-NIR). Healthy photosynthetically active vegetation rendered in blue; bare ground and dry material in gold. © Jeff A. Tracey 2026</figcaption>
+  </figure>
+</div>
+<section id="vegetation-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="vegetation-analysis">Vegetation Analysis</h2>
+<p>Multispectral imagery from UAV flights enables calculation of a range of vegetation indices beyond simple RGB. The figure below shows several indices derived from the same scene — each one sensitive to different aspects of canopy condition, chlorophyll content, water stress, and photosynthetic activity.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/geospatial-ai/veg_metrics.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Vegetation indices derived from multispectral UAV imagery. © Jeff A. Tracey 2026</figcaption>
+</figure>
+</div>
+</section>
+<section id="marine-wildlife-detection" class="level2">
+<h2 class="anchored" data-anchor-id="marine-wildlife-detection">Marine Wildlife Detection</h2>
+<p>Shallow nearshore waters are difficult to survey by traditional methods — transects are slow, and many species are cryptic or mobile. UAV surveys combined with deep learning offer a scalable alternative: a single flight covers a large area, and a trained detection model can identify and locate animals in the imagery automatically.</p>
+<p>Current work focuses on building instance segmentation models for detecting and classifying marine wildlife from drone footage. The image below shows a sample frame during the annotation phase, with individuals marked for model training.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/geospatial-ai/sharks_annotated.jpeg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Annotating marine wildlife detections in drone footage using CVAT. © Jeff A. Tracey 2026</figcaption>
+</figure>
+</div>
+<p>The trained model detects multiple species in the same imagery. A selection of segmentation masks from model output:</p>
+<div class="img-pair">
+  <figure class="figure">
+    <img src="../../img/geospatial-ai/seg_leopard_shark.jpeg" class="figure-img">
+    <figcaption style="font-size:0.85em; color:#666; margin-top:0.4em;">Leopard shark (<em>Triakis semifasciata</em>) — confidence 1.00. © Jeff A. Tracey 2026</figcaption>
+  </figure>
+  <figure class="figure">
+    <img src="../../img/geospatial-ai/seg_bat_ray.jpeg" class="figure-img">
+    <figcaption style="font-size:0.85em; color:#666; margin-top:0.4em;">Bat ray (<em>Myliobatis californica</em>) — confidence 0.99. © Jeff A. Tracey 2026</figcaption>
+  </figure>
+</div>
+<div class="img-pair">
+  <figure class="figure">
+    <img src="../../img/geospatial-ai/seg_sea_lion.jpeg" class="figure-img">
+    <figcaption style="font-size:0.85em; color:#666; margin-top:0.4em;">California sea lion (<em>Zalophus californianus</em>) — confidence 0.98. © Jeff A. Tracey 2026</figcaption>
+  </figure>
+  <figure class="figure">
+    <img src="../../img/geospatial-ai/seg_sea_bird.jpeg" class="figure-img">
+    <figcaption style="font-size:0.85em; color:#666; margin-top:0.4em;">Seabird — confidence 0.96. The dark shapes in the upper frame are leopard sharks visible just below the surface. © Jeff A. Tracey 2026</figcaption>
   </figure>
 </div>
 <p>Details to follow as work is published.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
