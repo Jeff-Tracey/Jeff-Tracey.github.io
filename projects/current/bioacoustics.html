@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-01-01">
+<meta name="dcterms.date" content="2026-06-04">
 <meta name="description" content="Passive acoustic monitoring, species detection, and deep learning for bioacoustic data — from field recording to automated inference pipelines.">
 
 <title>Bioacoustics – Jeff A. Tracey, PhD</title>
@@ -164,8 +164,16 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#anuran-acoustic-monitoring" id="toc-anuran-acoustic-monitoring" class="nav-link active" data-scroll-target="#anuran-acoustic-monitoring">Anuran Acoustic Monitoring</a></li>
+  <li><a href="#avian-bioacoustics" id="toc-avian-bioacoustics" class="nav-link" data-scroll-target="#avian-bioacoustics">Avian Bioacoustics</a></li>
+  <li><a href="#pinniped-acoustics" id="toc-pinniped-acoustics" class="nav-link" data-scroll-target="#pinniped-acoustics">Pinniped Acoustics</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -192,9 +200,9 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
 
     
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">Updated</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 1, 2024</p>
+      <p class="date">June 4, 2026</p>
     </div>
   </div>
   
@@ -260,9 +268,53 @@ if (outputEl) {{
 <hr>
 <p>Passive acoustic monitoring (PAM) is one of the most powerful tools available for ecological research and conservation — sensors can run continuously, cover large areas, and detect species that are rarely seen but reliably heard. The challenge is turning raw recordings into actionable information at scale.</p>
 <p>My work in this area spans the full pipeline: field recording, signal processing, deep learning model development, and species detection. Current projects address problems of data scarcity, class imbalance, and domain shift — the practical obstacles that limit how well acoustic classifiers perform in real ecological settings. I am also developing open tools and workflows to make these methods more accessible to researchers and conservation practitioners who collect acoustic data but lack a machine learning background.</p>
-<p>Details to follow as work is published.</p>
+<section id="anuran-acoustic-monitoring" class="level2">
+<h2 class="anchored" data-anchor-id="anuran-acoustic-monitoring">Anuran Acoustic Monitoring</h2>
+<p>In collaboration with Jennifer Rowe, Meredith Driskin, Hardin Waddle, and the USGS Amphibian Research and Monitoring Initiative (<a href="https://www.usgs.gov/programs/amphibian-research-and-monitoring-initiative">ARMI</a>), I developed CNN-based classifiers for detecting anuran species from passive acoustic recordings. The bullfrog classifier reached 96.7% accuracy. Work is ongoing to extend the pipeline to additional species and recording conditions.</p>
+</section>
+<section id="avian-bioacoustics" class="level2">
+<h2 class="anchored" data-anchor-id="avian-bioacoustics">Avian Bioacoustics</h2>
+<p>Current work applies deep learning to avian acoustic monitoring. I am developing classifiers and detection pipelines for challenging real-world recording conditions — dealing with environmental noise, overlapping vocalizations, and limited labeled training data.</p>
+<p>The recordings are collected at field sites using autonomous recording units. Not everything on the soundtrack is the target species. For example, meet a local contributor to the ambient soundscape:</p>
+<figure class="figure">
+<audio controls="" style="width:100%; max-width:500px;">
+  <source src="../../img/bioacoustics/cyber_chicken.wav" type="audio/wav">
+  Your browser does not support the audio element.
+</audio>
+<figcaption style="font-size:0.85em; color:#666; margin-top:0.4em;">A hen from a property near one of the recording sites. A reliable presence in the dataset.</figcaption>
+</figure>
+<p>Full details to follow as manuscripts are in preparation.</p>
+</section>
+<section id="pinniped-acoustics" class="level2">
+<h2 class="anchored" data-anchor-id="pinniped-acoustics">Pinniped Acoustics</h2>
+<p>California sea lions (<em>Zalophus californianus</em>) and harbor seals (<em>Phoca vitulina</em>) are year-round residents along the local coastline. Sea lions are highly vocal; harbor seals considerably less so. Passive acoustic monitoring offers a way to track presence, behavior, and activity patterns without requiring continuous human observation.</p>
+<div class="img-pair">
+  <figure class="figure">
+    <img src="../../img/bioacoustics/sea_lion_juvenile.jpeg" class="figure-img">
+    <figcaption style="font-size:0.85em; color:#666; margin-top:0.4em;">Juvenile California sea lion (<em>Zalophus californianus</em>). (Photo: Jeff A. Tracey)</figcaption>
+  </figure>
+  <figure class="figure">
+    <img src="../../img/bioacoustics/sea_lion_male_females.jpeg" class="figure-img">
+    <figcaption style="font-size:0.85em; color:#666; margin-top:0.4em;">Adult male California sea lion with females hauled out on a rocky outcrop. (Photo: Jeff A. Tracey)</figcaption>
+  </figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/bioacoustics/harbor_seals_beach.jpeg" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption>Harbor seals (<em>Phoca vitulina</em>) hauled out at Children’s Pool, La Jolla. (Photo: Jeff A. Tracey)</figcaption>
+</figure>
+</div>
+<p>A key part of any acoustic monitoring pipeline is manual annotation — labeling vocalizations in spectrograms to build training datasets. The screenshot below shows a Raven Pro annotation session with sea lion calls identified and labeled across a recording.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/bioacoustics/raven_annotation.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Raven Pro annotation session — labeling California sea lion vocalizations in a passive acoustic recording.</figcaption>
+</figure>
+</div>
+<p>Full details to follow as work develops.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

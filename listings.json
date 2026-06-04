@@ -2,26 +2,26 @@
   {
     "listing": "/projects/projects.html",
     "items": [
-      "/projects/past/rattlesnakes.html",
+      "/projects/past/condors.html",
+      "/projects/past/golden-eagles.html",
       "/projects/past/neural-net-movement.html",
       "/projects/past/ivory-billed.html",
-      "/projects/past/eeid.html",
-      "/projects/past/bobcats.html",
-      "/projects/past/monitoring-design.html",
-      "/projects/past/wildlife-underpasses.html",
-      "/projects/past/scientific-visualization.html",
-      "/projects/past/condors.html",
       "/projects/past/fire-fragmentation.html",
-      "/projects/past/golden-eagles.html",
+      "/projects/past/scientific-visualization.html",
+      "/projects/past/wildlife-underpasses.html",
+      "/projects/past/rattlesnakes.html",
+      "/projects/past/monitoring-design.html",
+      "/projects/past/bobcats.html",
+      "/projects/past/eeid.html",
       "/projects/past/hpc.html"
     ]
   },
   {
     "listing": "/projects/current_projects.html",
     "items": [
-      "/projects/current/wildlife-cameras.html",
       "/projects/current/geospatial-ai.html",
-      "/projects/current/bioacoustics.html"
+      "/projects/current/bioacoustics.html",
+      "/projects/current/wildlife-cameras.html"
     ]
   }
 ]

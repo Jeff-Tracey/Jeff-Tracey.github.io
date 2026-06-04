@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-01-01">
+<meta name="dcterms.date" content="2026-06-04">
 <meta name="description" content="Camera trap surveys and deep learning for automated wildlife detection, classification, and monitoring — from field deployment to AI-assisted analysis.">
 
 <title>Wildlife Cameras – Jeff A. Tracey, PhD</title>
@@ -164,8 +164,15 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#wildlife-underpass-monitoring" id="toc-wildlife-underpass-monitoring" class="nav-link active" data-scroll-target="#wildlife-underpass-monitoring">Wildlife Underpass Monitoring</a></li>
+  <li><a href="#individual-identification" id="toc-individual-identification" class="nav-link" data-scroll-target="#individual-identification">Individual Identification</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -193,9 +200,9 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
 
     
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">Updated</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 1, 2024</p>
+      <p class="date">June 4, 2026</p>
     </div>
   </div>
   
@@ -260,10 +267,29 @@ if (outputEl) {{
 </script>
 <hr>
 <p>Camera traps generate large volumes of imagery that are time-consuming to review manually. Deep learning models can automate detection and classification, making it practical to run continuous, large-scale wildlife monitoring programs with limited staff.</p>
-<p>My work in this area combines field camera deployment with AI pipelines for automated species detection and identification. This includes both the development of detection models and the practical aspects of deploying camera networks in the field — placement, maintenance, data management, and turning images into ecological information.</p>
-<p>Details to follow as work is published.</p>
+<p>My work in this area combines field camera deployment with AI pipelines for automated species detection and identification. This includes both the development of detection models and the practical aspects of deploying camera networks in the field — placement, maintenance, data management, and turning images into actionable ecological information.</p>
+<section id="wildlife-underpass-monitoring" class="level2">
+<h2 class="anchored" data-anchor-id="wildlife-underpass-monitoring">Wildlife Underpass Monitoring</h2>
+<p>Road mortality is one of the most significant threats to wildlife populations in fragmented landscapes. Underpasses and culverts are widely used as mitigation measures, but evaluating their effectiveness requires long-term monitoring of which species use them, how often, and under what conditions.</p>
+<p>This project involves large-scale camera trap monitoring of road underpasses, with a deep learning pipeline to automate image classification across millions of images. The classifier was developed with extensive hyperparameter tuning on USGS HPC systems and has been applied to a multi-year archive of previously unlabeled images. Ongoing work focuses on analysis of the resulting species detection time series and the ecological questions they can answer about connectivity, behavior, and landscape use.</p>
+<p>Full details to follow as work is published.</p>
+</section>
+<section id="individual-identification" class="level2">
+<h2 class="anchored" data-anchor-id="individual-identification">Individual Identification</h2>
+<p>Beyond species-level detection, there is growing interest in using camera trap imagery for individual animal identification — recognizing specific individuals from photos, which is otherwise labor-intensive to do manually. This has direct applications for mark-recapture population estimation, behavioral research, and long-term monitoring of animals that carry no physical marks.</p>
+<p>I am developing a Siamese network approach to individual ID — a class of deep learning architectures that learn to compare pairs of images and determine whether they show the same individual. The network is trained on matched and mismatched image pairs and learns a similarity metric that generalizes to new individuals not seen during training.</p>
+<p>As a development testbed, I have been training on photos of my own cats — a practical choice given ready access to a labeled dataset with known ground truth. The image below shows a sample of matched and mismatched pairs from the training set.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/siamese-nets/image_pairs.jpeg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Sample matched and mismatched image pairs from the individual ID training set.</figcaption>
+</figure>
+</div>
+<p>Three of the four cats are part Siamese, which makes this either a fitting coincidence or a conflict of interest, depending on your perspective.</p>
+<p>Full details to follow as work develops.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
