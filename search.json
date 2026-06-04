@@ -91,13 +91,6 @@
     "text": "The Cognavitron — hover for details · click to navigate\nPassive acoustic monitoring (PAM) is one of the most powerful tools available for ecological research and conservation — sensors can run continuously, cover large areas, and detect species that are rarely seen but reliably heard. The challenge is turning raw recordings into actionable information at scale.\nMy work in this area spans the full pipeline: field recording, signal processing, deep learning model development, and species detection. Current projects address problems of data scarcity, class imbalance, and domain shift — the practical obstacles that limit how well acoustic classifiers perform in real ecological settings. I am also developing open tools and workflows to make these methods more accessible to researchers and conservation practitioners who collect acoustic data but lack a machine learning background."
   },
   {
-    "objectID": "projects/current/bioacoustics.html#anuran-acoustic-monitoring",
-    "href": "projects/current/bioacoustics.html#anuran-acoustic-monitoring",
-    "title": "Bioacoustics",
-    "section": "Anuran Acoustic Monitoring",
-    "text": "Anuran Acoustic Monitoring\nIn collaboration with Jennifer Rowe, Meredith Driskin, Hardin Waddle, and the USGS Amphibian Research and Monitoring Initiative (ARMI), I developed CNN-based classifiers for detecting anuran species from passive acoustic recordings. The bullfrog classifier reached 96.7% accuracy. Work is ongoing to extend the pipeline to additional species and recording conditions."
-  },
-  {
     "objectID": "projects/current/bioacoustics.html#avian-bioacoustics",
     "href": "projects/current/bioacoustics.html#avian-bioacoustics",
     "title": "Bioacoustics",
@@ -117,13 +110,6 @@
     "title": "Wildlife Cameras",
     "section": "",
     "text": "The Cognavitron — hover for details · click to navigate\nCamera traps generate large volumes of imagery that are time-consuming to review manually. Deep learning models can automate detection and classification, making it practical to run continuous, large-scale wildlife monitoring programs with limited staff.\nMy work in this area combines field camera deployment with AI pipelines for automated species detection and identification. This includes both the development of detection models and the practical aspects of deploying camera networks in the field — placement, maintenance, data management, and turning images into actionable ecological information."
-  },
-  {
-    "objectID": "projects/current/wildlife-cameras.html#wildlife-underpass-monitoring",
-    "href": "projects/current/wildlife-cameras.html#wildlife-underpass-monitoring",
-    "title": "Wildlife Cameras",
-    "section": "Wildlife Underpass Monitoring",
-    "text": "Wildlife Underpass Monitoring\nRoad mortality is one of the most significant threats to wildlife populations in fragmented landscapes. Underpasses and culverts are widely used as mitigation measures, but evaluating their effectiveness requires long-term monitoring of which species use them, how often, and under what conditions.\nThis project involves large-scale camera trap monitoring of road underpasses, with a deep learning pipeline to automate image classification across millions of images. The classifier was developed with extensive hyperparameter tuning on USGS HPC systems and has been applied to a multi-year archive of previously unlabeled images. Ongoing work focuses on analysis of the resulting species detection time series and the ecological questions they can answer about connectivity, behavior, and landscape use.\nFull details to follow as work is published."
   },
   {
     "objectID": "projects/current/wildlife-cameras.html#individual-identification",
@@ -788,7 +774,7 @@
     "href": "projects/current_projects.html",
     "title": "Current Research Areas",
     "section": "",
-    "text": "The Cognavitron — hover for details · click to navigate\n\n\n\n\n\n\n\n\n\n\n\nGeospatial AI\n\n\n\ngeospatial-ai\n\ndeep-learning\n\nremote-sensing\n\nhabitat-mapping\n\nsuav\n\n\n\nAI and machine learning for ecological mapping and monitoring from aerial and satellite imagery — habitat classification, species detection, and landscape change.\n\n\n\n\n\n\n\n\n\nBioacoustics\n\n\n\nbioacoustics\n\ndeep-learning\n\npassive-acoustic-monitoring\n\nspecies-detection\n\n\n\nPassive acoustic monitoring, species detection, and deep learning for bioacoustic data — from field recording to automated inference pipelines.\n\n\n\n\n\n\n\n\n\nWildlife Cameras\n\n\n\nwildlife-cameras\n\ndeep-learning\n\ncamera-traps\n\nspecies-detection\n\nfield-ecology\n\n\n\nCamera trap surveys and deep learning for automated wildlife detection, classification, and monitoring — from field deployment to AI-assisted analysis.\n\n\n\n\n\nNo matching items"
+    "text": "The Cognavitron — hover for details · click to navigate\n\n\n\n\n\n\n\n\n\n\n\nWildlife Cameras\n\n\n\nwildlife-cameras\n\ndeep-learning\n\ncamera-traps\n\nspecies-detection\n\nfield-ecology\n\n\n\nCamera trap surveys and deep learning for automated wildlife detection, classification, and monitoring — from field deployment to AI-assisted analysis.\n\n\n\n\n\n\n\n\n\nBioacoustics\n\n\n\nbioacoustics\n\ndeep-learning\n\npassive-acoustic-monitoring\n\nspecies-detection\n\n\n\nPassive acoustic monitoring, species detection, and deep learning for bioacoustic data — from field recording to automated inference pipelines.\n\n\n\n\n\n\n\n\n\nGeospatial AI\n\n\n\ngeospatial-ai\n\ndeep-learning\n\nremote-sensing\n\nhabitat-mapping\n\nsuav\n\n\n\nAI and machine learning for ecological mapping and monitoring from aerial and satellite imagery — habitat classification, species detection, and landscape change.\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about/lakes.html",
