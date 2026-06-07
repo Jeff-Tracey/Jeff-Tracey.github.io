@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-06-04">
+<meta name="dcterms.date" content="2026-06-07">
 <meta name="description" content="Three-dimensional movement kernel density estimation for GPS-tracked California condors (Gymnogyps californianus). Extended MKDE methods to full 3D space to capture soaring and thermal use. Computationally intensive — required HPC cluster runs for large GPS datasets.">
 
 <title>California Condors — 3D Space Use – Jeff A. Tracey, PhD</title>
@@ -189,7 +189,7 @@ if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.M
 <header id="title-block-header">
 
 
-<p class="date">2026-06-04</p>
+<p class="date">2026-06-07</p>
 </header>
 
 
@@ -252,7 +252,7 @@ if (outputEl) {{
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../img/mkde/MKDE-TopFig.jpg" class="img-fluid figure-img"></p>
-<figcaption>Probabilistic 3D space use by a California condor (left) and a condor fitted with a GPS telemetry device (right). Collaboration between Jeff A. Tracey and San Diego Zoo Wildlife Alliance. <em>(Visualization: J. A. Tracey)</em></figcaption>
+<figcaption>Probabilistic 3D space use by a California condor (left) and a condor fitted with a GPS telemetry device (right). My collaboration with James Sheppard and the San Diego Zoo Wildlife Alliance. <em>(Visualization: J. A. Tracey)</em></figcaption>
 </figure>
 </div>
 <hr>
@@ -271,7 +271,7 @@ if (outputEl) {{
 </section>
 <section id="estimating-animal-space-use-in-3d" class="level2">
 <h2 class="anchored" data-anchor-id="estimating-animal-space-use-in-3d">Estimating Animal Space Use in 3D</h2>
-<p>This work began as a collaboration between Jeff A. Tracey and Dr.&nbsp;James K. Sheppard of the San Diego Zoo’s Institute for Conservation Research (now <a href="https://sandiegozooglobal.org">San Diego Zoo Wildlife Alliance</a>) to extend the MKDE approach to three spatial dimensions. The motivation was the spatial ecology of reintroduced California condors (<em>Gymnogyps californianus</em>) and risks they face from wind energy development along the US-Mexico border. As the project developed, we formed a collaboration with Robert Sinkovits from the San Diego Supercomputer Center <a href="https://www.sdsc.edu">(SDSC)</a>, a collaboration that was soon expanded to include Amit Chourasia, and Glenn Lockwood from SDSC. The methods, however, apply to any species that can be tracked with biotelemetry and has significant vertical movement — birds, marine mammals, sea turtles, arboreal species.</p>
+<p>James Sheppard and I initiated this project while he was at the San Diego Zoo’s Institute for Conservation Research (now <a href="https://sandiegozooglobal.org">San Diego Zoo Wildlife Alliance</a>), extending the MKDE approach to three spatial dimensions. The motivation was the spatial ecology of reintroduced California condors (<em>Gymnogyps californianus</em>) and risks they face from wind energy development along the US-Mexico border. As the project developed, we brought in Robert Sinkovits from the San Diego Supercomputer Center <a href="https://www.sdsc.edu">(SDSC)</a>, a collaboration that soon expanded to include Amit Chourasia and Glenn Lockwood from SDSC. The methods, however, apply to any species that can be tracked with biotelemetry and has significant vertical movement — birds, marine mammals, sea turtles, arboreal species.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/1/11/California-condor-gymnogyps-californianus-078_%2821196759264%29.jpg" class="img-fluid figure-img"></p>
@@ -306,7 +306,7 @@ if (outputEl) {{
 </section>
 <section id="high-performance-computing" class="level2">
 <h2 class="anchored" data-anchor-id="high-performance-computing">High-Performance Computing</h2>
-<p>In 2014, we submitted a 3D MKDE animation for the XSEDE Visualation Showcase. Because we had to compute large 3D MKDEs over two-day time intervals, we decided to process them in parallel on the Gordon supercomputer at SDSC. After Robert (Bob) optimized of the core C++ code, Glenn Lockwood and I parallelized the 3D MKDE computations using OpenMP. Once the MKDEs were computed, Amit Chourasia took the lead in creating the animatio using VisIt software.</p>
+<p>In 2014, we submitted a 3D MKDE animation for the XSEDE Visualization Showcase. Because we had to compute large 3D MKDEs over two-day time intervals, we processed them in parallel on the Gordon supercomputer at SDSC. After Robert (Bob) optimized the core C++ code, Glenn Lockwood and I parallelized the 3D MKDE computations using OpenMP. Once the MKDEs were computed, Amit Chourasia took the lead in creating the animation using VisIt software.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="https://www.sdsc.edu/news/2012/PR030512_gordon.html"><img src="https://www.sdsc.edu/_files/images/news_items/PR120711_gordon.jpg" class="img-fluid figure-img"></a></p>
@@ -319,7 +319,7 @@ if (outputEl) {{
   Your browser does not support the video tag.
 </video>
 <p><em>3D MKDE home ranges for a pair of California condors (<em>Gymnogyps californianus</em>), animated over a moving time window. The volumetric space use estimates capture both horizontal and vertical dimensions of flight — condors regularly soar above 1,500 m. Computed in collaboration with the San Diego Supercomputer Center. (Visualization: J. A. Tracey, J. K. Sheppard, R. Sinkovits, and A. Chourasia)</em></p>
-<p>A Sempra wind farm that was proposed for construction in Baja, Mexico (now built) overlapped an area that was used by a condor that reintroduced by the San Diego Wildlife Alliance i Baja. One bird released in Baja flew through the proposed installation area in 2007. We constructed 3D Models of the proposed windfarm so that we could visualize, in 3D, the movement route of the condor in relation th the turbines.</p>
+<p>A Sempra wind farm proposed for construction in Baja, Mexico (now built) overlapped an area used by a condor reintroduced in Baja by the San Diego Zoo Wildlife Alliance. One bird flew through the proposed installation area in 2007. We constructed 3D models of the proposed wind farm to visualize, in 3D, the condor’s movement route in relation to the turbines.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../img/mkde/SempraWindfarm01.png" class="img-fluid figure-img"></p>
@@ -330,7 +330,7 @@ if (outputEl) {{
 </section>
 <section id="software" class="level2">
 <h2 class="anchored" data-anchor-id="software">Software</h2>
-<p>This work produced the <a href="https://cran.r-project.org/package=mkde"><code>mkde</code></a> R package, developed in collaboration with SDZG and SDSC. The package provides functions for setting up animal location data, estimating MKDE variance parameters, creating MKDE objects, computing the MKDE, and exporting output files. Joint space-use between two animals based on spatiotemporal overlap of their MKDEs is also implemented. Output can be exported in VTK and XDMF formats for 3D visualization in ParaView, VisIt, and Mayavi. The package supports both 2D and 3D MKDE calculation and is now maintained by SDSC.</p>
+<p>This work produced the <a href="https://cran.r-project.org/package=mkde"><code>mkde</code></a> R package, which I developed in collaboration with James Sheppard, SDZG, and SDSC. The package provides functions for setting up animal location data, estimating MKDE variance parameters, creating MKDE objects, computing the MKDE, and exporting output files. Joint space-use between two animals based on spatiotemporal overlap of their MKDEs is also implemented. Output can be exported in VTK and XDMF formats for 3D visualization in ParaView, VisIt, and Mayavi. The package supports both 2D and 3D MKDE calculation and is now maintained by SDSC.</p>
 <hr>
 </section>
 <section id="products" class="level2">
