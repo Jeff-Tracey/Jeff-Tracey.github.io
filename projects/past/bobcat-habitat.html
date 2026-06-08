@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-06-08">
+<meta name="description" content="Multi-scale resource selection modeling for GPS-tracked bobcats (Lynx rufus) in Orange County’s fragmented urban-wildland matrix. Sex-specific GAMMs at two selection scales; population-level habitat selection maps for the Orange County NCCP reserve network.">
+
+<title>Bobcat Habitat Selection — Orange County, California – Jeff A. Tracey, PhD</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-52d3edc4879e86859cfab57e7fc9f8d6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+<script>
+window.PlotlyConfig = {MathJaxConfig: 'local'};
+if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
+</script>
+<script type="module">import "https://cdn.plot.ly/plotly-3.4.0.min"</script>
+
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Jeff A. Tracey, PhD</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../mission/mission.html"> 
+<span class="menu-text">Mission</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-about">    
+        <li>
+    <a class="dropdown-item" href="../../about/about.html">
+ <span class="dropdown-text">About</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../about/contact.html">
+ <span class="dropdown-text">Contact</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Projects</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
+        <li>
+    <a class="dropdown-item" href="../../projects/current_projects.html">
+ <span class="dropdown-text">Current Projects</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../projects/projects.html">
+ <span class="dropdown-text">Projects</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../projects/repos.html">
+ <span class="dropdown-text">Repos</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../projects/publications.html">
+ <span class="dropdown-text">Publications</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../training/training.html"> 
+<span class="menu-text">Training</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#study-system-and-data" id="toc-study-system-and-data" class="nav-link active" data-scroll-target="#study-system-and-data">Study System and Data</a></li>
+  <li><a href="#multi-scale-resource-selection" id="toc-multi-scale-resource-selection" class="nav-link" data-scroll-target="#multi-scale-resource-selection">Multi-Scale Resource Selection</a></li>
+  <li><a href="#habitat-selection-maps" id="toc-habitat-selection-maps" class="nav-link" data-scroll-target="#habitat-selection-maps">Habitat Selection Maps</a>
+  <ul class="collapse">
+  <li><a href="#female-bobcats" id="toc-female-bobcats" class="nav-link" data-scroll-target="#female-bobcats">Female Bobcats</a></li>
+  <li><a href="#male-bobcats" id="toc-male-bobcats" class="nav-link" data-scroll-target="#male-bobcats">Male Bobcats</a></li>
+  </ul></li>
+  <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings">Key Findings</a></li>
+  <li><a href="#conservation-context" id="toc-conservation-context" class="nav-link" data-scroll-target="#conservation-context">Conservation Context</a></li>
+  <li><a href="#papers-and-reports" id="toc-papers-and-reports" class="nav-link" data-scroll-target="#papers-and-reports">Papers and Reports</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7">Bobcat Habitat Selection — Orange County, California</h1></header>
+
+<header id="title-block-header">
+
+
+<p class="date">2026-06-08</p>
+</header>
+
+
+<div id="65115095" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div>            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.4.0.min.js" integrity="sha256-KEmPoupLpFyGMyGAiOsiNDbKDKAvxXAn/W+oQa0ZAfk=" crossorigin="anonymous"></script>                <div id="fd8192c0-1c92-42f4-a2f8-e089823323a7" class="plotly-graph-div" style="height:550px; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("fd8192c0-1c92-42f4-a2f8-e089823323a7")) {                    Plotly.newPlot(                        "fd8192c0-1c92-42f4-a2f8-e089823323a7",                        [{"hoverinfo":"none","line":{"color":"rgba(160, 115, 65, 0.15)","width":10},"mode":"lines","x":[0.16787258095012694,0.31707619246705104,null,0.16787258095012694,0.6285576686648385,null,0.16787258095012694,0.1414293074108608,null,0.16787258095012694,0.12020020180965638,null,0.16787258095012694,-0.2736283952095841,null,0.16787258095012694,-0.056314185267628256,null,0.16787258095012694,-0.026942455132299137,null,0.16787258095012694,0.4315784524808559,null,0.6285576686648385,0.8332483772039416,null,0.6285576686648385,0.9590981855707484,null,0.6285576686648385,1.0,null,0.12020020180965638,-0.2736283952095841,null,0.12020020180965638,0.09896851327077917,null,0.12020020180965638,0.3273011776689942,null,0.12020020180965638,0.48274269030768063,null,-0.2736283952095841,-0.056314185267628256,null,-0.2736283952095841,-0.026942455132299137,null,-0.2736283952095841,-0.24701185915130602,null,-0.2736283952095841,-0.4324957528745095,null,-0.2736283952095841,-0.44361433506035636,null,-0.2736283952095841,-0.6294846046954209,null,-0.2736283952095841,-0.6847202671876536,null,-0.2736283952095841,-0.7212483151269893,null,-0.2736283952095841,-0.6192085980290911,null,-0.2736283952095841,-0.28447384337361736,null,-0.2736283952095841,-0.4509773689971449,null,-0.2736283952095841,-0.5415293066150269,null,-0.026942455132299137,-0.09642406108490591,null],"y":[0.10809420271120455,0.4936918918275486,null,0.10809420271120455,0.1347615579407499,null,0.10809420271120455,0.5812969168651502,null,0.10809420271120455,-0.24656486014635248,null,0.10809420271120455,0.008680147367031307,null,0.10809420271120455,0.2495642901913967,null,0.10809420271120455,-0.1633078072266251,null,0.10809420271120455,0.26164324996460564,null,0.1347615579407499,0.5414619312981408,null,0.1347615579407499,-0.11485545012702829,null,0.1347615579407499,0.23237084071002156,null,-0.24656486014635248,0.008680147367031307,null,-0.24656486014635248,-0.698173478770124,null,-0.24656486014635248,-0.6112117597459722,null,-0.24656486014635248,-0.415496670578494,null,0.008680147367031307,0.2495642901913967,null,0.008680147367031307,-0.1633078072266251,null,0.008680147367031307,0.4305118510715727,null,0.008680147367031307,0.4575556548898009,null,0.008680147367031307,0.26566118932824323,null,0.008680147367031307,0.30432935876184186,null,0.008680147367031307,0.11915441989257766,null,0.008680147367031307,-0.06820001251521195,null,0.008680147367031307,-0.30362596399991926,null,0.008680147367031307,-0.3518593112947792,null,0.008680147367031307,-0.40479135480889117,null,0.008680147367031307,-0.13608435370518254,null,-0.1633078072266251,-0.6746064799013056,null],"type":"scatter"},{"customdata":["..\u002f..\u002findex.html","..\u002f..\u002fmission\u002fmission.html","..\u002f..\u002fabout\u002fabout.html","..\u002f..\u002fabout\u002fcontact.html","..\u002f..\u002fabout\u002focean.html","..\u002f..\u002fprojects\u002fcurrent_projects.html","..\u002f..\u002fprojects\u002fprojects.html","..\u002f..\u002fprojects\u002fpublications.html","..\u002f..\u002fprojects\u002frepos.html","..\u002f..\u002ftraining\u002ftraining.html","..\u002f..\u002fprojects\u002fpast\u002fhpc.html","..\u002f..\u002fprojects\u002fpast\u002fgolden-eagles.html","..\u002f..\u002fprojects\u002fpast\u002fcondors.html","..\u002f..\u002fprojects\u002fpast\u002fwildlife-underpasses.html","..\u002f..\u002fprojects\u002fpast\u002fbobcats.html","..\u002f..\u002fprojects\u002fpast\u002feeid.html","..\u002f..\u002fprojects\u002fpast\u002fneural-net-movement.html","..\u002f..\u002fprojects\u002fpast\u002frattlesnakes.html","..\u002f..\u002fabout\u002fland.html","..\u002f..\u002fabout\u002flakes.html","..\u002f..\u002fprojects\u002fpast\u002fivory-billed.html","..\u002f..\u002fprojects\u002fpast\u002fscientific-visualization.html","..\u002f..\u002fprojects\u002frepos.html","..\u002f..\u002fprojects\u002fcurrent\u002fbioacoustics.html","..\u002f..\u002fprojects\u002fcurrent\u002fgeospatial-ai.html","..\u002f..\u002fprojects\u002fcurrent\u002fwildlife-cameras.html"],"hoverinfo":"text","hovertext":["\u003cb\u003eHOME\u003c\u002fb\u003e\u003cbr\u003eReturn to home page","\u003cb\u003eMission\u003c\u002fb\u003e\u003cbr\u003eWhy this work matters","\u003cb\u003eAbout\u003c\u002fb\u003e\u003cbr\u003eMy story and background","\u003cb\u003eContact\u003c\u002fb\u003e\u003cbr\u003eHow to reach me","\u003cb\u003eOcean\u003c\u002fb\u003e\u003cbr\u003eFreediving, sharks, kelp forest, and open water","\u003cb\u003eCurrent Work\u003c\u002fb\u003e\u003cbr\u003eProjects I am working on","\u003cb\u003eProjects\u003c\u002fb\u003e\u003cbr\u003eCompleted and past projects","\u003cb\u003ePublications\u003c\u002fb\u003e\u003cbr\u003ePapers and reports","\u003cb\u003eRepos\u003c\u002fb\u003e\u003cbr\u003eCode, models, and datasets","\u003cb\u003eTraining\u003c\u002fb\u003e\u003cbr\u003eWorkshops and tutorials","\u003cb\u003eAI + HPC for Ecology\u003c\u002fb\u003e\u003cbr\u003eHPC and AI infrastructure at USGS Advanced Research Computing","\u003cb\u003eGolden Eagles\u003c\u002fb\u003e\u003cbr\u003eLong-term telemetry and occupancy modeling","\u003cb\u003eCondors 3D MKDE\u003c\u002fb\u003e\u003cbr\u003eThree-dimensional movement kernel density estimation","\u003cb\u003eWildlife Camera Surveys\u003c\u002fb\u003e\u003cbr\u003eCamera trap surveys of wildlife underpass use","\u003cb\u003eBobcat Movement\u003c\u002fb\u003e\u003cbr\u003eFinite mixture movement models for bobcats","\u003cb\u003eEcology of Disease\u003c\u002fb\u003e\u003cbr\u003eAgent-based models for infectious disease ecology","\u003cb\u003eNN Movement Models\u003c\u002fb\u003e\u003cbr\u003eNeural network models for animal movement (PhD)","\u003cb\u003eRattlesnakes\u003c\u002fb\u003e\u003cbr\u003eRadio-tracking Crotalus ruber \u2014 M.S. thesis","\u003cb\u003eLand\u003c\u002fb\u003e\u003cbr\u003eField experiences, wildlife, and the terrestrial world","\u003cb\u003eLakes\u003c\u002fb\u003e\u003cbr\u003eNorthern Michigan lakes and freshwater life","\u003cb\u003eIvory-billed WP\u003c\u002fb\u003e\u003cbr\u003eHabitat network modeling for a possibly-extinct woodpecker","\u003cb\u003eScientific Visualization\u003c\u002fb\u003e\u003cbr\u003e3D visualization of ecological data \u2014 movement, terrain, drone models, bathymetry","\u003cb\u003emkde (R)\u003c\u002fb\u003e\u003cbr\u003eR package for 2D\u002f3D movement kernel density estimation \u2014 on CRAN, maintained by SDSC","\u003cb\u003eBioacoustics\u003c\u002fb\u003e\u003cbr\u003ePassive acoustic monitoring and deep learning for species detection","\u003cb\u003eGeospatial AI\u003c\u002fb\u003e\u003cbr\u003eAI and machine learning for ecological mapping from aerial imagery","\u003cb\u003eWildlife Cameras\u003c\u002fb\u003e\u003cbr\u003eCamera trap surveys and deep learning for wildlife monitoring"],"marker":{"color":["#5a8a5a","#8aba8a","#c8b08a","#c8b08a","#5a9ab0","#7ac4b4","#7ac4b4","#7ac4b4","#7ac4b4","#a8c88a","#8aaa8a","#8aaa8a","#8aaa8a","#8aaa8a","#8aaa8a","#8aaa8a","#8aaa8a","#8aaa8a","#7a9a6a","#6a8aaa","#8aaa8a","#8aaa8a","#7ac4b4","#7ab4a4","#7ab4a4","#7ab4a4"],"line":{"color":["#5a8a5a","#8aba8a","#c8b08a","#c8b08a","#5a9ab0","#7ac4b4","#7ac4b4","#7ac4b4","#7ac4b4","#a8c88a","#8aaa8a","#8aaa8a","#8aaa8a","#8aaa8a","#8aaa8a","#8aaa8a","#8aaa8a","#8aaa8a","#7a9a6a","#6a8aaa","#8aaa8a","#8aaa8a","#7ac4b4","#7ab4a4","#7ab4a4","#7ab4a4"],"width":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]},"size":[60,40,30,30,30,40,30,30,30,30,16,16,16,16,16,16,16,16,30,30,16,16,16,22,22,22]},"mode":"markers+text","text":["\u003cb\u003eHOME\u003c\u002fb\u003e","\u003cb\u003eMission\u003c\u002fb\u003e","\u003cb\u003eAbout\u003c\u002fb\u003e","\u003cb\u003eContact\u003c\u002fb\u003e","\u003cb\u003eOcean\u003c\u002fb\u003e","\u003cb\u003eCurrent Work\u003c\u002fb\u003e","\u003cb\u003eProjects\u003c\u002fb\u003e","\u003cb\u003ePublications\u003c\u002fb\u003e","\u003cb\u003eRepos\u003c\u002fb\u003e","\u003cb\u003eTraining\u003c\u002fb\u003e","","","","","","","","","\u003cb\u003eLand\u003c\u002fb\u003e","\u003cb\u003eLakes\u003c\u002fb\u003e","","","","","",""],"textfont":{"color":"#333333","size":11},"textposition":"top center","x":[0.16787258095012694,0.31707619246705104,0.6285576686648385,0.1414293074108608,0.8332483772039416,0.12020020180965638,-0.2736283952095841,-0.056314185267628256,-0.026942455132299137,0.4315784524808559,-0.24701185915130602,-0.4324957528745095,-0.44361433506035636,-0.6294846046954209,-0.6847202671876536,-0.7212483151269893,-0.6192085980290911,-0.28447384337361736,0.9590981855707484,1.0,-0.4509773689971449,-0.5415293066150269,-0.09642406108490591,0.09896851327077917,0.3273011776689942,0.48274269030768063],"y":[0.10809420271120455,0.4936918918275486,0.1347615579407499,0.5812969168651502,0.5414619312981408,-0.24656486014635248,0.008680147367031307,0.2495642901913967,-0.1633078072266251,0.26164324996460564,0.4305118510715727,0.4575556548898009,0.26566118932824323,0.30432935876184186,0.11915441989257766,-0.06820001251521195,-0.30362596399991926,-0.3518593112947792,-0.11485545012702829,0.23237084071002156,-0.40479135480889117,-0.13608435370518254,-0.6746064799013056,-0.698173478770124,-0.6112117597459722,-0.415496670578494],"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"xaxis":{"showgrid":false,"zeroline":false,"showticklabels":false},"yaxis":{"showgrid":false,"zeroline":false,"showticklabels":false},"margin":{"l":60,"r":60,"t":60,"b":60},"showlegend":false,"plot_bgcolor":"#ffffff","paper_bgcolor":"#ffffff","autosize":true,"height":550,"clickmode":"event"},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('fd8192c0-1c92-42f4-a2f8-e089823323a7');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+<p>The Cognavitron — hover for details · click to navigate</p>
+</div>
+</div>
+<script>
+(function() {
+    function attachHandlers() {
+        var plots = document.querySelectorAll('.js-plotly-plot');
+        if (plots.length === 0) { setTimeout(attachHandlers, 100); return; }
+        plots.forEach(function(plot) {
+            if (!plot._clickHandlerAttached) {
+                plot.on('plotly_click', function(data) {
+                    var pt = data.points[0];
+                    if (pt && pt.customdata) { window.location.href = pt.customdata; }
+                });
+                plot._clickHandlerAttached = true;
+            }
+        });
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', attachHandlers);
+    } else { attachHandlers(); }
+})();
+</script>
+<hr>
+<p>Orange County, California is one of the most densely developed counties in the United States — and it contains a network of nature reserves, managed under the <a href="https://www.ocparks.com/parks-trails/nature-preserves/nccp">Orange County Central and Coastal Natural Communities Conservation Plan</a> (NCCP), designed to protect biodiversity in exactly this kind of fragmented urban-wildland matrix. Bobcats (<em>Lynx rufus</em>) are a focal species for this reserve network: wide-ranging, habitat-sensitive, and dependent on connectivity between patches for long-term population persistence.</p>
+<p>This project asked: which parts of the landscape do bobcats actually select, and does that differ by sex and by the scale at which selection is measured? The answers have direct implications for where reserve lands are most valuable and where connectivity most matters.</p>
+<p>This work was prepared in cooperation with the Natural Communities Coalition and is documented in Boydston &amp; Tracey (2018). I developed all spatial analyses and statistical models; this report received a <strong>USGS Star Award</strong>.</p>
+<hr>
+<section id="study-system-and-data" class="level2">
+<h2 class="anchored" data-anchor-id="study-system-and-data">Study System and Data</h2>
+<p>GPS telemetry data from <strong>30 male and 21 female bobcats</strong> tracked in and around Orange County NCCP reserve lands from 2002–2009. The study area is a mosaic of chaparral, coastal sage scrub, oak woodland, and grassland embedded in a densely urbanized matrix — one of the most challenging landscapes a medium-sized carnivore can navigate in North America.</p>
+<p>Environmental predictors included terrain metrics (Topographic Position Index, Vector Ruggedness Measure, slope), climate variables (precipitation, temperature), vegetation indices (NDVI, NDWI), distance to roads and streams, land use/land cover, proportion urban (within 125-m radius), log patch area, and log distance to nearest patch — all derived from high-resolution spatial data layers maintained by the San Diego Association of Governments and USGS.</p>
+<hr>
+</section>
+<section id="multi-scale-resource-selection" class="level2">
+<h2 class="anchored" data-anchor-id="multi-scale-resource-selection">Multi-Scale Resource Selection</h2>
+<p>Following Johnson’s (1980) hierarchical framework, I modeled habitat selection at two spatial scales:</p>
+<ul>
+<li><strong>2nd order</strong> (home range vs.&nbsp;study area): which parts of the landscape do bobcats establish home ranges in, relative to what is available across the study area?</li>
+<li><strong>3rd order</strong> (GPS locations vs.&nbsp;study area): which specific locations do bobcats use within their ranges, relative to study-area availability?</li>
+</ul>
+<p>Models were fit separately for males and females, yielding four RSF models in total. Each was fit using <strong>Generalized Additive Mixed-effects Models (GAMMs)</strong> — allowing non-linear responses to habitat covariates while accounting for individual variation through mixed effects. Model selection used AUC evaluated via cross-validation across many candidate covariate combinations.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/bobcat-habitat/ScatterPlot-TrainAUCvsNumPred.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>AUC values across candidate models, plotted against number of predictors, for each of the three model comparisons by sex. Selected models balance predictive performance and parsimony.</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="habitat-selection-maps" class="level2">
+<h2 class="anchored" data-anchor-id="habitat-selection-maps">Habitat Selection Maps</h2>
+<p>Maps show the mean predicted probability of selection across Orange County for each model. Color scale: <strong>green = higher probability of selection</strong>; <strong>brown/tan = lower probability</strong> (urban and developed areas). Reserve boundaries shown as dashed orange lines; roads in black; water in blue.</p>
+<section id="female-bobcats" class="level3">
+<h3 class="anchored" data-anchor-id="female-bobcats">Female Bobcats</h3>
+<div class="quarto-layout-panel" data-layout="[[1,1], [1,1]]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/bobcat-habitat/FHomeStudy-mean-MAP.png" class="img-fluid figure-img"></p>
+<figcaption><strong>Female — 2nd order (home range vs.&nbsp;study area).</strong> Female home ranges are concentrated within and immediately adjacent to NCCP reserve lands. Urban areas show strong avoidance.</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/bobcat-habitat/FHomeStudy-mean-KEY.png" class="img-fluid figure-img"></p>
+<figcaption><strong>Legend</strong></figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/bobcat-habitat/FLocStudy-mean-MAP.png" class="img-fluid figure-img"></p>
+<figcaption><strong>Female — 3rd order (locations vs.&nbsp;study area).</strong> Within-range location selection further concentrates on core habitat patches. Edge areas and corridors show intermediate selection.</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/bobcat-habitat/FLocStudy-mean-KEY.png" class="img-fluid figure-img"></p>
+<figcaption><strong>Legend</strong></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="male-bobcats" class="level3">
+<h3 class="anchored" data-anchor-id="male-bobcats">Male Bobcats</h3>
+<div class="quarto-layout-panel" data-layout="[[1,1], [1,1]]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/bobcat-habitat/MHomeStudy-mean-MAP.png" class="img-fluid figure-img"></p>
+<figcaption><strong>Male — 2nd order (home range vs.&nbsp;study area).</strong> Male home ranges extend further into undeveloped areas outside reserve boundaries, reflecting larger typical home range sizes.</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/bobcat-habitat/MHomeStudy-mean-KEY.png" class="img-fluid figure-img"></p>
+<figcaption><strong>Legend</strong></figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/bobcat-habitat/MLocStudy-mean.asc-MAP.png" class="img-fluid figure-img"></p>
+<figcaption><strong>Male — 3rd order (locations vs.&nbsp;study area).</strong> Location-level selection shows males using a broader set of undeveloped areas, both within and outside reserves.</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/bobcat-habitat/MLocStudy-mean.asc-KEY.png" class="img-fluid figure-img"></p>
+<figcaption><strong>Legend</strong></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="key-findings" class="level2">
+<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
+<p><strong>Female bobcats were more dependent on reserve habitat than males.</strong> At both selection scales, female home range establishment and location use were tightly associated with NCCP reserve lands. This likely reflects the importance of core habitat quality for females with home ranges centered on territory defense and den site selection.</p>
+<p><strong>Male bobcats used undeveloped areas both within and outside reserves.</strong> The larger typical home range sizes of males — and their wider movements associated with mate-seeking — meant that suitable habitat outside formal reserve boundaries was also important for the male population.</p>
+<p><strong>Both sexes showed strong urban avoidance.</strong> The proportion of urban land cover within a 125-m radius was among the strongest negative predictors of selection at both scales, consistent with the fine-scale urban avoidance documented at the move-step level in related work (Tracey et al.&nbsp;2018, golden eagle synoptic models).</p>
+<p><strong>Small patches of suitable habitat exist outside reserves.</strong> The maps identify areas outside formal NCCP boundaries that showed characteristics associated with bobcat use — potential targets for restoration, connectivity enhancement, or reduced edge effects.</p>
+<hr>
+</section>
+<section id="conservation-context" class="level2">
+<h2 class="anchored" data-anchor-id="conservation-context">Conservation Context</h2>
+<p>These models were developed to support management and planning decisions for the Orange County NCCP reserve network — one of the most ambitious urban habitat conservation plans in the US. The habitat selection maps provide a spatially explicit basis for identifying core areas, prioritizing connectivity, and evaluating the adequacy of the reserve network for a species that requires both core habitat and movement corridors across a fragmented urban landscape.</p>
+<p><em>See also:</em> <a href="../../projects/past/bobcats.html">Bobcat Movement — Finite Mixture Models</a> for the behavioral landscape work using the same study system, and <a href="../../projects/past/eeid.html">Ecology of Infectious Disease</a> for agent-based disease transmission modeling motivated by FIV dynamics in this bobcat population.</p>
+<hr>
+</section>
+<section id="papers-and-reports" class="level2">
+<h2 class="anchored" data-anchor-id="papers-and-reports">Papers and Reports</h2>
+<p>Boydston EE, Tracey JA (2018). Modeling resource selection of bobcats (<em>Lynx rufus</em>) and vertebrate species distributions in Orange County, southern California. USGS Open-File Report 2018-1095. <a href="https://doi.org/10.3133/ofr20181095">https://doi.org/10.3133/ofr20181095</a></p>
+<p>Lyren LM, Turschak GM, Ambat ES, Haas CD, Tracey JA, Boydston EE, Hathaway SA, Fisher RN, Crooks KR (2006). Carnivore activity and movement in a southern California protected area, the North/Central Irvine Ranch. USGS Western Ecological Research Center Technical Report, 115 p.&nbsp;Prepared for The Nature Conservancy.</p>
+<p>Ruell EW, Riley SPD, Douglas MR, Antolin MF, Pollinger JR, Tracey JA, Lyren LM, Boydston EE, Fisher RN, Crooks KR (2012). Urban habitat fragmentation and genetic population structure of bobcats in coastal southern California. <em>The American Midland Naturalist</em> 168(2): 265–280. <a href="https://doi.org/10.1674/0003-0031-168.2.265">https://doi.org/10.1674/0003-0031-168.2.265</a></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/jeff-tracey\.github\.io");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
