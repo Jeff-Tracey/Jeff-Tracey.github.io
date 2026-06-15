@@ -1,1 +1,31 @@
 /* css styles */
+
+/* Responsive image pair layout */
+.img-pair {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.img-pair figure {
+  flex: 1;
+  margin: 0;
+}
+
+.img-pair img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .img-pair {
+    flex-direction: column;
+  }
+}
+
+/* Prevent standalone images from overflowing on mobile */
+img {
+  max-width: 100%;
+  height: auto;
+}
