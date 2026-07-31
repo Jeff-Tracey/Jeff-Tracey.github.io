@@ -1,95 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jeff-tracey.github.io/mission/mission.html</loc>
-    <lastmod>2026-06-17T19:38:17.184Z</lastmod>
+    <loc>https://jeff-tracey.github.io/github-profile-README.html</loc>
+    <lastmod>2026-07-08T16:38:18.942Z</lastmod>
   </url>
   <url>
-    <loc>https://jeff-tracey.github.io/about/about.html</loc>
-    <lastmod>2026-06-17T19:38:17.184Z</lastmod>
+    <loc>https://jeff-tracey.github.io/index.html</loc>
+    <lastmod>2026-06-18T18:46:52.676Z</lastmod>
   </url>
   <url>
-    <loc>https://jeff-tracey.github.io/about/land.html</loc>
+    <loc>https://jeff-tracey.github.io/about/ocean.html</loc>
+    <lastmod>2026-06-19T21:56:33.657Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jeff-tracey.github.io/about/lakes.html</loc>
     <lastmod>2026-06-17T19:38:17.183Z</lastmod>
   </url>
   <url>
-    <loc>https://jeff-tracey.github.io/about/contact.html</loc>
-    <lastmod>2026-06-17T19:38:17.183Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jeff-tracey.github.io/projects/current/bioacoustics.html</loc>
-    <lastmod>2026-06-17T19:38:17.197Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jeff-tracey.github.io/projects/current/wildlife-cameras.html</loc>
-    <lastmod>2026-06-17T19:38:17.197Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jeff-tracey.github.io/projects/projects.html</loc>
-    <lastmod>2026-06-17T19:38:17.182Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jeff-tracey.github.io/projects/past/hpc.html</loc>
-    <lastmod>2026-06-17T19:42:46.267Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jeff-tracey.github.io/projects/past/monitoring-design.html</loc>
-    <lastmod>2026-06-17T19:38:17.194Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jeff-tracey.github.io/projects/past/bobcat-habitat.html</loc>
-    <lastmod>2026-06-17T19:38:17.192Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jeff-tracey.github.io/projects/past/scientific-visualization.html</loc>
-    <lastmod>2026-06-17T19:38:17.192Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jeff-tracey.github.io/projects/past/ivory-billed.html</loc>
-    <lastmod>2026-06-17T19:38:17.191Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jeff-tracey.github.io/projects/past/golden-eagles.html</loc>
-    <lastmod>2026-06-17T19:38:17.185Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jeff-tracey.github.io/projects/repos.html</loc>
-    <lastmod>2026-06-17T19:38:17.182Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jeff-tracey.github.io/training/training.html</loc>
-    <lastmod>2026-06-17T19:38:17.182Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jeff-tracey.github.io/projects/past/condors.html</loc>
-    <lastmod>2026-06-17T19:38:17.185Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jeff-tracey.github.io/projects/past/neural-net-movement.html</loc>
-    <lastmod>2026-06-17T19:38:17.186Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jeff-tracey.github.io/projects/past/fire-fragmentation.html</loc>
-    <lastmod>2026-06-17T19:38:17.191Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jeff-tracey.github.io/projects/past/wildlife-underpasses.html</loc>
-    <lastmod>2026-06-17T19:38:17.192Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jeff-tracey.github.io/projects/past/rattlesnakes.html</loc>
-    <lastmod>2026-06-17T19:38:17.194Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jeff-tracey.github.io/projects/past/bobcats.html</loc>
-    <lastmod>2026-06-17T19:38:17.194Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jeff-tracey.github.io/projects/past/eeid.html</loc>
-    <lastmod>2026-06-17T19:38:17.196Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jeff-tracey.github.io/projects/publications.html</loc>
+    <loc>https://jeff-tracey.github.io/projects/current_projects.html</loc>
     <lastmod>2026-06-17T19:38:17.183Z</lastmod>
   </url>
   <url>
@@ -97,19 +25,95 @@
     <lastmod>2026-06-17T19:38:17.197Z</lastmod>
   </url>
   <url>
-    <loc>https://jeff-tracey.github.io/projects/current_projects.html</loc>
+    <loc>https://jeff-tracey.github.io/projects/publications.html</loc>
     <lastmod>2026-06-17T19:38:17.183Z</lastmod>
   </url>
   <url>
-    <loc>https://jeff-tracey.github.io/about/lakes.html</loc>
+    <loc>https://jeff-tracey.github.io/projects/past/eeid.html</loc>
+    <lastmod>2026-06-17T19:38:17.196Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jeff-tracey.github.io/projects/past/bobcats.html</loc>
+    <lastmod>2026-06-17T19:38:17.194Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jeff-tracey.github.io/projects/past/rattlesnakes.html</loc>
+    <lastmod>2026-06-17T19:38:17.194Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jeff-tracey.github.io/projects/past/wildlife-underpasses.html</loc>
+    <lastmod>2026-06-17T19:38:17.192Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jeff-tracey.github.io/projects/past/fire-fragmentation.html</loc>
+    <lastmod>2026-06-17T19:38:17.191Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jeff-tracey.github.io/projects/past/neural-net-movement.html</loc>
+    <lastmod>2026-06-17T19:38:17.186Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jeff-tracey.github.io/projects/past/condors.html</loc>
+    <lastmod>2026-06-17T19:38:17.185Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jeff-tracey.github.io/training/training.html</loc>
+    <lastmod>2026-06-17T19:38:17.182Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jeff-tracey.github.io/projects/repos.html</loc>
+    <lastmod>2026-06-17T19:38:17.182Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jeff-tracey.github.io/projects/past/golden-eagles.html</loc>
+    <lastmod>2026-06-17T19:38:17.185Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jeff-tracey.github.io/projects/past/ivory-billed.html</loc>
+    <lastmod>2026-06-17T19:38:17.191Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jeff-tracey.github.io/projects/past/scientific-visualization.html</loc>
+    <lastmod>2026-06-17T19:38:17.192Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jeff-tracey.github.io/projects/past/bobcat-habitat.html</loc>
+    <lastmod>2026-06-17T19:38:17.192Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jeff-tracey.github.io/projects/past/monitoring-design.html</loc>
+    <lastmod>2026-06-17T19:38:17.194Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jeff-tracey.github.io/projects/past/hpc.html</loc>
+    <lastmod>2026-06-17T19:42:46.267Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jeff-tracey.github.io/projects/projects.html</loc>
+    <lastmod>2026-06-17T19:38:17.182Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jeff-tracey.github.io/projects/current/wildlife-cameras.html</loc>
+    <lastmod>2026-06-17T19:38:17.197Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jeff-tracey.github.io/projects/current/bioacoustics.html</loc>
+    <lastmod>2026-06-17T19:38:17.197Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jeff-tracey.github.io/about/contact.html</loc>
     <lastmod>2026-06-17T19:38:17.183Z</lastmod>
   </url>
   <url>
-    <loc>https://jeff-tracey.github.io/about/ocean.html</loc>
-    <lastmod>2026-06-19T21:56:33.657Z</lastmod>
+    <loc>https://jeff-tracey.github.io/about/land.html</loc>
+    <lastmod>2026-06-17T19:38:17.183Z</lastmod>
   </url>
   <url>
-    <loc>https://jeff-tracey.github.io/index.html</loc>
-    <lastmod>2026-06-18T18:46:52.676Z</lastmod>
+    <loc>https://jeff-tracey.github.io/about/about.html</loc>
+    <lastmod>2026-06-17T19:38:17.184Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jeff-tracey.github.io/mission/mission.html</loc>
+    <lastmod>2026-06-17T19:38:17.184Z</lastmod>
   </url>
 </urlset>

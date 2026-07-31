@@ -1,5 +1,13 @@
 [
   {
+    "listing": "/projects/current_projects.html",
+    "items": [
+      "/projects/current/wildlife-cameras.html",
+      "/projects/current/geospatial-ai.html",
+      "/projects/current/bioacoustics.html"
+    ]
+  },
+  {
     "listing": "/projects/projects.html",
     "items": [
       "/projects/past/condors.html",
@@ -15,14 +23,6 @@
       "/projects/past/scientific-visualization.html",
       "/projects/past/fire-fragmentation.html",
       "/projects/past/monitoring-design.html"
-    ]
-  },
-  {
-    "listing": "/projects/current_projects.html",
-    "items": [
-      "/projects/current/wildlife-cameras.html",
-      "/projects/current/geospatial-ai.html",
-      "/projects/current/bioacoustics.html"
     ]
   }
 ]
